@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="10" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-05T10:17:37 IST" name="Default suite" finished-at="2022-07-05T10:18:50 IST" duration-ms="73029">
+    <groups>
+    </groups>
+    <test started-at="2022-07-05T10:17:37 IST" name="Default test" finished-at="2022-07-05T10:18:50 IST" duration-ms="73029">
+      <class name="loginFunctionality.UserSignInFunctionality">
+        <test-method is-config="true" signature="standardLogic()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:17:38 IST" name="standardLogic" finished-at="2022-07-05T10:17:44 IST" duration-ms="6879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standardLogic -->
+        <test-method signature="TeacherLoginPageIncorrectPassword(java.lang.String,java.lang.String)[pri:5, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:17:45 IST" name="TeacherLoginPageIncorrectPassword" data-provider="TeacherLoginPageIncorrectPassword_Data" finished-at="2022-07-05T10:17:51 IST" duration-ms="6474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9000000102]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeacherLoginPageIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:17:51 IST" name="tearDown" finished-at="2022-07-05T10:17:51 IST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="standardLogic()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:17:51 IST" name="standardLogic" finished-at="2022-07-05T10:17:56 IST" duration-ms="4630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standardLogic -->
+        <test-method signature="TeacherLoginPageIncorrectPassword(java.lang.String,java.lang.String)[pri:5, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:17:56 IST" name="TeacherLoginPageIncorrectPassword" data-provider="TeacherLoginPageIncorrectPassword_Data" finished-at="2022-07-05T10:18:02 IST" duration-ms="6414" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9000000105]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[  ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeacherLoginPageIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:02 IST" name="tearDown" finished-at="2022-07-05T10:18:02 IST" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="standardLogic()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:02 IST" name="standardLogic" finished-at="2022-07-05T10:18:07 IST" duration-ms="4462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standardLogic -->
+        <test-method signature="TeacherLoginPageIncorrectPassword(java.lang.String,java.lang.String)[pri:5, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:07 IST" name="TeacherLoginPageIncorrectPassword" data-provider="TeacherLoginPageIncorrectPassword_Data" finished-at="2022-07-05T10:18:18 IST" duration-ms="11207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9000000111]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456789]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeacherLoginPageIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:18 IST" name="tearDown" finished-at="2022-07-05T10:18:18 IST" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="standardLogic()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:18 IST" name="standardLogic" finished-at="2022-07-05T10:18:23 IST" duration-ms="4908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standardLogic -->
+        <test-method signature="TeacherLoginPageIncorrectPassword(java.lang.String,java.lang.String)[pri:5, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:23 IST" name="TeacherLoginPageIncorrectPassword" data-provider="TeacherLoginPageIncorrectPassword_Data" finished-at="2022-07-05T10:18:34 IST" duration-ms="11264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9000000115]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345610]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeacherLoginPageIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:34 IST" name="tearDown" finished-at="2022-07-05T10:18:34 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="standardLogic()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:34 IST" name="standardLogic" finished-at="2022-07-05T10:18:39 IST" duration-ms="4751" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standardLogic -->
+        <test-method signature="TeacherLoginPageIncorrectPassword(java.lang.String,java.lang.String)[pri:5, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:39 IST" name="TeacherLoginPageIncorrectPassword" data-provider="TeacherLoginPageIncorrectPassword_Data" finished-at="2022-07-05T10:18:50 IST" duration-ms="11326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9000000118]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567894651]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeacherLoginPageIncorrectPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:loginFunctionality.UserSignInFunctionality@345cf395]" started-at="2022-07-05T10:18:50 IST" name="tearDown" finished-at="2022-07-05T10:18:50 IST" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- loginFunctionality.UserSignInFunctionality -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

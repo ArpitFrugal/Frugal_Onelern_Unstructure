@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testResource.Listners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="loginFunctionality.UserSignInFunctionality">
+        <methods>
+          <include name="StudentLoginPageCorrectCredentials" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="standardLogic"/>
+          <include name="TeacherLoginPageCorrectCredentials" invocation-numbers="2"/>
+        </methods>
+      </class> <!-- loginFunctionality.UserSignInFunctionality -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
