@@ -32,7 +32,7 @@ public class DownloadReportCheck extends Base {
     @Epic("This story represents the Assessment module of the onelern_school project.")
     @Description("Examine whether or not the student can successfully download the report.")
     @Story("ASSFS_05")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentdata")
     public void StudentDownloadReportCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);

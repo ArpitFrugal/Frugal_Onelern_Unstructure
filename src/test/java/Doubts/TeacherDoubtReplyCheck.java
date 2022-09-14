@@ -69,7 +69,7 @@ public class TeacherDoubtReplyCheck extends Base {
             if(i==0){
                 selectedSubject = select.getFirstSelectedOption().getText();
             }
-            else if(i==1){
+            else if(i==2){
                 selectedLesson = select.getFirstSelectedOption().getText();
             }
             i++;
@@ -77,6 +77,7 @@ public class TeacherDoubtReplyCheck extends Base {
         }
         dou.QuestionTextBox().click();
         dou.QuestionTextBox().sendKeys("ABCD TEST");
+        Thread.sleep(1000);
         dou.SubmitBtn().click();
 
         Thread.sleep(5000);

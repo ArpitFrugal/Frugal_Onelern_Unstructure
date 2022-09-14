@@ -36,7 +36,7 @@ public class ViewAnswerKeyStudent extends Base {
     @Epic("This story represents the Assessment module of the onelern_school project.")
     @Description("Examine whether or not the student can successfully view the answer key of the assessment.")
     @Story("ASSFS_04")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentdata")
     public void StudentViewAnswerKeyCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);

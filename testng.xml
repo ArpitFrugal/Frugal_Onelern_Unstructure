@@ -7,8 +7,15 @@
 	<test name="Test">
 		<classes>
 <!--			Below classes cannot run on headless browsers-->
-<!--			<class name="Publish.PublishNewContentCheck"/>-->
-<!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
+			<class name="Publish.PublishNewContentCheck"/>
+			<class name="Notebook.viewHighlightsNotesBookmarks"/>
+
+			<!--			Assessments-->
+<!--			<class name="Assessment.AssessmentLandingPageCheck"/>-->
+<!--			<class name="Assessment.CreateAssessment_Online"/>-->
+<!--			<class name="Assessment.CreateAssessment_PenPaper"/>-->
+<!--			<class name="Assessment.AssessmentsDraftsCheck"/>-->
+
 
 
 			<!--			Attendance-->
@@ -16,11 +23,11 @@
 <!--			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/>-->
 <!--			<class name="Attendance.AttendanceMarkHolidayCheck"/>-->
 <!--			<class name="Attendance.AttendancePercentageCheck"/>-->
-			<class name="Attendance.AttendancePaginationCheck"/>
+<!--			<class name="Attendance.AttendancePaginationCheck"/>-->
 
 
 
-<!--			&lt;!&ndash;			Doubts&ndash;&gt;-->
+			<!--			Doubts-->
 
 <!--			<class name="Doubts.DoubtsLandingPageCheck"/>-->
 <!--			<class name="Doubts.DoubtsAskaDoubt_Student"/>-->

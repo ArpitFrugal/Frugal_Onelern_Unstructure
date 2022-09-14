@@ -53,7 +53,8 @@ public class CreateAssessment_PenPaper extends Base {
 
         ass.MyAssessmentsPage().click();
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(1000);
         ass.CreateNew().click();
         Thread.sleep(2000);
 
@@ -75,7 +76,8 @@ public class CreateAssessment_PenPaper extends Base {
         Thread.sleep(1000);
 
         ass.SubmitBtn().click();
-
+//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(1000);
         ass.SectionBtn().click();
 
         ass.SectionName().click();
@@ -88,26 +90,33 @@ public class CreateAssessment_PenPaper extends Base {
         Thread.sleep(2000);
         ass.QuestionBtn().click();
 
-        ass.ShortAsnwerOption().click();
+        ass.ShortAnswerOption().click();
 
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
-
-
-        List<WebElement> QuestionTextBoxes = ass.QuestionInputBoxes();
-        QuestionTextBoxes.get(0).click();
-        QuestionTextBoxes.get(0).sendKeys("Question");
-
-        QuestionTextBoxes.get(1).click();
-        QuestionTextBoxes.get(1).sendKeys("Instructions");
-
-        js.executeScript("arguments[0].scrollIntoView();", QuestionTextBoxes.get(3));
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         Thread.sleep(2000);
 
-        QuestionTextBoxes.get(2).click();
-        QuestionTextBoxes.get(2).sendKeys("Hints");
-
-        QuestionTextBoxes.get(3).click();
-        QuestionTextBoxes.get(3).sendKeys("Solution");
+        driver.findElement(By.xpath("//button[contains(@class, 'toolbar-btn')]")).click();
+        Thread.sleep(1000);
+        List<WebElement> QuestionTextBoxes = ass.QuestionInputBoxes();
+        int cnt=0;
+        for(WebElement webElement: QuestionTextBoxes){
+            if(cnt == 0){
+                webElement.click();
+                webElement.sendKeys("Question");
+            } else if (cnt == 1) {
+                webElement.click();
+                webElement.sendKeys("Instructions");
+            }else if (cnt == 2) {
+                webElement.click();
+                webElement.sendKeys("Hints");
+            }else if (cnt == 3) {
+                js.executeScript("arguments[0].scrollIntoView();", webElement);
+                webElement.click();
+                webElement.sendKeys("Solution");
+            }
+            cnt++;
+        }
 
         for(WebElement webElement:ass.QuestionsMetadata()){
             if(webElement.isEnabled()){
@@ -117,6 +126,9 @@ public class CreateAssessment_PenPaper extends Base {
                 Thread.sleep(1000);
             }
         }
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
 
 
         ass.MarksInputBox().click();
@@ -132,7 +144,7 @@ public class CreateAssessment_PenPaper extends Base {
         Thread.sleep(2000);
 
         ass.AssignStudentsBtn().click();
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         Thread.sleep(1000);
         ass.SelectStudentsBtn().click();
         Thread.sleep(1000);
@@ -178,7 +190,7 @@ public class CreateAssessment_PenPaper extends Base {
 
         ass.PublishAssessmentBtn().click();
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
 
         ValidateTest(ass.questionPaperPreview());
     }
@@ -202,7 +214,7 @@ public class CreateAssessment_PenPaper extends Base {
     public Object[][] getteacherData() throws FileAlreadyExistsException {
         Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
                 {"9000000113", "123456"}, {"9000000117", "123456"}};
-//        Object loginData[][] = {{"9000000101", "123456"}};
+//        Object loginData[][] = {{"9000000105", "123456"}};
         return loginData;
     }
 }

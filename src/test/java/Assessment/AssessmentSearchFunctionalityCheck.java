@@ -1,22 +1,25 @@
 package Assessment;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.Assessment;
-import pageObjects.Attendance;
 import pageObjects.LoginPage;
 import resources.Base;
 import testResource.BaseLogin;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
+import java.time.Duration;
 
-public class AssessmentLandingPageCheck extends Base {
+public class AssessmentSearchFunctionalityCheck extends Base {
     public Assessment ass;
     public LoginPage log;
     public WebDriver driver;
@@ -30,21 +33,14 @@ public class AssessmentLandingPageCheck extends Base {
         log = new LoginPage(driver);
     }
 
-    public void ValidateTest(String actual_header, String expected_header){
-        if (expected_header.contains(actual_header)) {
-            System.out.println("Assessment Module is active");
-        }
-        else {
-            Assert.fail();
-        }
-    }
+
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully get inside the Assessment module.")
-    @Story("ASSFS_01")
-    @Severity(SeverityLevel.BLOCKER)
+    @Description("Examine whether or not the student can successfully search an assessment.")
+    @Story("ASSFS_06")
+    @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentdata")
-    public void studentLanding(String mobNumber, String password) throws IOException, InterruptedException {
+    public void studentSearchAssessmentCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
         Thread.sleep(2000);
@@ -53,25 +49,50 @@ public class AssessmentLandingPageCheck extends Base {
         ass.AssessmentToggle().click();
         Thread.sleep(2000);
 
-        String actual_header = ass.GetHeader().getText();
-        ValidateTest(actual_header, "Scheduled Assessments");
+        ass.AssessmentsSearch().click();
+        ass.AssessmentsSearch().sendKeys("Assessment13579");
+
+        int NoOfAssessmentsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'assessment-box')]//h1[text()='Assessment13579']")).size();
+
+        ValidateTest(NoOfAssessmentsDisplayed);
 
     }
 
+    private void ValidateTest(int actual_result) {
+        System.out.println(actual_result);
+        if(actual_result == 1)
+            System.out.println("PASSED");
+        else
+            Assert.fail();
+    }
+
+
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Assessment module.")
-    @Story("ASSFT_01")
-    @Severity(SeverityLevel.BLOCKER)
+    @Description("Examine whether or not the teacher can successfully search an assessment.")
+    @Story("ASSFT_08")
+    @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherdata")
-    public void teacherLanding(String mobNumber, String password) throws IOException, InterruptedException {
+    public void teacherSearchAssessmentCheck(String mobNumber, String password) throws IOException, InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         ass.AssessmentToggle().click();
         Thread.sleep(2000);
 
-        String actual_header = ass.GetHeader().getText();
-        ValidateTest(actual_header, "Assessments");
+        ass.MyAssessmentsPage().click();
+        Thread.sleep(2000);
+
+        ass.CompletedTabPage().click();
+
+        ass.AssessmentsSearch().click();
+        ass.AssessmentsSearch().sendKeys("Assessment13579");
+
+        int NoOfAssessmentsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'assessment-box')]//h1[text()='Assessment13579']")).size();
+
+        ValidateTest(NoOfAssessmentsDisplayed);
+
     }
 
 
@@ -83,6 +104,7 @@ public class AssessmentLandingPageCheck extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
+
     @DataProvider(name = "studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
@@ -91,7 +113,6 @@ public class AssessmentLandingPageCheck extends Base {
 //        Object loginData[][] = {{"9000000001", "123456"}};
         return loginData;
     }
-
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
         Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},

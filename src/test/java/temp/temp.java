@@ -1,6 +1,7 @@
 package temp;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +44,7 @@ public class temp extends Base {
     }
     @Epic("This story represents the Notebook module of the onelern_school project.")
     @Test(dataProvider = "data")
-    public void studentLanding(String mobNumber, String password) throws IOException, InterruptedException {
+    public void temp(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
         Thread.sleep(2000);
@@ -51,10 +52,13 @@ public class temp extends Base {
         Thread.sleep(2000);
         note.NotebookToggle().click();
         Thread.sleep(2000);
-//        screenshot(Thread.currentThread().getStackTrace()[2].getClassName(), driver);
-        screenshot();
-        String actual_header = note.GetHeader();
-        ValidateTest(actual_header);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        note.EnvironmentalCoursebookGrade1().click();
+        note.SecondLesson().click();
+        Thread.sleep(10000);
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(10000);
     }
 
     @Attachment(value = "Screenshot", type = "image/png")

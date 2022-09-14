@@ -32,12 +32,7 @@ public class DoubtsFilterFunctionality extends Base {
     }
 
     public boolean textCheck(String actual_text, String expected_text){
-        if (actual_text.contains(expected_text)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return actual_text.contains(expected_text);
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
@@ -109,6 +104,7 @@ public class DoubtsFilterFunctionality extends Base {
     }
 
     public void ValidateTest(boolean flag1, boolean flag2, boolean flag3) {
+        System.out.println(flag1 +" "+flag2+" "+flag3);
         if(flag1 && flag2 && flag3){
             System.out.println("PASSED");
         }

@@ -38,7 +38,7 @@ public class AssessmentsCompletedCheck extends Base {
     @Epic("This story represents the Assessment module of the onelern_school project.")
     @Description("Examine whether or not the teacher can successfully fetch completed assessments from ongoing tab.")
     @Story("ASSFT_07")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherdata")
     public void teacherCompletedAssessmentsCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);

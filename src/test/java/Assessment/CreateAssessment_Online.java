@@ -48,12 +48,14 @@ public class CreateAssessment_Online extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        List<WebElement> QuestionTextBoxes;
         ass.AssessmentToggle().click();
         Thread.sleep(2000);
 
         ass.MyAssessmentsPage().click();
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        if(ass.ModalOverlay().isDisplayed())
+            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         ass.CreateNew().click();
         Thread.sleep(2000);
 
@@ -86,27 +88,214 @@ public class CreateAssessment_Online extends Base {
 
         ass.SubmitBtn().click();
         Thread.sleep(2000);
+
+        // T/F Question
+
         ass.QuestionBtn().click();
         ass.TrueFalseOption().click();
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(2000);
 
         ass.TrueOption().click();
 
-        List<WebElement> QuestionTextBoxes = ass.QuestionInputBoxes();
-        QuestionTextBoxes.get(0).click();
-        QuestionTextBoxes.get(0).sendKeys("Question");
+        QuestionTextBoxes = ass.QuestionInputBoxes();
+        int cnt=0;
+        for(WebElement webElement: QuestionTextBoxes){
+            if(cnt == 0){
+                webElement.click();
+                webElement.sendKeys("Question");
+            } else if (cnt == 1) {
+                webElement.click();
+                webElement.sendKeys("Instructions");
+            }else if (cnt == 2) {
+                webElement.click();
+                webElement.sendKeys("Hints");
+            }else if (cnt == 3) {
+                webElement.click();
+                webElement.sendKeys("Solution");
+            }
+            cnt++;
+        }
 
-        QuestionTextBoxes.get(1).click();
-        QuestionTextBoxes.get(1).sendKeys("Instructions");
 
-        js.executeScript("arguments[0].scrollIntoView();", QuestionTextBoxes.get(3));
+        for(WebElement webElement:ass.QuestionsMetadata()){
+            if(webElement.isEnabled()){
+                webElement.click();
+                webElement.sendKeys(Keys.ARROW_DOWN);
+                webElement.sendKeys(Keys.ENTER);
+                Thread.sleep(1500);
+            }
+        }
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+
+        ass.MarksInputBox().click();
+        Thread.sleep(1000);
+        ass.MarksInputBox().sendKeys("01");
         Thread.sleep(2000);
 
-        QuestionTextBoxes.get(2).click();
-        QuestionTextBoxes.get(2).sendKeys("Hints");
+        ass.AddThisQuestionBtn().click();
+        Thread.sleep(2000);
 
-        QuestionTextBoxes.get(3).click();
-        QuestionTextBoxes.get(3).sendKeys("Solution");
+        // - -------------------------------------
+
+        ass.QuestionBtn().click();
+        ass.MCQOption().click();
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(2000);
+        QuestionTextBoxes = ass.QuestionInputBoxes();
+        cnt=0;
+        for(WebElement webElement: QuestionTextBoxes){
+            if(cnt == 0){
+                webElement.click();
+                webElement.sendKeys("Question");
+            } else if (cnt == 1) {
+                webElement.click();
+                webElement.sendKeys("Option1");
+            }else if (cnt == 2) {
+                WebElement Element = QuestionTextBoxes.get(4);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
+                webElement.click();
+                webElement.sendKeys("Option2");
+            }else if (cnt == 3) {
+                webElement.click();
+                webElement.sendKeys("Option3");
+            }else if (cnt == 4) {
+                webElement.click();
+                webElement.sendKeys("Option4");
+            }else if (cnt == 5) {
+                WebElement Element = QuestionTextBoxes.get(QuestionTextBoxes.size() - 1);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
+                webElement.click();
+                webElement.sendKeys("Instructions");
+            }else if (cnt == 6) {
+                webElement.click();
+                webElement.sendKeys("Hints");
+            }else if (cnt == 7) {
+                webElement.click();
+                webElement.sendKeys("Solution");
+            }
+            cnt++;
+        }
+
+        for(WebElement webElement:ass.QuestionsMetadata()){
+            if(webElement.isEnabled()){
+                webElement.click();
+                webElement.sendKeys(Keys.ARROW_DOWN);
+                webElement.sendKeys(Keys.ENTER);
+                Thread.sleep(1500);
+            }
+        }
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+
+        ass.MarksInputBox().click();
+        Thread.sleep(1000);
+        ass.MarksInputBox().sendKeys("01");
+        Thread.sleep(2000);
+
+        ass.AddThisQuestionBtn().click();
+        Thread.sleep(2000);
+
+        // --------------------------------------
+
+        ass.QuestionBtn().click();
+        ass.FillBlanksOption().click();
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(2000);
+        QuestionTextBoxes = ass.QuestionInputBoxes();
+        cnt=0;
+        for(WebElement webElement: QuestionTextBoxes){
+            if(cnt == 0){
+                webElement.click();
+                webElement.sendKeys("Question");
+            } else if (cnt == 1) {
+                webElement.click();
+                webElement.sendKeys("Instructions");
+            }else if (cnt == 2) {
+                WebElement Element = QuestionTextBoxes.get(4);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
+                webElement.click();
+                webElement.sendKeys("Hints");
+            }else if (cnt == 3) {
+                webElement.click();
+                webElement.sendKeys("Solution");
+            }
+            cnt++;
+        }
+
+        ass.FBCorrectAnswer().click();
+        ass.FBCorrectAnswer().sendKeys("Answer");
+
+
+
+        for(WebElement webElement:ass.QuestionsMetadata()){
+            if(webElement.isEnabled()){
+                webElement.click();
+                webElement.sendKeys(Keys.ARROW_DOWN);
+                webElement.sendKeys(Keys.ENTER);
+                Thread.sleep(1500);
+            }
+        }
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+
+
+        ass.MarksInputBox().click();
+        Thread.sleep(1000);
+        ass.MarksInputBox().sendKeys("01");
+        Thread.sleep(2000);
+
+        ass.AddThisQuestionBtn().click();
+        Thread.sleep(2000);
+
+        // ----------------------------------------------
+
+        ass.QuestionBtn().click();
+        ass.MRQOption().click();
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(2000);
+        QuestionTextBoxes = ass.QuestionInputBoxes();
+        cnt=0;
+        for(WebElement webElement: QuestionTextBoxes){
+            if(cnt == 0){
+                webElement.click();
+                webElement.sendKeys("Question");
+            } else if (cnt == 1) {
+                webElement.click();
+                webElement.sendKeys("Option1");
+            }else if (cnt == 2) {
+                WebElement Element = QuestionTextBoxes.get(4);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
+                webElement.click();
+                webElement.sendKeys("Option2");
+            }else if (cnt == 3) {
+                webElement.click();
+                webElement.sendKeys("Option3");
+            }else if (cnt == 4) {
+                webElement.click();
+                webElement.sendKeys("Option4");
+            }else if (cnt == 5) {
+                WebElement Element = QuestionTextBoxes.get(QuestionTextBoxes.size() - 1);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
+                webElement.click();
+                webElement.sendKeys("Instructions");
+            }else if (cnt == 6) {
+                webElement.click();
+                webElement.sendKeys("Hints");
+            }else if (cnt == 7) {
+                webElement.click();
+                webElement.sendKeys("Solution");
+            }
+            cnt++;
+        }
 
 
         for(WebElement webElement:ass.QuestionsMetadata()){
@@ -117,6 +306,9 @@ public class CreateAssessment_Online extends Base {
                 Thread.sleep(1000);
             }
         }
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
 
         ass.MarksInputBox().click();
         Thread.sleep(1000);
@@ -125,13 +317,20 @@ public class CreateAssessment_Online extends Base {
 
         ass.AddThisQuestionBtn().click();
         Thread.sleep(2000);
+
+
+        // --------------------------------------
+
+
+
         ass.PassMarks().click();
         Thread.sleep(2000);
         ass.PassMarks().sendKeys("1");
         Thread.sleep(2000);
 
         ass.AssignStudentsBtn().click();
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         Thread.sleep(1000);
         ass.SelectStudentsBtn().click();
 
@@ -152,7 +351,7 @@ public class CreateAssessment_Online extends Base {
         String curryear = str.split("/")[2];
 
         DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
-        String dateString = dateFormat.format(new Date(Calendar.getInstance().getTimeInMillis() + 60*1000));
+        String dateString = dateFormat.format(new Date(Calendar.getInstance().getTimeInMillis() + 2*60*1000));
         String currhour = dateString.split("\\.")[0];
         String currmin  = dateString.split("\\.")[1].split(" ")[0];
         String ampm = dateString.split("\\.")[1].split(" ")[1];
@@ -188,7 +387,7 @@ public class CreateAssessment_Online extends Base {
         ass.HintShowOption().click();
         Thread.sleep(1000);
         ass.PublishAssessmentBtn().click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         String DisplayedAssessmentName = ass.FirstAssessmentDisplayedTeacher().getText();
 
         ValidateTest(DisplayedAssessmentName, AssessmentName);
@@ -213,7 +412,7 @@ public class CreateAssessment_Online extends Base {
     // functions.
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+        Object loginData[][] =  {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
                 {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;

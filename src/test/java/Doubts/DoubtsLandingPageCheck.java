@@ -30,6 +30,7 @@ public class DoubtsLandingPageCheck extends Base {
     }
 
     public void ValidateTest(String actual_header){
+        System.out.println(actual_header);
         if (actual_header.contains("Doubts")) {
             System.out.println("Doubts Module is active");
         }

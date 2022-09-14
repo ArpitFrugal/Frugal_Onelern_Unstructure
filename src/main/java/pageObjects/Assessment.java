@@ -13,7 +13,7 @@ public class Assessment extends Base {
     By StudentAccount = By.id("student");
     By StudentImageClick = By.xpath("//div[@class='d-flex justify-content-center align-items-center flex-column']//div[2]//button[1]//img[1]");
     By AssessmentToggle = By.id("assessments");
-    By GetHeader = By.xpath("//header/div/div[1]/span");
+    By GetHeader = By.xpath("//*[contains(@class,'top-div')]//h1");
     By MyAssessmentsPage = By.xpath("//a[@href='assessments']");
     By CreateNew = By.xpath("//*[@class='add-btn']");
     By NameOfAssessmentInput = By.xpath("//input[@placeholder='Name of Assessment']");
@@ -26,13 +26,16 @@ public class Assessment extends Base {
     By SectionName = By.id("section");
     By SectionInstructions = By.xpath("//*[contains(@class,'fr-element')]");
     By QuestionBtn = By.xpath("//*[contains(@class,'question-btn')]");
+    By MCQOption = By.xpath("//*[contains(@class,'question-selection')]/div[text()='Multiple Choice Question']");
+    By FillBlanksOption = By.xpath("//*[contains(@class,'question-selection')]/div[text()='Fill in the Blanks']");
     By TrueFalseOption = By.xpath("//*[contains(@class,'question-selection')]/div[text()='True or False']");
+    By MRQOption = By.xpath("//*[contains(@class,'question-selection')]/div[text()='Multiple Response Question']");
     By ShortAsnwerOption = By.xpath("//*[contains(@class,'question-selection')]/div[text()='Short Answer']");
     By ModalOverlay = By.xpath("//*[contains(@class,'modal-overlay')]");
     By QuestionInputBoxes = By.xpath("//*[contains(@class,'fr-element')]");
     By TrueOption = By.xpath("//*[contains(@class,'radio-item')]");
     By QuestionsMetadata = By.xpath("//*[contains(@class,'form-select')]");
-    By AddThisQuestionBtn = By.xpath("//*[contains(@class,'bottom-fix')]//button[contains(@class,'custome-btn')]");
+    By AddThisQuestionBtn = By.xpath("//*[contains(@class,'single-answer')]//*[contains(@class,'bottom-fix')]//button[contains(@class,'custome-btn')]");
     By MarksInputBox = By.xpath("//*[contains(@class,'modal-header-two')]/div/div/input");
     By PassMarks = By.id("passmarks");
     By AssignStudentsBtn = By.xpath("//*[contains(@class,'assign-students-btn')]");
@@ -48,7 +51,7 @@ public class Assessment extends Base {
     By instructionsInput = By.xpath("//*[contains(@class,'form-box')]//textarea");
     By HintShowOption = By.xpath("//*[contains(@class,'hint-txt')]/div/div/div");
     By PublishAssessmentBtn = By.xpath("//*[@class='bottom-fix']/div/button[2]");
-    By FirstAssessmentDisplayedTeacher = By.xpath("//*[contains(@class,'d-flex')]//h1");
+    By FirstAssessmentDisplayedTeacher = By.xpath("//*[contains(@class,'assessment-box')]//h1");
     By AssessmentsSearch = By.xpath("//input[@aria-label='Search']");
     By FirstAssessmentDisplayedStudent = By.xpath("//button[contains(@class,'assessment-btn')]");
     By StartAssessmentBtn = By.xpath("//div[contains(@class,'footer')]//button");
@@ -78,6 +81,12 @@ public class Assessment extends Base {
     By OutsideEditBtnDrafts = By.xpath("//a[text()='Edit']");
     By deleteDraft = By.xpath("//*[contains(text(),'Delete')]");
     By StatusTagOnAssessment = By.xpath("//*[contains(@class,'due-take-test')]//div/label");
+    By FBCorrectAnswer = By.xpath("//input[contains(@placeholder, 'correct answer')]");
+    By radioOption = By.xpath("//*[contains(@class, 'radio-item')]");
+    By checkOption = By.xpath("//*[contains(@class, 'option')]//*[contains(@class, 'check ')]");
+
+
+
 
 
     @Attachment(value = "Screenshot", type = "image/png")
@@ -162,13 +171,28 @@ public class Assessment extends Base {
         screenshot();
         return driver.findElement(QuestionBtn);
     }
+    @Step("Choosing MCQ option for question type...")
+    public WebElement MCQOption(){
+        screenshot();
+        return driver.findElement(MCQOption);
+    }
+    @Step("Choosing Fill in the blanks option for question type...")
+    public WebElement FillBlanksOption(){
+        screenshot();
+        return driver.findElement(FillBlanksOption);
+    }
     @Step("Choosing true or false option for question type...")
     public WebElement TrueFalseOption(){
         screenshot();
         return driver.findElement(TrueFalseOption);
     }
+    @Step("Choosing Multiple Response option for question type...")
+    public WebElement MRQOption(){
+        screenshot();
+        return driver.findElement(MRQOption);
+    }
     @Step("Choosing Short answer option for question type...")
-    public WebElement ShortAsnwerOption(){
+    public WebElement ShortAnswerOption(){
         screenshot();
         return driver.findElement(ShortAsnwerOption);
     }
@@ -201,7 +225,7 @@ public class Assessment extends Base {
     public WebElement instructionsInput(){return driver.findElement(instructionsInput);}
     public WebElement HintShowOption(){return driver.findElement(HintShowOption);}
     public WebElement PublishAssessmentBtn(){return driver.findElement(PublishAssessmentBtn);}
-    public WebElement FirstAssessmentDisplayedTeacher(){return driver.findElements(FirstAssessmentDisplayedTeacher).get(1);}
+    public WebElement FirstAssessmentDisplayedTeacher(){return driver.findElement(FirstAssessmentDisplayedTeacher);}
     public WebElement AssessmentsSearch(){return driver.findElement(AssessmentsSearch);}
     public WebElement FirstAssessmentDisplayedStudent(){return driver.findElements(FirstAssessmentDisplayedStudent).get(0);}
     public WebElement StartAssessmentBtn(){return driver.findElement(StartAssessmentBtn);}
@@ -235,6 +259,11 @@ public class Assessment extends Base {
         screenshot();
         return driver.findElement(StudentAccount);
     }
+    @Step("Entering the question fields...")
+    public WebElement FBCorrectAnswer(){
+        screenshot();
+        return driver.findElement(FBCorrectAnswer);
+    }
     public WebElement questionPaperPreview(){return driver.findElement(questionPaperPreview);}
     public WebElement CompletedTabPage(){return driver.findElement(CompletedTabPage);}
     public WebElement DraftsTabPage(){return driver.findElement(DraftsTabPage);}
@@ -248,5 +277,15 @@ public class Assessment extends Base {
     public WebElement deleteDraft(){return driver.findElement(deleteDraft);}
     public List<WebElement> StatusTagOnAssessment(){return driver.findElements(StatusTagOnAssessment);}
 
+    @Step("Selecting Answer...")
+    public WebElement radioOption(){
+        screenshot();
+        return driver.findElement(radioOption);
+    }
+    @Step("Selecting Answer...")
+    public WebElement checkOption(){
+        screenshot();
+        return driver.findElement(checkOption);
+    }
 
 }

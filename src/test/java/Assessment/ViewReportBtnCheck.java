@@ -32,7 +32,7 @@ public class ViewReportBtnCheck extends Base {
     @Epic("This story represents the Assessment module of the onelern_school project.")
     @Description("Examine whether or not the student can successfully open the report.")
     @Story("ASSFS_03")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentdata")
     public void StudentViewReportBtnCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);

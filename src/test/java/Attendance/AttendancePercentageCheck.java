@@ -49,7 +49,7 @@ public class AttendancePercentageCheck extends Base {
     @Epic("This story represents the Attendance module of the onelern_school project.")
     @Description("Examine whether or not the student can successfully the attendance percentage calculated monthly.")
     @Story("ATTFS_03")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentdata")
     public void studentPercentageCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
@@ -66,6 +66,7 @@ public class AttendancePercentageCheck extends Base {
         int totalWorkingDays = totaldaysinmonth - NonWorkingDays.get(att.DisplayedMonthStudent().getText()) - att.holidayMarksStudent().size();
 
         int numberOfPresentDays = att.presentMarksStudent().size();
+        System.out.println(numberOfPresentDays+" "+totalWorkingDays);
         ValidateTest((int)(((float)numberOfPresentDays/totalWorkingDays)*100), attendancePercentage);
 //        ValidateTest(Math.round((float)numberOfPresentDays/totalWorkingDays), attendancePercentage);
     }
@@ -91,9 +92,9 @@ public class AttendancePercentageCheck extends Base {
     @DataProvider(name = "studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-                {"9000000061", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000001", "123456"}};
+//        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
+//                {"9000000061", "123456"}, {"9000000081", "123456"}};
+        Object loginData[][] = {{"9000000001", "123456"}};
         return loginData;
     }
 

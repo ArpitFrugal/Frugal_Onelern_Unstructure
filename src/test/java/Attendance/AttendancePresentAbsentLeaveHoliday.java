@@ -49,7 +49,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
     @Epic("This story represents the Attendance module of the onelern_school project.")
     @Description("Examine whether or not the student can view the count of present, absent, leave, and holiday correctly.")
     @Story("ATTFS_02")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentdata")
     public void studentPALHCountCheck(String mobNumber, String password) throws IOException, InterruptedException {
         boolean flag1, flag2, flag3, flag4;
@@ -81,6 +81,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
         flag3 = valCompare(leaveCount, daysleave);
         flag4 = valCompare(holidayCount, daysholiday);
 
+        System.out.println(flag1+" "+flag2+" "+flag3+" "+flag4);
 
         ValidateTest(flag1 && flag2 && flag3 && flag4);
     }
@@ -90,7 +91,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
     @Epic("This story represents the Attendance module of the onelern_school project.")
     @Description("Examine whether or not the teacher can view the count of present, absent, and leave correctly.")
     @Story("ATTFT_02")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "teacherdata")
     public void teacherPALCountCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
@@ -100,7 +101,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
         Thread.sleep(2000);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        if(driver.findElement(By.xpath("//div[contains(@class,'active')]/button[contains(@class,'holiday')]")).isDisplayed()){
+        if(!att.editAttendanceBtn().isEnabled()){
             ValidateTest(true);
         }
         else {
@@ -144,6 +145,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
                 int absentcount = Integer.parseInt(att.absentCountTeacher().getText().split(" ")[1]);
                 int leavecount = Integer.parseInt(att.leaveCountTeacher().getText().split(" ")[1]);
 
+                System.out.println(totalcount+" "+presentcount+" "+absentcount+" "+leavecount);
                 ValidateTest(totalcount == presentcount+absentcount+leavecount);
             }
         }
