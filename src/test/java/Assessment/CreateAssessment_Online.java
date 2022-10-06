@@ -2,6 +2,7 @@ package Assessment;
 
 import io.qameta.allure.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -54,8 +55,9 @@ public class CreateAssessment_Online extends Base {
 
         ass.MyAssessmentsPage().click();
         Thread.sleep(2000);
-        if(ass.ModalOverlay().isDisplayed())
-            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+//        if(ass.ModalOverlay().isDisplayed())
+//            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(10000);
         ass.CreateNew().click();
         Thread.sleep(2000);
 
@@ -109,6 +111,8 @@ public class CreateAssessment_Online extends Base {
                 webElement.click();
                 webElement.sendKeys("Instructions");
             }else if (cnt == 2) {
+                WebElement Element = QuestionTextBoxes.get(3);
+                js.executeScript("arguments[0].scrollIntoView();", Element);
                 webElement.click();
                 webElement.sendKeys("Hints");
             }else if (cnt == 3) {
@@ -127,17 +131,26 @@ public class CreateAssessment_Online extends Base {
                 Thread.sleep(1500);
             }
         }
-        ass.QuestionsMetadata().get(4).click();
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
-
         ass.MarksInputBox().click();
         Thread.sleep(1000);
         ass.MarksInputBox().sendKeys("01");
         Thread.sleep(2000);
 
-        ass.AddThisQuestionBtn().click();
+
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+//
+        Actions action = new Actions(driver);
+        for(int i=0;i<5;i++){
+            action.sendKeys(Keys.TAB).perform();
+            Thread.sleep(1000);
+        }
+
+        action.sendKeys(Keys.ENTER).perform();
         Thread.sleep(2000);
+
 
         // - -------------------------------------
 
@@ -145,7 +158,10 @@ public class CreateAssessment_Online extends Base {
         ass.MCQOption().click();
 //        if(ass.ModalOverlay().isDisplayed())
 //            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+
+        driver.findElement(By.xpath("//div[contains(@class,'check')]")).click();
+        Thread.sleep(1000);
         QuestionTextBoxes = ass.QuestionInputBoxes();
         cnt=0;
         for(WebElement webElement: QuestionTextBoxes){
@@ -189,17 +205,27 @@ public class CreateAssessment_Online extends Base {
                 Thread.sleep(1500);
             }
         }
-        ass.QuestionsMetadata().get(4).click();
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
 
         ass.MarksInputBox().click();
         Thread.sleep(1000);
         ass.MarksInputBox().sendKeys("01");
         Thread.sleep(2000);
 
-        ass.AddThisQuestionBtn().click();
+
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+
+//        Actions action = new Actions(driver);
+        for(int i=0;i<5;i++){
+            action.sendKeys(Keys.TAB).perform();
+            Thread.sleep(1000);
+        }
+
+        action.sendKeys(Keys.ENTER).perform();
         Thread.sleep(2000);
+
 
         // --------------------------------------
 
@@ -218,7 +244,7 @@ public class CreateAssessment_Online extends Base {
                 webElement.click();
                 webElement.sendKeys("Instructions");
             }else if (cnt == 2) {
-                WebElement Element = QuestionTextBoxes.get(4);
+                WebElement Element = QuestionTextBoxes.get(3);
                 js.executeScript("arguments[0].scrollIntoView();", Element);
                 webElement.click();
                 webElement.sendKeys("Hints");
@@ -242,17 +268,24 @@ public class CreateAssessment_Online extends Base {
                 Thread.sleep(1500);
             }
         }
-        ass.QuestionsMetadata().get(4).click();
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
-
-
         ass.MarksInputBox().click();
         Thread.sleep(1000);
         ass.MarksInputBox().sendKeys("01");
         Thread.sleep(2000);
 
-        ass.AddThisQuestionBtn().click();
+
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+
+//        Actions action = new Actions(driver);
+        for(int i=0;i<5;i++){
+            action.sendKeys(Keys.TAB).perform();
+            Thread.sleep(1000);
+        }
+
+        action.sendKeys(Keys.ENTER).perform();
         Thread.sleep(2000);
 
         // ----------------------------------------------
@@ -262,6 +295,8 @@ public class CreateAssessment_Online extends Base {
 //        if(ass.ModalOverlay().isDisplayed())
 //            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//div[contains(@class,'check')]")).click();
         QuestionTextBoxes = ass.QuestionInputBoxes();
         cnt=0;
         for(WebElement webElement: QuestionTextBoxes){
@@ -306,21 +341,28 @@ public class CreateAssessment_Online extends Base {
                 Thread.sleep(1000);
             }
         }
-        ass.QuestionsMetadata().get(4).click();
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
-        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
-
         ass.MarksInputBox().click();
         Thread.sleep(1000);
         ass.MarksInputBox().sendKeys("01");
         Thread.sleep(2000);
 
-        ass.AddThisQuestionBtn().click();
+
+        ass.QuestionsMetadata().get(4).click();
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ARROW_DOWN);
+        ass.QuestionsMetadata().get(4).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+
+//        Actions action = new Actions(driver);
+        for(int i=0;i<5;i++){
+            action.sendKeys(Keys.TAB).perform();
+            Thread.sleep(1000);
+        }
+
+        action.sendKeys(Keys.ENTER).perform();
         Thread.sleep(2000);
 
 
         // --------------------------------------
-
 
 
         ass.PassMarks().click();
@@ -412,9 +454,9 @@ public class CreateAssessment_Online extends Base {
     // functions.
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] =  {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
-//        Object loginData[][] = {{"9000000101", "123456"}};
+//        Object loginData[][] =  {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+//                {"9000000113", "123456"}, {"9000000117", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
 }

@@ -42,9 +42,7 @@ public class AssessmentsCompletedCheck extends Base {
     @Test(dataProvider = "teacherdata")
     public void teacherCompletedAssessmentsCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
-        user.userLogin("student", mobNumber, password);
-        Thread.sleep(2000);
-        ass.StudentImageClick().click();
+        user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
         ass.AssessmentToggle().click();
         Thread.sleep(2000);
@@ -52,8 +50,8 @@ public class AssessmentsCompletedCheck extends Base {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         ass.MyAssessmentsPage().click();
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
-
+//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        Thread.sleep(2000);
         ass.CompletedTabPage().click();
 
         boolean flag = true;

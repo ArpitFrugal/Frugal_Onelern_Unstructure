@@ -7,18 +7,28 @@
 	<test name="Test">
 		<classes>
 <!--			Below classes cannot run on headless browsers-->
-			<class name="Publish.PublishNewContentCheck"/>
-			<class name="Notebook.viewHighlightsNotesBookmarks"/>
+<!--			<class name="Publish.PublishNewContentCheck"/>-->
+<!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
 
-			<!--			Assessments-->
+
+<!--						Student Groups-->
+			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>
+			<class name="StudentGroups.AddGroupBtnCheck"/>
+			<class name="StudentGroups.AddGroupCheck"/>
+			<class name="StudentGroups.EditGroupCheck"/>
+			<class name="StudentGroups.DeleteGroupCheck"/>
+			<class name="StudentGroups.SearchFunctionalityCheck"/>
+
+
+<!--			&lt;!&ndash;			Assessments&ndash;&gt;-->
 <!--			<class name="Assessment.AssessmentLandingPageCheck"/>-->
 <!--			<class name="Assessment.CreateAssessment_Online"/>-->
 <!--			<class name="Assessment.CreateAssessment_PenPaper"/>-->
 <!--			<class name="Assessment.AssessmentsDraftsCheck"/>-->
+<!--			<class name="Assessment.AssessmentsCompletedCheck"/>-->
 
 
-
-			<!--			Attendance-->
+<!--			&lt;!&ndash;			Attendance&ndash;&gt;-->
 <!--			<class name="Attendance.AttendanceLandingPageCheck"/>-->
 <!--			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/>-->
 <!--			<class name="Attendance.AttendanceMarkHolidayCheck"/>-->
@@ -26,9 +36,7 @@
 <!--			<class name="Attendance.AttendancePaginationCheck"/>-->
 
 
-
-			<!--			Doubts-->
-
+<!--			&lt;!&ndash;			Doubts&ndash;&gt;-->
 <!--			<class name="Doubts.DoubtsLandingPageCheck"/>-->
 <!--			<class name="Doubts.DoubtsAskaDoubt_Student"/>-->
 <!--			<class name="Doubts.DoubtsViewCountCheck"/>-->
@@ -45,6 +53,7 @@
 <!--			<class name="Publish.PublishPagination"/>-->
 <!--			<class name="Publish.PublishTeacherCategoryFilters_Student"/>-->
 <!--			<class name="Publish.PublishSubjectLessonCategoryFilters_Teacher"/>-->
+
 
 <!--			&lt;!&ndash;			Notebook&ndash;&gt;-->
 <!--			<class name="Notebook.NotebookLandingPageCheck"/>-->

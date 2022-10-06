@@ -64,29 +64,23 @@ public class PublishNewContentCheck extends Base {
 
         String FirstContent = pub.PublishContentOnTop().getText();
         if (mob >= 9000000001l && mob <= 9000000020l) {
-            String GradeContent = map.get("Grade 1");
-            ValidateTest(FirstContent, GradeContent);
-//            ValidateTest(FirstContent, "Grade 1 Content 1");
+            ValidateTest(FirstContent, "Grade 1 Content");
         }
 
         else if (mob >= 9000000021l && mob <= 9000000040l) {
-            String GradeContent = map.get("Grade 2");
-            ValidateTest(FirstContent, GradeContent);
+            ValidateTest(FirstContent, "Grade 2 Content");
         }
 
         else if (mob >= 9000000041l && mob <= 9000000060l) {
-            String GradeContent = map.get("Grade 3");
-            ValidateTest(FirstContent, GradeContent);
+            ValidateTest(FirstContent, "Grade 3 Content");
         }
 
         else if (mob >= 9000000061l && mob <= 9000000080l) {
-            String GradeContent = map.get("Grade 4");
-            ValidateTest(FirstContent, GradeContent);
+            ValidateTest(FirstContent, "Grade 4 Content");
         }
 
         else if (mob >= 9000000081l && mob <= 9000000100l) {
-            String GradeContent = map.get("Grade 5");
-            ValidateTest(FirstContent, GradeContent);
+            ValidateTest(FirstContent, "Grade 5 Content");
         }
     }
 
@@ -126,7 +120,7 @@ public class PublishNewContentCheck extends Base {
         Thread.sleep(3000);
 
         if(mob >= 9000000101l && mob <= 9000000104l){
-            String publishContent = "Grade 1 Content " + Publish.contentSequenceCounter;
+            String publishContent = "Grade 1 Content";
             map.put("Grade 1",publishContent);
 
             pub.PublishContentDescriptionTextArea().click();
@@ -150,7 +144,7 @@ public class PublishNewContentCheck extends Base {
             ValidateTest(actual_time, expected_time);
         }
         else if (mob >= 9000000105l && mob <= 9000000108l) {
-            String publishContent = "Grade 2 Content " + Publish.contentSequenceCounter;
+            String publishContent = "Grade 2 Content";
             map.put("Grade 2",publishContent);
 
             pub.PublishContentDescriptionTextArea().click();
@@ -175,7 +169,7 @@ public class PublishNewContentCheck extends Base {
         }
 
         else if (mob >= 9000000109l && mob <= 9000000112l) {
-            String publishContent = "Grade 3 Content " + Publish.contentSequenceCounter;
+            String publishContent = "Grade 3 Content";
             map.put("Grade 3",publishContent);
 
             pub.PublishContentDescriptionTextArea().click();
@@ -200,7 +194,7 @@ public class PublishNewContentCheck extends Base {
         }
 
         else if (mob >= 9000000113l && mob <= 9000000116l) {
-            String publishContent = "Grade 4 Content " + Publish.contentSequenceCounter;
+            String publishContent = "Grade 4 Content";
             map.put("Grade 4",publishContent);
 
             pub.PublishContentDescriptionTextArea().click();
@@ -225,7 +219,7 @@ public class PublishNewContentCheck extends Base {
         }
 
         else if (mob >= 9000000117l && mob <= 9000000120l) {
-            String publishContent = "Grade 5 Content " + Publish.contentSequenceCounter;
+            String publishContent = "Grade 5 Content";
             map.put("Grade 5",publishContent);
 
             pub.PublishContentDescriptionTextArea().click();
@@ -248,7 +242,6 @@ public class PublishNewContentCheck extends Base {
             String expected_time = "a minute ago a few seconds ago";
             ValidateTest(actual_time, expected_time);
         }
-        Publish.contentSequenceCounter++;
     }
 
 

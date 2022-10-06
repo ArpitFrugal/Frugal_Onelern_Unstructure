@@ -144,10 +144,14 @@ public class Doubts extends Base {
     public WebElement insertedImage(){return driver.findElement(insertedImage);}
     public WebElement insertedVideo(){return driver.findElement(insertedVideo);}
     @Step("Undo option is selected in question field...")
-    public WebElement UndoOption(){return driver.findElement(UndoOption);
+    public WebElement UndoOption(){
+        screenshot();
+        return driver.findElement(UndoOption);
     }
     @Step("Redo option is selected in question field...")
-    public WebElement RedoOption(){return driver.findElement(RedoOption);
+    public WebElement RedoOption(){
+        screenshot();
+        return driver.findElement(RedoOption);
     }
 
     //    Filter Functionality

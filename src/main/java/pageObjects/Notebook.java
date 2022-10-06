@@ -26,7 +26,7 @@ public class Notebook extends Base {
 
 
     // Grade check
-    By CoursebooksGradeTextGrade = By.className("svelte-uh84k1");
+    By CoursebooksGradeTextGrade = By.xpath("//*[contains(@class,'book ')]//div[contains(@class,'form-details')]");
 
     // lesson name verify
     By EnvironmentalCoursebookGrade1 = By.xpath("//*[@id='61606a629e1fe601b5ee768c']/img");

@@ -92,12 +92,11 @@ public class GradeCheck extends Base {
 
 			ValidateTest(actual_grade, expected_grade);
 		}
-
 	}
 
-	@Epic("This story represents the Library module of the onelern_school project.")
+	@Epic("This story represents the Lesson Delivery module of the onelern_school project.")
 	@Description("To see if a teacher of a specific grade has the correct grade book")
-	@Story("LIBFT_02")
+	@Story("LDFT_02")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(dataProvider = "Teachersdata")
 	public void CheckTeacherBookGrade(String mobNumber, String password) throws IOException, InterruptedException {

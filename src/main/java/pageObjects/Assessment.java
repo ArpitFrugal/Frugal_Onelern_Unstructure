@@ -58,7 +58,7 @@ public class Assessment extends Base {
     By PasswordInputStudent = By.id("password");
     By PasswordSubmitBtnStudent = By.xpath("//div[contains(@class,'modal-footer')]//button");
     By NextQuestionBtn = By.xpath("//*[contains(@class,'btn-next')]");
-    By TrueOptionAnswer = By.xpath("//*[contains(@class,'exam-section')]//label");
+    By AttemptAnswerOption = By.xpath("//*[contains(@class,'exam-section')]//label");
     By AssessmentSubmitBtn = By.xpath("//*[contains(@class,'submit-btn')]");
     By FinalSubmitAssessment = By.id("submitAssessment");
     By ModuleHeading = By.xpath("//*[contains(@class,'top-div')]//h1");
@@ -232,7 +232,7 @@ public class Assessment extends Base {
     public WebElement PasswordInputStudent(){return driver.findElement(PasswordInputStudent);}
     public WebElement PasswordSubmitBtnStudent(){return driver.findElement(PasswordSubmitBtnStudent);}
     public WebElement NextQuestionBtn(){return driver.findElement(NextQuestionBtn);}
-    public WebElement TrueOptionAnswer(){return driver.findElement(TrueOptionAnswer);}
+    public WebElement AttemptAnswerOption(){return driver.findElement(AttemptAnswerOption);}
     public WebElement AssessmentSubmitBtn(){return driver.findElement(AssessmentSubmitBtn);}
     public WebElement FinalSubmitAssessment(){return driver.findElement(FinalSubmitAssessment);}
     public WebElement ModuleHeading(){return driver.findElement(ModuleHeading);}

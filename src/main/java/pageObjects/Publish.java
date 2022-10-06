@@ -9,7 +9,6 @@ import java.util.List;
 
 public class Publish extends Base {
     public WebDriver driver;
-    public static int contentSequenceCounter = 1;
 
     By StudentImageClick = By.xpath("//div[@class='d-flex justify-content-center align-items-center flex-column']//div[2]//button[1]//img[1]");
     By PublishToggle = By.id("publish");

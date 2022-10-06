@@ -1,4 +1,4 @@
-package Attendance;
+package StudentGroups;
 
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
@@ -7,16 +7,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pageObjects.Attendance;
 import pageObjects.LoginPage;
+import pageObjects.StudentGroups;
 import resources.Base;
 import testResource.BaseLogin;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
-public class AttendanceMarkHolidayCheck extends Base {
-    public Attendance att;
+public class StudentGroupsLandingPageCheck extends Base {
+    public StudentGroups sg;
     public LoginPage log;
     public WebDriver driver;
 
@@ -25,43 +25,35 @@ public class AttendanceMarkHolidayCheck extends Base {
         driver = initializeDriver();
         driver.manage().window().maximize();
         driver.get(prop.getProperty("url"));
-        att = new Attendance(driver);
+        sg = new StudentGroups(driver);
         log = new LoginPage(driver);
     }
 
-
-    @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can mark a day as holiday or mark attendance for any particular day.")
-    @Story("ATTFT_03")
-    @Severity(SeverityLevel.BLOCKER)
-    @Test(dataProvider = "teacherdata")
-    public void teacherMarkHolidayCheck(String mobNumber, String password) throws IOException, InterruptedException {
-        BaseLogin user = new BaseLogin(driver);
-        user.userLogin("teacher", mobNumber, password);
-        Thread.sleep(2000);
-        att.AttendanceToggle().click();
-        Thread.sleep(2000);
-
-        boolean markedForToday = att.notMarkedTeacher().size() > 0;
-
-        if(markedForToday){
-            att.markasholidayBtn().click();
-            ValidateTest(att.holidayMarksTeacher().size(), Integer.parseInt(att.totalCountTeacher().getText().split(" ")[2]));
+    public void ValidateTest(String actual_header){
+        System.out.println(actual_header);
+        if (actual_header.contains("Student Groups")) {
+            System.out.println("Student Groups Module is active");
         }
-        else{
-            System.out.println("Attendance already marked for the day.");
-            ValidateTest(1,1);
+        else {
+            Assert.fail();
         }
     }
 
-    private void ValidateTest(int actual, int expected) {
-        System.out.println(actual+" "+expected);
-        if(actual == expected){
-            System.out.println("PASSED");
-        }
-        else{
-            Assert.fail();
-        }
+    @Epic("This story represents the Student Groups module of the onelern_school project.")
+    @Description("Examine whether or not the teacher can successfully get inside the Student Groups module.")
+    @Story("SGFT-01")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(dataProvider = "teacherdata")
+    public void teacherLanding(String mobNumber, String password) throws IOException, InterruptedException {
+        BaseLogin user = new BaseLogin(driver);
+        user.userLogin("teacher", mobNumber, password);
+        Thread.sleep(2000);
+        sg.rightswipemodules().click();
+        sg.StudentGroupsToggle().click();
+        Thread.sleep(2000);
+
+        String actual_header = sg.GetHeader().getText();
+        ValidateTest(actual_header);
     }
 
     @AfterMethod
@@ -71,7 +63,6 @@ public class AttendanceMarkHolidayCheck extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
-
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
         Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
@@ -79,5 +70,4 @@ public class AttendanceMarkHolidayCheck extends Base {
 //        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
-
 }

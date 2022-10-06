@@ -169,7 +169,7 @@ public class AudioCheck extends Base {
     @Story("LIBFT_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "Teacherdata")
-    public void teacherVideocheck(String mobNumber, String password) throws IOException, InterruptedException {
+    public void teacherAudiocheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
