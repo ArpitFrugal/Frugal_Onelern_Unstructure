@@ -10,19 +10,43 @@
 <!--			<class name="Publish.PublishNewContentCheck"/>-->
 <!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
 
+<!--			Lesson Delivery-->
+			<class name="LessonDelivery.LessonDeliveryLandingPageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryGradeCheck"/>
+			<class name="LessonDelivery.LessonDeliveryWorkbookNameVerify"/>
+			<class name="LessonDelivery.LessonDeliveryLessonNameVerify"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanCheck"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanOverviewCheck"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanComponentsCheck"/>
+			<class name="LessonDelivery.LessonDeliveryStartEndSessionCheck"/>
+			<class name="LessonDelivery.LessonDeliveryCompletedOngoingTagCheck"/>
+			<class name="LessonDelivery.LessonDeliveryCreateLearningPlanCheck"/>
+			<class name="LessonDelivery.LessonDeliveryEditLearningPlan"/>
+			<class name="LessonDelivery.LessonDeliveryDeleteLearningPlan"/>
+			<class name="LessonDelivery.LessonDeliveryCompletePercentageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertLinkCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertImageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertPDFCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertAudioCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertVideoCheck"/>
 
+
+			
+			
+			
+			
 <!--						Student Groups-->
-			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>
-			<class name="StudentGroups.AddGroupBtnCheck"/>
-			<class name="StudentGroups.AddGroupCheck"/>
-			<class name="StudentGroups.EditGroupCheck"/>
-			<class name="StudentGroups.DeleteGroupCheck"/>
-			<class name="StudentGroups.SearchFunctionalityCheck"/>
+<!--			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>-->
+<!--			<class name="StudentGroups.AddGroupBtnCheck"/>-->
+<!--			<class name="StudentGroups.AddGroupCheck"/>-->
+<!--			<class name="StudentGroups.EditGroupCheck"/>-->
+<!--			<class name="StudentGroups.DeleteGroupCheck"/>-->
+<!--			<class name="StudentGroups.SearchFunctionalityCheck"/>-->
 
 
 <!--			&lt;!&ndash;			Assessments&ndash;&gt;-->
 <!--			<class name="Assessment.AssessmentLandingPageCheck"/>-->
-<!--			<class name="Assessment.CreateAssessment_Online"/>-->
+			<class name="Assessment.CreateAssessment_Online"/>
 <!--			<class name="Assessment.CreateAssessment_PenPaper"/>-->
 <!--			<class name="Assessment.AssessmentsDraftsCheck"/>-->
 <!--			<class name="Assessment.AssessmentsCompletedCheck"/>-->
