@@ -71,7 +71,7 @@ public class LessonDeliveryWorkbookNameVerify extends Base {
 			element.click();
 			ThreadSleep5000();
 			String text = ld.WorkbookHeading().getText();
-			String workbookName = "Environmental Studies Coursebook - Part A";
+			String workbookName = "Lesson Delivery";
 
 			ValidateTest(workbookName, text);
 		}
@@ -83,7 +83,7 @@ public class LessonDeliveryWorkbookNameVerify extends Base {
 			element.click();
 			ThreadSleep5000();
 			String text = ld.WorkbookHeading().getText();
-			String workbookName = "English Coursebook - Part A";
+			String workbookName = "Lesson Delivery";
 
 			ValidateTest(workbookName, text);
 		}
@@ -95,7 +95,7 @@ public class LessonDeliveryWorkbookNameVerify extends Base {
 			element.click();
 			ThreadSleep5000();
 			String text = ld.WorkbookHeading().getText();
-			String workbookName = "Mathematics Coursebook - Part A";
+			String workbookName = "Lesson Delivery";
 
 			ValidateTest(workbookName, text);
 		}
@@ -107,7 +107,7 @@ public class LessonDeliveryWorkbookNameVerify extends Base {
 			element.click();
 			ThreadSleep5000();
 			String text = ld.WorkbookHeading().getText();
-			String workbookName = "English Coursebook - Part A";
+			String workbookName = "Lesson Delivery";
 
 			ValidateTest(workbookName, text);
 		}
@@ -119,7 +119,7 @@ public class LessonDeliveryWorkbookNameVerify extends Base {
 			element.click();
 			ThreadSleep5000();
 			String text = ld.WorkbookHeading().getText();
-			String workbookName = "Mathematics Coursebook - Part A";
+			String workbookName = "Lesson Delivery";
 
 			ValidateTest(workbookName, text);
 		}

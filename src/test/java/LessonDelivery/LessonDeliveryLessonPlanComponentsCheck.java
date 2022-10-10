@@ -69,7 +69,7 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         String blackColor = "#131536";
-        String blueColor = "#474bff";
+        String blueColor = "rgba(71, 75, 255, 1)";
         boolean flag1, flag2, flag3, flag4;
         String color;
 
@@ -91,21 +91,21 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
 
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ApplyComponent().getCssValue("color");
             flag2 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.AssessComponent().getCssValue("color");
             flag3 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ReviewComponent().getCssValue("color");
             flag4 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ReviewComponent().click();
@@ -272,9 +272,9 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
     @DataProvider(name = "Teachersdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
 
-//        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-//                { "9000000114", "123456" }, { "9000000120", "123456" } };
-        Object loginData[][] = { { "9000000101", "123456" }};
+        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
+                { "9000000114", "123456" }, { "9000000120", "123456" } };
+//        Object loginData[][] = { { "9000000101", "123456" }};
         return loginData;
     }
 }

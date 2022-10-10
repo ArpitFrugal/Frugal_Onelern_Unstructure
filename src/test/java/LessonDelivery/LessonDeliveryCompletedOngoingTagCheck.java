@@ -75,7 +75,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
+            Thread.sleep(2000);
             if(ld.LearningPlanStatus().getText().contains("Completed")){
                 // completed
                 flag = true;
@@ -232,9 +232,9 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
     @DataProvider(name = "Teachersdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
 
-//        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-//                { "9000000114", "123456" }, { "9000000120", "123456" } };
-        Object loginData[][] = { { "9000000101", "123456" }};
+        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
+                { "9000000114", "123456" }, { "9000000120", "123456" } };
+//        Object loginData[][] = { { "9000000101", "123456" }};
         return loginData;
     }
 }

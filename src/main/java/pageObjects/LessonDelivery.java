@@ -59,7 +59,12 @@ public class LessonDelivery extends Base {
     By LinkInputBox = By.xpath("//*[contains(@class, 'link-modal-body')]/input");
     By AddLinkBtn = By.xpath("//*[contains(@class, 'link-modal-footer')]/button[2]");
     By previewLink = By.xpath("//*[contains(@class, 'preview-link')]");
-
+    By ImageFileSelectionOption = By.id("image-type");
+    By PDFFileSelectionOption = By.id("pdf-type");
+    By AudioFileSelectionOption = By.id("audio-type");
+    By VideoFileSelectionOption = By.id("video-type");
+    By FilePreview = By.xpath("//div[contains(@class, 'file-preview')]");
+    By DisplayedFileFormat = By.xpath("//h6[contains(@class, 'file-preview')]");
 
 
 
@@ -160,6 +165,13 @@ public class LessonDelivery extends Base {
     public WebElement LinkInputBox(){return driver.findElement(LinkInputBox);}
     public WebElement AddLinkBtn(){return driver.findElement(AddLinkBtn);}
     public WebElement previewLink(){return driver.findElement(previewLink);}
+    public WebElement ImageFileSelectionOption(){return driver.findElement(ImageFileSelectionOption);}
+    public WebElement PDFFileSelectionOption(){return driver.findElement(PDFFileSelectionOption);}
+    public WebElement AudioFileSelectionOption(){return driver.findElement(AudioFileSelectionOption);}
+    public WebElement VideoFileSelectionOption(){return driver.findElement(VideoFileSelectionOption);}
+    public WebElement FilePreview(){return driver.findElement(FilePreview);}
+    public WebElement DisplayedFileFormat(){return driver.findElement(DisplayedFileFormat);}
+
 
 
 
