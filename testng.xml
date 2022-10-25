@@ -9,7 +9,24 @@
 <!--			Below classes cannot run on headless browsers-->
 <!--			<class name="Publish.PublishNewContentCheck"/>-->
 <!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
-
+			
+<!--			Analytics-->
+<!--			<class name="Analytics.AnalyticsLandingPageCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentsCountCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesAttemptedCountCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentProfileCheck"/>-->
+<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentGradeCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQTopicsenabledisableCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQLessonsTopicCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQStudentsCountCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQAttemptedCountCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQStudentProfileCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoSQStudentGradeCheck"/>-->
+<!--			<class name="Analytics.AnalyticsEoLTAttemptedCountCheck"/>-->
+			
+			
 <!--			Lesson Delivery-->
 <!--			<class name="LessonDelivery.LessonDeliveryLandingPageCheck"/>-->
 <!--			<class name="LessonDelivery.LessonDeliveryGradeCheck"/>-->
