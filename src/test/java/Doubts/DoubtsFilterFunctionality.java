@@ -203,17 +203,17 @@ public class DoubtsFilterFunctionality extends Base {
     @DataProvider(name = "studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-//        Object loginData[][] = {{"9000000001", "123456"}, {"9000000024", "123456"}, {"9000000046", "123456"},
-//                {"9000000069", "123456"}, {"9000000081", "123456"}};
-        Object loginData[][] = {{"9000000001", "123456"}};
+        Object loginData[][] = {{"9000000001", "123456"}, {"9000000024", "123456"}, {"9000000046", "123456"},
+                {"9000000069", "123456"}, {"9000000081", "123456"}};
+//        Object loginData[][] = {{"9000000001", "123456"}};
         return loginData;
     }
 
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-//        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-//                {"9000000113", "123456"}, {"9000000117", "123456"}};
-        Object loginData[][] = {{"9000000101", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+                {"9000000113", "123456"}, {"9000000117", "123456"}};
+//        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
 }

@@ -1,25 +1,26 @@
-package Assessment;
+package Analytics;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pageObjects.Assessment;
+import pageObjects.Analytics;
 import pageObjects.LoginPage;
 import resources.Base;
 import testResource.BaseLogin;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
-import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
 
-public class AssessmentsOngoingCheck extends Base {
-    public Assessment ass;
+public class AnalyticsLearningOutcomesStudentsCountCheck extends Base {
+    public Analytics ana;
     public LoginPage log;
     public WebDriver driver;
 
@@ -28,37 +29,41 @@ public class AssessmentsOngoingCheck extends Base {
         driver = initializeDriver();
         driver.manage().window().maximize();
         driver.get(prop.getProperty("url"));
-        ass = new Assessment(driver);
+        ana = new Analytics(driver);
         log = new LoginPage(driver);
     }
 
-    @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully fetch ongoing assessments from ongoing tab.")
-    @Story("ASSFT_05")
-    @Severity(SeverityLevel.NORMAL)
+    @Epic("This story represents the Analytics module of the onelern_school project.")
+    @Description("Examine whether or not the teacher should be able to view all the attempted students.")
+    @Story("ANAFT_05")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherdata")
-    public void teacherOngoingAssessmentsCheck(String mobNumber, String password) throws IOException, InterruptedException {
+    public void LearningOutcomesStudentsCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
-        ass.AssessmentToggle().click();
+        ana.AnalyticsToggle().click();
         Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        ass.MyAssessmentsPage().click();
-        Thread.sleep(2000);
-//        wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
+        ana.LearningOutcomeOpenBtn().click();
+        Thread.sleep(3000);
+        System.out.println(ana.AttemptedCount());
+        System.out.println(List.of(ana.AttemptedCount().split(" ")));
+        int attemptedCount = Integer.parseInt(List.of(ana.AttemptedCount().split(" ")).get(1));
+        int displayedStudents = ana.AttemptedStudents().size();
 
-        ass.OngoingTabPage().click();
-
-        Validate(ass.StatusTagOnAssessment().size());
+        ValidateTest(attemptedCount, displayedStudents);
     }
-
-    private void Validate(int size) {
-        if(size > 0)
+    public void ValidateTest(int actual, int expected){
+        System.out.println(actual+" "+expected);
+        if(actual == expected){
             System.out.println("PASSED");
-        else
+        }
+        else{
             Assert.fail();
+        }
     }
 
     @AfterMethod
@@ -68,6 +73,7 @@ public class AssessmentsOngoingCheck extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
+
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
         Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},

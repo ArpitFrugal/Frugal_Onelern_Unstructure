@@ -843,7 +843,7 @@ public class viewHighlightsNotesBookmarks extends Base {
 
         Object loginData[][] = { { "9000000001", "123456" }, { "9000000021", "123456" }, { "9000000041", "123456" },
                 { "9000000061", "123456" }, { "9000000081", "123456" } };
-//        Object loginData[][] = { { "9000000001", "123456" }};
+//        Object loginData[][] = { { "9000000041", "123456" }};
         return loginData;
     }
 
@@ -852,7 +852,7 @@ public class viewHighlightsNotesBookmarks extends Base {
 
         Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
                 { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { };
+//        Object loginData[][] = { { "9000000101", "123456" }};
         return loginData;
     }
 

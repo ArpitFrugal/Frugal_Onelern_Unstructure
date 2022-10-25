@@ -52,22 +52,22 @@ public class AttemptAssessment extends Base {
 
         ass.PasswordInputStudent().click();
         ass.PasswordInputStudent().sendKeys("password");
-//        ass.PasswordInputStudent().sendKeys("password");
 
         ass.PasswordSubmitBtnStudent().click();
         ass.NextQuestionBtn().click();
 
+        Thread.sleep(3000);
         ass.AttemptAnswerOption().click();
 
-        ass.NextQuestionBtn().click();
-        ass.AttemptAnswerOption().click();
-        Thread.sleep(1000);
-        ass.AttemptAnswerOption().click();
-
-        ass.NextQuestionBtn().click();
-        ass.AttemptAnswerOption().click();
-
-        ass.NextQuestionBtn().click();
+//        ass.NextQuestionBtn().click();
+//        ass.AttemptAnswerOption().click();
+//        Thread.sleep(1000);
+//        ass.AttemptAnswerOption().click();
+//
+//        ass.NextQuestionBtn().click();
+//        ass.AttemptAnswerOption().click();
+//
+//        ass.NextQuestionBtn().click();
 
 
         ass.AssessmentSubmitBtn().click();

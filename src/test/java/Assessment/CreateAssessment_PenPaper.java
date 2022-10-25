@@ -96,8 +96,8 @@ public class CreateAssessment_PenPaper extends Base {
 //            wait.until(ExpectedConditions.invisibilityOf(ass.ModalOverlay()));
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//button[contains(@class, 'toolbar-btn')]")).click();
-        Thread.sleep(1000);
+//        driver.findElement(By.xpath("//button[contains(@class, 'toolbar-btn')]")).click();
+//        Thread.sleep(1000);
         List<WebElement> QuestionTextBoxes = ass.QuestionInputBoxes();
         int cnt=0;
         for(WebElement webElement: QuestionTextBoxes){

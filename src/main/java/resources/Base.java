@@ -32,10 +32,10 @@ public class Base {
 
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-//			driver = new ChromeDriver();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+//			driver = new ChromeDriver(options);
 		}
 
 		else if (browserName.equals("firefox")) {

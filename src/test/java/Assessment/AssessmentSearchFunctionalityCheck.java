@@ -3,6 +3,7 @@ package Assessment;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -60,7 +61,7 @@ public class AssessmentSearchFunctionalityCheck extends Base {
 
     private void ValidateTest(int actual_result) {
         System.out.println(actual_result);
-        if(actual_result == 1)
+        if(actual_result >= 1)
             System.out.println("PASSED");
         else
             Assert.fail();
@@ -87,9 +88,13 @@ public class AssessmentSearchFunctionalityCheck extends Base {
         ass.CompletedTabPage().click();
 
         ass.AssessmentsSearch().click();
-        ass.AssessmentsSearch().sendKeys("Assessment13579");
+        Thread.sleep(2000);
+        ass.AssessmentsSearch().sendKeys("New Assessment");
+        Thread.sleep(3000);
+//        ass.AssessmentsSearch().sendKeys(Keys.ENTER);
 
-        int NoOfAssessmentsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'assessment-box')]//h1[text()='Assessment13579']")).size();
+
+        int NoOfAssessmentsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'assessment-box')]//h1[text()='New Assessment']")).size();
 
         ValidateTest(NoOfAssessmentsDisplayed);
 
