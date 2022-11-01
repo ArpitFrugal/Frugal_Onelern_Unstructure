@@ -10,6 +10,22 @@
 <!--			<class name="Publish.PublishNewContentCheck"/>-->
 <!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
 			
+<!--			Assignment-->
+			<class name="Assignments.AssignmentsLandingPageCheck"/>
+			<class name="Assignments.CreateAssignmentCheck"/>
+			<class name="Assignments.AssignmentScheduledPageCheck"/>
+			<class name="Assignments.AssignmentOngoingPageCheck"/>
+			<class name="Assignments.AssignmentDraftsPageCheck"/>
+			<class name="Assignments.AssignmentCompletedPageCheck"/>
+			<class name="Assignments.AssignmentCancelledPageCheck"/>
+			<class name="Assignments.CreateAssignmentForStudent"/>
+			<class name="Assignments.StartAssignment"/>
+			<class name="Assignments.PaginationCheck"/>
+
+			
+			
+			
+			
 <!--			Analytics-->
 <!--			<class name="Analytics.AnalyticsLandingPageCheck"/>-->
 <!--			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>-->

@@ -54,6 +54,7 @@ public class AttemptAssessment extends Base {
         ass.PasswordInputStudent().sendKeys("password");
 
         ass.PasswordSubmitBtnStudent().click();
+        Thread.sleep(3000);
         ass.NextQuestionBtn().click();
 
         Thread.sleep(3000);

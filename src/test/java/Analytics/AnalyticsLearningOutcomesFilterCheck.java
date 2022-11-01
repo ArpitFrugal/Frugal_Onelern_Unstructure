@@ -52,6 +52,7 @@ public class AnalyticsLearningOutcomesFilterCheck extends Base {
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
         Thread.sleep(2000);
+        ana.PerformanceTab().click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         int no_of_LO_displayed;
         boolean flag1 = false, flag2 = false;

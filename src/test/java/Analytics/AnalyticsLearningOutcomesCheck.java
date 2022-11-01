@@ -53,6 +53,7 @@ public class AnalyticsLearningOutcomesCheck extends Base {
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
         Thread.sleep(2000);
+        ana.PerformanceTab().click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         boolean flag1, flag2;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");

@@ -58,6 +58,8 @@ public class Publish extends Base {
 
 
 
+
+
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] screenshot() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -176,5 +178,8 @@ public class Publish extends Base {
     public List<WebElement> TeacherFilterOptions(){return driver.findElements(TeacherFilterOptions);}
     public List<WebElement> ContentList(){return driver.findElements(ContentList);}
     public WebElement FirstCategoryFilterOption(){return driver.findElement(FirstCategoryFilterOption);}
+
+
+
 
 }

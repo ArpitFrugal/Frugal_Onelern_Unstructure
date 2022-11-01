@@ -42,6 +42,7 @@ public class AnalyticsEoSQStudentsCountCheck extends Base {
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
         Thread.sleep(2000);
+        ana.PerformanceTab().click();
 
         ana.ViewWEoSQ().click();
 

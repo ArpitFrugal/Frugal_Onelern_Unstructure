@@ -56,6 +56,7 @@ public class AnalyticsEoLTAttemptedCountCheck extends Base {
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
         Thread.sleep(2000);
+        ana.PerformanceTab().click();
         boolean flag1, flag2, flag3;
 
         ana.ViewEoLT().click();

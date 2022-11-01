@@ -11,6 +11,7 @@ public class Analytics extends Base {
     public WebDriver driver;
 
     By AnalyticsToggle = By.id("analytics");
+    By PerformanceTab = By.xpath("//*[contains(@class, 'page-tabs')]//div[2]");
     By GetHeader = By.xpath("//header/div/div/h1");
     By LearningOutcomes = By.xpath("//div[contains(@class, 'lo-block')]//table//tbody/tr");
     By LearningOutcomesFilterDropdown = By.xpath("//div[contains(@class, 'lo-block')]//select");
@@ -83,7 +84,7 @@ public class Analytics extends Base {
     public int recentLevelsTotalStudents(){
         return Integer.parseInt(List.of(driver.findElement(recentLevelsTotalStudents).getText().split(" ")).get(2));
     }
-
+    public WebElement PerformanceTab(){return driver.findElement(PerformanceTab);}
 
 
 
