@@ -53,12 +53,12 @@ public class AnalyticsEoSQAttemptedCountCheck extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         ana.PerformanceTab().click();
         boolean flag1, flag2, flag3;
-
+        Thread.sleep(2000);
         ana.ViewWEoSQ().click();
-
+        Thread.sleep(2000);
         ana.EoSQLesson1().click();
         ana.EoSQAttemptedTopic1().click();
 

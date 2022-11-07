@@ -92,9 +92,9 @@ public class AttendancePercentageCheck extends Base {
     @DataProvider(name = "studentdata")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
 
-//        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-//                {"9000000061", "123456"}, {"9000000081", "123456"}};
-        Object loginData[][] = {{"9000000001", "123456"}};
+        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
+                {"9000000061", "123456"}, {"9000000081", "123456"}};
+//        Object loginData[][] = {{"9000000001", "123456"}};
         return loginData;
     }
 

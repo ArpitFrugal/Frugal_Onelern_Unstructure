@@ -55,7 +55,7 @@ public class AnalyticsEoLTAttemptedCountCheck extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
         ana.AnalyticsToggle().click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         ana.PerformanceTab().click();
         boolean flag1, flag2, flag3;
 
@@ -81,9 +81,9 @@ public class AnalyticsEoLTAttemptedCountCheck extends Base {
 
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
-//        Object loginData[][] = {{"9000000101", "123456"}};
+//        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+//                {"9000000113", "123456"}, {"9000000117", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
 }

@@ -14,7 +14,7 @@ public class Attendance extends Base {
     By GetHeader = By.xpath("//header/div/div[1]/span");
     By presentMarksStudent = By.xpath("//*[contains(@class,'present ')]");
     By absentMarksStudent = By.xpath("//*[contains(@class,'absent ')]");
-    By leaveMarksStudent = By.xpath("//*[contains(@class,'leave ')]");
+    By leaveMarksStudent = By.xpath("//*[contains(@class,' leave ')]");
     By holidayMarksStudent = By.xpath("//*[contains(@class,'holiday ')]");
     By presentCountStudent = By.xpath("//*[contains(@class,'present-tag')]/span[2]");
     By absentCountStudent = By.xpath("//*[contains(@class,'absent-tag')]/span[2]");

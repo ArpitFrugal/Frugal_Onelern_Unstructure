@@ -92,9 +92,17 @@ public class DoubtsFilterFunctionality extends Base {
         no_of_doubts = dou.displayedDoubtSubjectDetails().size();
         for(int i=1; i<=no_of_doubts;i++){
             WebElement webElement = driver.findElement(By.xpath("//div[contains(@class, 'doubts-card')]["+i+"]//div[contains(@class, 'subject-details')]"));
-            flag3 = textCheck(webElement.getText(), selectedFilterSubject);
-            if(!flag3){
-                break;
+            if(webElement.getText().contains("Environmental") || webElement.getText().contains("EVS")){
+                flag3 = textCheck(webElement.getText(), selectedFilterSubject) || textCheck(webElement.getText(), "EVS");
+                if(!flag3){
+                    break;
+                }
+            }
+            else{
+                flag3 = textCheck(webElement.getText(), selectedFilterSubject);
+                if(!flag3){
+                    break;
+                }
             }
         }
         dou.FilterSubjectThirdSubject_Student().click();

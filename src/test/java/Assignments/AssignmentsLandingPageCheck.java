@@ -31,9 +31,9 @@ public class AssignmentsLandingPageCheck extends Base {
         log = new LoginPage(driver);
     }
 
-    public void ValidateTest(String actual_header){
-        System.out.println(actual_header);
-        if (actual_header.equals("Assignments")) {
+    public void ValidateTest(String actual_header, String expected_header){
+        System.out.println(actual_header+"\n"+expected_header);
+        if (actual_header.contains(expected_header)) {
             System.out.println("Assignments Module is active");
         }
         else {
@@ -59,7 +59,8 @@ public class AssignmentsLandingPageCheck extends Base {
 
         String actual_header = asg.GetHeader();
         Thread.sleep(1000);
-        ValidateTest(actual_header);
+        String expected_header = "Assignments";
+        ValidateTest(actual_header, expected_header);
     }
 
     @Epic("This story represents the Assignments module of the onelern_school project.")
@@ -74,7 +75,8 @@ public class AssignmentsLandingPageCheck extends Base {
         asg.AssignmentsToggle().click();
 
         String actual_header = asg.GetHeader();
-        ValidateTest(actual_header);
+        String expected_header = "Scheduled Assignments";
+        ValidateTest(actual_header, expected_header);
 
     }
 
@@ -97,9 +99,9 @@ public class AssignmentsLandingPageCheck extends Base {
 
     @DataProvider(name = "teacherdata")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-//        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-//                {"9000000113", "123456"}, {"9000000117", "123456"}};
-        Object loginData[][] = {{"9000000101", "123456"}};
+        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+                {"9000000113", "123456"}, {"9000000117", "123456"}};
+//        Object loginData[][] = {{"9000000101", "123456"}};
         return loginData;
     }
 
