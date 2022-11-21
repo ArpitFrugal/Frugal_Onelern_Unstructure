@@ -16,6 +16,12 @@ public class LoginPage extends Base {
     By okText = By.id("ok-btn");
     By UserName = By.id("mobile-number");
 
+    // Admin
+    By userEmailID = By.id("userid");
+    By PasswordInput = By.id("password");
+    By adminLoginBtn = By.id("login-btn");
+
+
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] screenshot() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -75,4 +81,12 @@ public class LoginPage extends Base {
     public WebElement okText() {
         return driver.findElement(okText);
     }
+
+
+    // Admin
+    public WebElement userEmailID(){return driver.findElement(userEmailID);}
+    public WebElement PasswordInput(){return driver.findElement(PasswordInput);}
+    public WebElement adminLoginBtn(){return driver.findElement(adminLoginBtn);}
+
+
 }

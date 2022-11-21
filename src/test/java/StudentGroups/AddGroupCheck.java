@@ -64,7 +64,7 @@ public class AddGroupCheck extends Base {
         sg.SelectAllStudentsSubmit().click();
         sg.SaveGroup().click();
 
-        String CreatedGroup = sg.GroupCards().get(sg.GroupCards().size()-1).getText();
+        String CreatedGroup = sg.GroupCards().get(0).getText();
         ValidateTest(CreatedGroup);
     }
 

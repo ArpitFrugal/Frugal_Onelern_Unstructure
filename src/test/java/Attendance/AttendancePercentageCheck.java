@@ -15,6 +15,7 @@ import testResource.BaseLogin;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AttendancePercentageCheck extends Base {
@@ -61,13 +62,11 @@ public class AttendancePercentageCheck extends Base {
         Thread.sleep(2000);
 
         int attendancePercentage = Integer.parseInt(att.AttendancePercentage().getText().split(" ")[1].split("%")[0]);
-        int totaldaysinmonth = att.AllDaysList().size();
 
-        int totalWorkingDays = totaldaysinmonth - NonWorkingDays.get(att.DisplayedMonthStudent().getText()) - att.holidayMarksStudent().size();
-
+        int totalClassesHeld = Integer.parseInt(List.of(att.heldCountStudent().getText().split(" ")).get(2));
         int numberOfPresentDays = att.presentMarksStudent().size();
-        System.out.println(numberOfPresentDays+" "+totalWorkingDays);
-        ValidateTest((int)(((float)numberOfPresentDays/totalWorkingDays)*100), attendancePercentage);
+        System.out.println(numberOfPresentDays+" "+totalClassesHeld);
+        ValidateTest((int)(((float)numberOfPresentDays/totalClassesHeld)*100), attendancePercentage);
 //        ValidateTest(Math.round((float)numberOfPresentDays/totalWorkingDays), attendancePercentage);
     }
 

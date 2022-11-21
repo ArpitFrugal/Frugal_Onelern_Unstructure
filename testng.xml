@@ -7,10 +7,27 @@
 	<test name="Test">
 		<classes>
 <!--			Below classes cannot run on headless browsers-->
-<!--			<class name="Publish.PublishNewContentCheck"/>-->
-<!--			<class name="Notebook.viewHighlightsNotesBookmarks"/>-->
-			
-<!--			Assignment-->
+			<class name="Publish.PublishNewContentCheck"/>
+			<class name="Notebook.viewHighlightsNotesBookmarks"/>
+
+<!--			Time Table-->
+			<class name="TimeTable.TimetableLandingPageCheck"/>
+			<class name="TimeTable.TimetablePaginationCheck"/>
+			<class name="TimeTable.TimetableViewAllEventsCheck"/>
+			<class name="TimeTable.TimetableViewAllHolidaysCheck"/>
+			<class name="TimeTable.TimetableAdminLandingPageCheck"/>
+			<class name="TimeTable.TimetableAdminCreateTemplateCheck"/>
+			<class name="TimeTable.TimetableAdminDeleteTemplateCheck"/>
+			<class name="TimeTable.TimetableAdminViewCalendarCheck"/>
+			<class name="TimeTable.TimetableAdminCreateEventCheck"/>
+			<class name="TimeTable.TimetableAdminEditEventCheck"/>
+			<class name="TimeTable.TimetableAdminDeleteEventCheck"/>
+			<class name="TimeTable.TimetableAdminCreateHolidayCheck"/>
+			<class name="TimeTable.TimetableAdminEditHolidayCheck"/>
+			<class name="TimeTable.TimetableAdminDeleteHolidayCheck"/>
+
+
+			<!--			Assignment-->
 			<class name="Assignments.AssignmentsLandingPageCheck"/>
 			<class name="Assignments.CreateAssignmentCheck"/>
 			<class name="Assignments.AssignmentScheduledPageCheck"/>
@@ -27,41 +44,41 @@
 			
 			
 <!--			Analytics-->
-<!--			<class name="Analytics.AnalyticsLandingPageCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentsCountCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesAttemptedCountCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentProfileCheck"/>-->
-<!--			<class name="Analytics.AnalyticsLearningOutcomesStudentGradeCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQTopicsenabledisableCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQLessonsTopicCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQStudentsCountCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQAttemptedCountCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQStudentProfileCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoSQStudentGradeCheck"/>-->
-<!--			<class name="Analytics.AnalyticsEoLTAttemptedCountCheck"/>-->
+			<class name="Analytics.AnalyticsLandingPageCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesStudentsCountCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesAttemptedCountCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesStudentProfileCheck"/>
+			<class name="Analytics.AnalyticsLearningOutcomesStudentGradeCheck"/>
+			<class name="Analytics.AnalyticsEoSQTopicsenabledisableCheck"/>
+			<class name="Analytics.AnalyticsEoSQLessonsTopicCheck"/>
+			<class name="Analytics.AnalyticsEoSQStudentsCountCheck"/>
+			<class name="Analytics.AnalyticsEoSQAttemptedCountCheck"/>
+			<class name="Analytics.AnalyticsEoSQStudentProfileCheck"/>
+			<class name="Analytics.AnalyticsEoSQStudentGradeCheck"/>
+			<class name="Analytics.AnalyticsEoLTAttemptedCountCheck"/>
 			
 			
 <!--			Lesson Delivery-->
-<!--			<class name="LessonDelivery.LessonDeliveryLandingPageCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryGradeCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryWorkbookNameVerify"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryLessonNameVerify"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryLessonPlanCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryLessonPlanOverviewCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryLessonPlanComponentsCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryStartEndSessionCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryCompletedOngoingTagCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryCreateLearningPlanCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryEditLearningPlan"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryDeleteLearningPlan"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryCompletePercentageCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryInsertLinkCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryInsertImageCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryInsertPDFCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryInsertAudioCheck"/>-->
-<!--			<class name="LessonDelivery.LessonDeliveryInsertVideoCheck"/>-->
+			<class name="LessonDelivery.LessonDeliveryLandingPageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryGradeCheck"/>
+			<class name="LessonDelivery.LessonDeliveryWorkbookNameVerify"/>
+			<class name="LessonDelivery.LessonDeliveryLessonNameVerify"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanCheck"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanOverviewCheck"/>
+			<class name="LessonDelivery.LessonDeliveryLessonPlanComponentsCheck"/>
+			<class name="LessonDelivery.LessonDeliveryStartEndSessionCheck"/>
+			<class name="LessonDelivery.LessonDeliveryCompletedOngoingTagCheck"/>
+			<class name="LessonDelivery.LessonDeliveryCreateLearningPlanCheck"/>
+			<class name="LessonDelivery.LessonDeliveryEditLearningPlan"/>
+			<class name="LessonDelivery.LessonDeliveryDeleteLearningPlan"/>
+			<class name="LessonDelivery.LessonDeliveryCompletePercentageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertLinkCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertImageCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertPDFCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertAudioCheck"/>
+			<class name="LessonDelivery.LessonDeliveryInsertVideoCheck"/>
 
 
 			
@@ -69,69 +86,69 @@
 			
 			
 <!--						Student Groups-->
-<!--			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>-->
-<!--			<class name="StudentGroups.AddGroupBtnCheck"/>-->
-<!--			<class name="StudentGroups.AddGroupCheck"/>-->
-<!--			<class name="StudentGroups.EditGroupCheck"/>-->
-<!--			<class name="StudentGroups.DeleteGroupCheck"/>-->
-<!--			<class name="StudentGroups.SearchFunctionalityCheck"/>-->
+			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>
+			<class name="StudentGroups.AddGroupBtnCheck"/>
+			<class name="StudentGroups.AddGroupCheck"/>
+			<class name="StudentGroups.EditGroupCheck"/>
+			<class name="StudentGroups.DeleteGroupCheck"/>
+			<class name="StudentGroups.SearchFunctionalityCheck"/>
 
 
-<!--			&lt;!&ndash;			Assessments&ndash;&gt;-->
-<!--			<class name="Assessment.AssessmentLandingPageCheck"/>-->
-<!--			<class name="Assessment.CreateAssessment_Online"/>-->
-<!--			<class name="Assessment.CreateAssessment_PenPaper"/>-->
-<!--			<class name="Assessment.AssessmentsDraftsCheck"/>-->
-<!--			<class name="Assessment.AssessmentsCompletedCheck"/>-->
+			<!--			Assessments-->
+			<class name="Assessment.AssessmentLandingPageCheck"/>
+			<class name="Assessment.CreateAssessment_Online"/>
+			<class name="Assessment.CreateAssessment_PenPaper"/>
+			<class name="Assessment.AssessmentsDraftsCheck"/>
+			<class name="Assessment.AssessmentsCompletedCheck"/>
 
 
-<!--			&lt;!&ndash;			Attendance&ndash;&gt;-->
-<!--			<class name="Attendance.AttendanceLandingPageCheck"/>-->
-<!--			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/>-->
-<!--			<class name="Attendance.AttendanceMarkHolidayCheck"/>-->
-<!--			<class name="Attendance.AttendancePercentageCheck"/>-->
-<!--			<class name="Attendance.AttendancePaginationCheck"/>-->
+			<!--			Attendance-->
+			<class name="Attendance.AttendanceLandingPageCheck"/>
+			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/>
+			<class name="Attendance.AttendanceMarkHolidayCheck"/>
+			<class name="Attendance.AttendancePercentageCheck"/>
+			<class name="Attendance.AttendancePaginationCheck"/>
 
 
-<!--			&lt;!&ndash;			Doubts&ndash;&gt;-->
-<!--			<class name="Doubts.DoubtsLandingPageCheck"/>-->
-<!--			<class name="Doubts.DoubtsAskaDoubt_Student"/>-->
-<!--			<class name="Doubts.DoubtsViewCountCheck"/>-->
-<!--			<class name="Doubts.DoubtsNewDoubtCheck"/>-->
-<!--			<class name="Doubts.DoubtsUploadMultimediaCheck"/>-->
-<!--			<class name="Doubts.DoubtsFilterFunctionality"/>-->
-<!--			<class name="Doubts.TeacherDoubtReplyCheck"/>-->
+			<!--			Doubts-->
+			<class name="Doubts.DoubtsLandingPageCheck"/>
+			<class name="Doubts.DoubtsAskaDoubt_Student"/>
+			<class name="Doubts.DoubtsViewCountCheck"/>
+			<class name="Doubts.DoubtsNewDoubtCheck"/>
+			<class name="Doubts.DoubtsUploadMultimediaCheck"/>
+			<class name="Doubts.DoubtsFilterFunctionality"/>
+			<class name="Doubts.TeacherDoubtReplyCheck"/>
 
 
-<!--			&lt;!&ndash;			Publish	&ndash;&gt;-->
-<!--			<class name="Publish.PublishLandingPage"/>-->
-<!--			<class name="Publish.PublishNewContentButtonCheck_Teacher"/>-->
-<!--			<class name="Publish.PublishViewsandLikes_Student"/>-->
-<!--			<class name="Publish.PublishPagination"/>-->
-<!--			<class name="Publish.PublishTeacherCategoryFilters_Student"/>-->
-<!--			<class name="Publish.PublishSubjectLessonCategoryFilters_Teacher"/>-->
+			<!--			Publish	-->
+			<class name="Publish.PublishLandingPage"/>
+			<class name="Publish.PublishNewContentButtonCheck_Teacher"/>
+			<class name="Publish.PublishViewsandLikes_Student"/>
+			<class name="Publish.PublishPagination"/>
+			<class name="Publish.PublishTeacherCategoryFilters_Student"/>
+			<class name="Publish.PublishSubjectLessonCategoryFilters_Teacher"/>
 
 
-<!--			&lt;!&ndash;			Notebook&ndash;&gt;-->
-<!--			<class name="Notebook.NotebookLandingPageCheck"/>-->
-<!--			<class name="Notebook.GradeCheck"/>-->
-<!--			<class name="Notebook.LessonNameVerify"/>-->
+			<!--			Notebook-->
+			<class name="Notebook.NotebookLandingPageCheck"/>
+			<class name="Notebook.GradeCheck"/>
+			<class name="Notebook.LessonNameVerify"/>
 
 
-<!--			&lt;!&ndash;			Library&ndash;&gt;-->
-<!--			<class name="Library.LibLandingPageCheck" />-->
-<!--			<class name="Library.GradeCheck" />-->
-<!--			<class name="Library.WorkbookNameVerify" />-->
-<!--			<class name="Library.LessonNameVerify" />-->
-<!--			<class name="Library.LessonTopicsVerify" />-->
-<!--			<class name="Library.SearchCheck" />-->
-<!--			<class name="Library.VideoCheck" />-->
-<!--			<class name="Library.AudioCheck" />-->
+			<!--			Library-->
+			<class name="Library.LibLandingPageCheck" />
+			<class name="Library.GradeCheck" />
+			<class name="Library.WorkbookNameVerify" />
+			<class name="Library.LessonNameVerify" />
+			<class name="Library.LessonTopicsVerify" />
+			<class name="Library.SearchCheck" />
+			<class name="Library.VideoCheck" />
+			<class name="Library.AudioCheck" />
 
 
-<!--			&lt;!&ndash;			Login&ndash;&gt;-->
-<!--			<class name="loginFunctionality.LoginLandingPageCheck" />-->
-<!--			<class name="loginFunctionality.UserSignInFunctionality" />-->
+			<!--			Login-->
+			<class name="loginFunctionality.LoginLandingPageCheck" />
+			<class name="loginFunctionality.UserSignInFunctionality" />
 
 
 		</classes>

@@ -32,6 +32,9 @@ public class DoubtsFilterFunctionality extends Base {
     }
 
     public boolean textCheck(String actual_text, String expected_text){
+        if(expected_text.contains("Environmental")){
+            return actual_text.contains("EVS") || actual_text.contains(expected_text);
+        }
         return actual_text.contains(expected_text);
     }
 
@@ -138,8 +141,11 @@ public class DoubtsFilterFunctionality extends Base {
 
 
         dou.FilterSubjectFirstSubject_Teacher().click();
+        Thread.sleep(1000);
         dou.FilterSubjectSecondSubject_Teacher().click();
+        Thread.sleep(1000);
         dou.FilterSubjectThirdSubject_Teacher().click();
+        Thread.sleep(1000);
 
         dou.FilterSubjectFirstSubject_Teacher().click();
         Thread.sleep(5000);
@@ -161,8 +167,8 @@ public class DoubtsFilterFunctionality extends Base {
         Thread.sleep(2000);
 
 
-        dou.FilterSubjectSecondSubject_Teacher().click();
-        Thread.sleep(5000);
+//        dou.FilterSubjectSecondSubject_Teacher().click();
+//        Thread.sleep(5000);
 
         selectedFilterSubject = dou.FilterSubjectSecondSubject_Teacher().getText();
         no_of_doubts = dou.displayedDoubtSubjectDetails().size();
@@ -170,6 +176,7 @@ public class DoubtsFilterFunctionality extends Base {
             WebElement webElement = driver.findElement(By.xpath("//div[contains(@class, 'doubts-card')]["+i+"]//div[contains(@class, 'subject-details')]"));
             flag2 = textCheck(webElement.getText(), selectedFilterSubject);
             if(!flag2){
+                System.out.println(webElement.getText()+" "+selectedFilterSubject);
                 break;
             }
         }
@@ -181,8 +188,8 @@ public class DoubtsFilterFunctionality extends Base {
         Thread.sleep(2000);
 
 
-        dou.FilterSubjectThirdSubject_Teacher().click();
-        Thread.sleep(5000);
+//        dou.FilterSubjectThirdSubject_Teacher().click();
+//        Thread.sleep(5000);
 
         selectedFilterSubject = dou.FilterSubjectThirdSubject_Teacher().getText();
         no_of_doubts = dou.displayedDoubtSubjectDetails().size();
@@ -190,6 +197,7 @@ public class DoubtsFilterFunctionality extends Base {
             WebElement webElement = driver.findElement(By.xpath("//div[contains(@class, 'doubts-card')]["+i+"]//div[contains(@class, 'subject-details')]"));
             flag3 = textCheck(webElement.getText(), selectedFilterSubject);
             if(!flag3){
+                System.out.println(webElement.getText()+" "+selectedFilterSubject);
                 break;
             }
         }

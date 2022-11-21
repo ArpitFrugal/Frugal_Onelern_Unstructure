@@ -131,19 +131,19 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ApplyComponent().getCssValue("color");
             flag2 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.AssessComponent().getCssValue("color");
             flag3 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ReviewComponent().getCssValue("color");
             flag4 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ReviewComponent().click();
@@ -169,19 +169,19 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ApplyComponent().getCssValue("color");
             flag2 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.AssessComponent().getCssValue("color");
             flag3 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ReviewComponent().getCssValue("color");
             flag4 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ReviewComponent().click();
@@ -208,19 +208,19 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ApplyComponent().getCssValue("color");
             flag2 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.AssessComponent().getCssValue("color");
             flag3 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ReviewComponent().getCssValue("color");
             flag4 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ReviewComponent().click();
@@ -247,19 +247,19 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ApplyComponent().getCssValue("color");
             flag2 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.AssessComponent().getCssValue("color");
             flag3 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
+            color = ld.ReviewComponent().getCssValue("color");
             flag4 = ColorCheck(color, blueColor);
             Thread.sleep(1000);
             ld.ReviewComponent().click();

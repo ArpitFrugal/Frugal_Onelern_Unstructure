@@ -71,7 +71,12 @@ public class AnalyticsLearningOutcomesFilterCheck extends Base {
         Thread.sleep(2000);
         no_of_LO_displayed = ana.LearningOutcomes().size();
         System.out.println(no_of_LO_displayed);
-        flag2 = valCompare(no_of_LO_displayed, 2);
+        if(no_of_LO_displayed<2){
+            flag2 = valCompare(no_of_LO_displayed, 1);
+        }
+        else{
+            flag2 = valCompare(no_of_LO_displayed, 2);
+        }
 
         ValidateTest(flag1, flag2);
     }

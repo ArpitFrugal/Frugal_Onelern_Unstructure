@@ -23,7 +23,7 @@ public class Publish extends Base {
     By ContentOptions = By.xpath("//select[contains(@class, 'form-select')]");
 
     By PublishContentDescriptionTextArea = By.xpath("//*[@placeholder='Description']");
-    By NextStepBtn = By.xpath("/html/body/footer/div[2]/button[2]");
+    By NextStepBtn = By.xpath("//footer/div[2]/button[2]");
 //    By IndividualOption = By.id("individual");
     By IndividualOption = By.xpath("//label[@for='individual']");
     By StudentNamesInput = By.id("lang");
@@ -44,6 +44,8 @@ public class Publish extends Base {
     // pagination
     By BackNavigate = By.xpath("//*[contains(@class,'option prev')]");
     By NextNavigate = By.xpath("//*[contains(@class,'option next')]");
+    By StudentBackNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[1]");
+    By StudentNextNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[2]");
     By PaginationText = By.className("pagination-text");
 
     // Teacher filter
@@ -154,6 +156,17 @@ public class Publish extends Base {
     }
 
     // pagination
+
+    @Step("Back button is clicked...")
+    public WebElement StudentBackNavigate(){
+        screenshot();
+        return driver.findElement(StudentBackNavigate);
+    }
+    @Step("Next button is clicked...")
+    public WebElement StudentNextNavigate(){
+        screenshot();
+        return driver.findElement(StudentNextNavigate);
+    }
     @Step("Back button is clicked...")
     public WebElement BackNavigate(){
         screenshot();

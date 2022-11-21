@@ -56,21 +56,22 @@ public class PublishPagination extends Base {
 
         int i=0;
         // one click forward
-        if(CheckEnabled(pub.NextNavigate())){
-            pub.NextNavigate().click(); Thread.sleep(2000);
+        if(CheckEnabled(pub.StudentNextNavigate())){
+            pub.StudentNextNavigate().click(); Thread.sleep(2000);
             i+=1;
             CurrPaginationText = pub.PaginationText().getText(); Thread.sleep(2000);
             flag1= ValidateTest(CurrPaginationText, list.get(i)); Thread.sleep(2000);
         }
 
         // two clicks forward
-        if(CheckEnabled(pub.NextNavigate())) {
-            pub.NextNavigate().click(); Thread.sleep(2000);
+        if(CheckEnabled(pub.StudentNextNavigate())) {
+            pub.StudentNextNavigate().click(); Thread.sleep(2000);
             i+=1;
-            if(CheckEnabled(pub.NextNavigate())){
-                pub.NextNavigate().click(); Thread.sleep(2000);
+            if(CheckEnabled(pub.StudentNextNavigate())){
+                pub.StudentNextNavigate().click();
                 i+=1;
             }
+            Thread.sleep(2000);
             CurrPaginationText = pub.PaginationText().getText(); Thread.sleep(2000);
             flag2= ValidateTest(CurrPaginationText, list.get(i)); Thread.sleep(2000);
         }
@@ -78,19 +79,19 @@ public class PublishPagination extends Base {
 
 
         // one click back
-        if(CheckEnabled(pub.BackNavigate())){
-            pub.BackNavigate().click(); Thread.sleep(2000);
+        if(CheckEnabled(pub.StudentBackNavigate())){
+            pub.StudentBackNavigate().click(); Thread.sleep(2000);
             i-=1;
             CurrPaginationText = pub.PaginationText().getText();
             flag3= ValidateTest(CurrPaginationText, list.get(i));
         }
 
         // two click back
-        if(CheckEnabled(pub.BackNavigate())){
-            pub.BackNavigate().click(); Thread.sleep(2000);
+        if(CheckEnabled(pub.StudentBackNavigate())){
+            pub.StudentBackNavigate().click(); Thread.sleep(2000);
             i-=1;
-            if(CheckEnabled(pub.BackNavigate())){
-                pub.BackNavigate().click(); Thread.sleep(2000);
+            if(CheckEnabled(pub.StudentBackNavigate())){
+                pub.StudentBackNavigate().click(); Thread.sleep(2000);
                 i-=1;
             }
             CurrPaginationText = pub.PaginationText().getText();

@@ -46,7 +46,7 @@ public class AnalyticsEoSQStudentsCountCheck extends Base {
 
         ana.ViewWEoSQ().click();
 
-        ana.EoSQLesson1().click();
+//        ana.EoSQLesson1().click();
         ana.EoSQAttemptedTopic1().click();
 
 

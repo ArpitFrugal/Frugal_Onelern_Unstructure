@@ -84,11 +84,10 @@ public class AnalyticsLearningOutcomesAttemptedCountCheck extends Base {
         ValidateTest(flag1, flag2, flag3);
     }
     public boolean CompareVal(int actual, int expected){
+        System.out.println(actual + " "+expected);
         return actual == expected;
     }
-    public boolean CompareText(String actual, String expected){
-        return actual.contains(expected);
-    }
+
 
     @AfterMethod
     public void tearDown() {

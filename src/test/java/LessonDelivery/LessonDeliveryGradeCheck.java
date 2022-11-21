@@ -90,6 +90,11 @@ public class LessonDeliveryGradeCheck extends Base {
 
 	}
 
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
 
 	@DataProvider(name = "Teachersdata")
 	public Object[][] getteacherData() throws FileAlreadyExistsException {
@@ -99,11 +104,6 @@ public class LessonDeliveryGradeCheck extends Base {
 //        Object loginData[][] = {{"9000000101", "123456"}};
 
 		return loginData;
-	}
-
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
 	}
 
 }

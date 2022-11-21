@@ -104,19 +104,20 @@ public class AssignmentDraftsPageCheck extends Base {
             webElement.click();
             Thread.sleep(500);
         }
-
-
-        asg.SelectStudentsBtn().click();
-
-        Thread.sleep(2000);
-        asg.SelectAllOption().click();
-
-        asg.AddStudentsBtn().click();
+//        asg.AssignStudentsBtn().click();
+//
+//
+//        asg.SelectStudentsBtn().click();
+//
+//        Thread.sleep(2000);
+//        asg.SelectAllOption().click();
+//
+//        asg.AddStudentsBtn().click();
 
         asg.SaveAsDraft().click();
 
         Thread.sleep(2000);
-        asg.DraftsTabPage().click();
+//        asg.DraftsTabPage().click();
         boolean flag=false;
         for(WebElement webElement:asg.AssignmentNames()){
             if(webElement.getText().contains("Drafted Assignment")){

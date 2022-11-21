@@ -16,6 +16,7 @@ public class Attendance extends Base {
     By absentMarksStudent = By.xpath("//*[contains(@class,'absent ')]");
     By leaveMarksStudent = By.xpath("//*[contains(@class,' leave ')]");
     By holidayMarksStudent = By.xpath("//*[contains(@class,'holiday ')]");
+    By heldCountStudent = By.xpath("//*[contains(@class, 'held-tag')]//span[2]");
     By presentCountStudent = By.xpath("//*[contains(@class,'present-tag')]/span[2]");
     By absentCountStudent = By.xpath("//*[contains(@class,'absent-tag')]/span[2]");
     By leaveCountStudent = By.xpath("//*[contains(@class,'leave-tag')]/span[2]");
@@ -96,6 +97,11 @@ public class Attendance extends Base {
     public List<WebElement> notMarkedTeacher(){
         screenshot();
         return driver.findElements(notMarkedTeacher);
+    }
+    @Step("Fetching number of days held count...")
+    public WebElement heldCountStudent(){
+        screenshot();
+        return driver.findElement(heldCountStudent);
     }
     @Step("Fetching number of days present count...")
     public WebElement presentCountStudent(){

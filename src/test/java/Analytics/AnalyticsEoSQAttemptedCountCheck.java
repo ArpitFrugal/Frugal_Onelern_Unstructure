@@ -48,7 +48,7 @@ public class AnalyticsEoSQAttemptedCountCheck extends Base {
     @Story("ANAFT_12")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherdata")
-    public void LearningOutcomesCheck(String mobNumber, String password) throws IOException, InterruptedException {
+    public void EoSQAttemptedCountCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
@@ -59,7 +59,7 @@ public class AnalyticsEoSQAttemptedCountCheck extends Base {
         Thread.sleep(2000);
         ana.ViewWEoSQ().click();
         Thread.sleep(2000);
-        ana.EoSQLesson1().click();
+//        ana.EoSQLesson1().click();
         ana.EoSQAttemptedTopic1().click();
 
         System.out.println(ana.AttemptedCount());

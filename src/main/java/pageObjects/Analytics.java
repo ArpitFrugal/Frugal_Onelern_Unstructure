@@ -31,7 +31,7 @@ public class Analytics extends Base {
 
     By EoSQLesson1 = By.id("item_1");
     By EoSQAttemptedTopic1 = By.xpath("//div[@class='session  svelte-jgwn9e']");
-    By ViewEoLT = By.id("view-link-eosq");
+    By ViewEoLT = By.id("view-link");
     By LevelsStudents = By.xpath("//*[contains(@class,'recent-levels-list')]//span//span[not(contains(@class,'students-count'))]");
     By recentLevelsTotalStudents = By.xpath("//*[contains(@class,'recent-levels')]//small");
 
