@@ -46,7 +46,7 @@ public class LessonNameVerify extends Base {
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
     @Story("LIBFS_04")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "Studentdata")
+    @Test(dataProvider = "studentData")
     public void StudentLessonNameCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -366,7 +366,7 @@ public class LessonNameVerify extends Base {
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
     @Story("LIBFT_04")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "Teachersdata")
+    @Test(dataProvider = "teachersData")
     public void TeacherLessonNameCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -669,22 +669,18 @@ public class LessonNameVerify extends Base {
 
     }
 
-    @DataProvider(name = "Studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
-                { "9000000069", "123456" }, { "9000000081", "123456" } };
-//        Object loginData[][] = { { "9000000001", "123456" }};
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-                { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { { "9000000101", "123456" }};
-        return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+        return getTeacherData();
     }
     
 }

@@ -59,7 +59,7 @@ public class viewHighlightsNotesBookmarks extends Base {
     @Description("To see if a student can view highlights, notes and bookmarks from library in Notebook")
     @Story("NOTFS_04")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "Studentdata")
+    @Test(dataProvider = "studentData")
     public void CheckStudentHighlightsNotesBookmarks(String mobNumber, String password) throws IOException, InterruptedException, UnsupportedFlavorException {
         Map<String, String> map = new HashMap<>();
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -454,7 +454,7 @@ public class viewHighlightsNotesBookmarks extends Base {
     @Description("To see if a teacher can view highlights, notes and bookmarks from library in Notebook")
     @Story("NOTFT_04")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "Teachersdata")
+    @Test(dataProvider = "teachersData")
     public void CheckTeacherHighlightsNotesBookmarks(String mobNumber, String password) throws IOException, InterruptedException, UnsupportedFlavorException {
         Map<String, String> map = new HashMap<>();
         Long mob = Long.parseLong(mobNumber);
@@ -838,22 +838,18 @@ public class viewHighlightsNotesBookmarks extends Base {
 
 
 
-    @DataProvider(name = "Studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000001", "123456" }, { "9000000021", "123456" }, { "9000000041", "123456" },
-                { "9000000061", "123456" }, { "9000000081", "123456" } };
-//        Object loginData[][] = { { "9000000041", "123456" }};
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-                { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { { "9000000101", "123456" }};
-        return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+        return getTeacherData();
     }
 
 }

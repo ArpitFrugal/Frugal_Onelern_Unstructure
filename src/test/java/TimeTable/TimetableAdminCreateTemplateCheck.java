@@ -40,7 +40,7 @@ public class TimetableAdminCreateTemplateCheck extends Base {
     @Description("Examine whether or not the admin can create an template successfully.")
     @Story("TIMFA_02")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "admindata")
+    @Test(dataProvider = "adminData")
     public void adminCreateTemplateCheck(String usermail, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("schooladmin", usermail, password);
@@ -185,9 +185,8 @@ public class TimetableAdminCreateTemplateCheck extends Base {
     }
 
 
-    @DataProvider(name = "admindata")
-    public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"frugaltestschooladmin@onelern.com", "123456"}};
-        return loginData;
+    @DataProvider(name = "adminData")
+    public Object[][] getadminData() throws FileAlreadyExistsException {
+        return getSchoolAdminData();
     }
 }

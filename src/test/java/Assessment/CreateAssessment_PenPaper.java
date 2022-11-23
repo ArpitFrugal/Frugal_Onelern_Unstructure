@@ -41,7 +41,7 @@ public class CreateAssessment_PenPaper extends Base {
     @Description("Examine whether or not the teacher can successfully create Pen & paper assessment for the students.")
     @Story("ASSFT_03")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void teacherCreateAssessment_PenPaper(String mobNumber, String password) throws IOException, InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         BaseLogin user = new BaseLogin(driver);
@@ -210,11 +210,10 @@ public class CreateAssessment_PenPaper extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 }

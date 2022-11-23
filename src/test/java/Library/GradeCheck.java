@@ -47,7 +47,7 @@ public class GradeCheck extends Base {
 	@Description("To see if a student in a specific grade has the correct grade book")
 	@Story("LIBFS_02")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(dataProvider = "Studentdata")
+	@Test(dataProvider = "studentData")
 	public void CheckStudentBookGrade(String mobNumber, String password) throws IOException, InterruptedException {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
@@ -98,7 +98,7 @@ public class GradeCheck extends Base {
 	@Description("To see if a teacher of a specific grade has the correct grade book")
 	@Story("LDFT_02")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(dataProvider = "Teachersdata")
+	@Test(dataProvider = "teachersData")
 	public void CheckTeacherBookGrade(String mobNumber, String password) throws IOException, InterruptedException {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
@@ -142,24 +142,18 @@ public class GradeCheck extends Base {
 
 	}
 
-	@DataProvider(name = "Studentdata")
+	@DataProvider(name = "studentData")
 	public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-		Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-				{"9000000061", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000021", "123456"}};
-
-		return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+		return getStudentData();
 	}
 
-	@DataProvider(name = "Teachersdata")
+	@DataProvider(name = "teacherData")
 	public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-		Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-				{"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-
-		return loginData;
+//        return loginData;
+		return getTeacherData();
 	}
 
 	@AfterMethod

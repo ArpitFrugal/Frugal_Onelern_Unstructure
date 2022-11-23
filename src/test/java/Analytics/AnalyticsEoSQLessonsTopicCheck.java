@@ -49,7 +49,7 @@ public class AnalyticsEoSQLessonsTopicCheck extends Base {
     @Description("Examine whether or not the teacher should be able to view the lessons and can open them to view detailed scores.")
     @Story("ANAFT_10")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void EoSQLessonTopicsCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -98,11 +98,10 @@ public class AnalyticsEoSQLessonsTopicCheck extends Base {
     // This method provides data inputs to the above mentioned data receiver
     // functions.
 
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 }

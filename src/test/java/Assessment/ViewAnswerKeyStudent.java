@@ -37,7 +37,7 @@ public class ViewAnswerKeyStudent extends Base {
     @Description("Examine whether or not the student can successfully view the answer key of the assessment.")
     @Story("ASSFS_04")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "studentdata")
+    @Test(dataProvider = "studentData")
     public void StudentViewAnswerKeyCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
@@ -77,12 +77,10 @@ public class ViewAnswerKeyStudent extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
-    @DataProvider(name = "studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-                {"9000000061", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000001", "123456"}};
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 }

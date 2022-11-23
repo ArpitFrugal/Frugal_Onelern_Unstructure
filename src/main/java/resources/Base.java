@@ -3,6 +3,7 @@ package resources;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -57,6 +58,33 @@ public class Base {
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		String destinationFile = System.getProperty("user.dir") + "\\reports" + "\\reports" + testcasename + ".png";
 		FileUtils.copyFile(source, new File(destinationFile));
+	}
+
+	public Object[][] getStudentData() throws FileAlreadyExistsException {
+		Object loginData[][] = { { "9000000001", "123456" }, { "9000000021", "123456" }, { "9000000041", "123456" },
+				{ "9000000061", "123456" }, { "9000000081", "123456" } };
+		return loginData;
+	}
+
+	public Object[][] getTeacherData() throws FileAlreadyExistsException {
+		Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
+				{"9000000113", "123456"}, {"9000000117", "123456"}};
+		return loginData;
+	}
+
+	public Object[][] getSchoolAdminData() throws FileAlreadyExistsException{
+		Object loginData[][] = {{"frugaltestschooladmin@onelern.com", "123456"}};
+		return loginData;
+	}
+
+	public Object[][] getPrincipalAdminData() throws FileAlreadyExistsException{
+		Object loginData[][] = {{"prakhar.test@onelern.school", "123456"}};
+		return loginData;
+	}
+
+	public Object[][] getProjectAdminData() throws FileAlreadyExistsException{
+		Object loginData[][] = {{"indianadmin@onelern.com", "IndianProject@098"}};
+		return loginData;
 	}
 
 	public void getScreenshotAtEveryStep(String testcasename, WebDriver driver) throws IOException {

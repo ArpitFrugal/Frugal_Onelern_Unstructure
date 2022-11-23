@@ -36,6 +36,7 @@ public class LessonDeliveryEditLearningPlan extends Base {
     public void tearDown() {
         driver.quit();
     }
+
     public void ThreadSleep5000() throws InterruptedException {
         Thread.sleep(5000);
     }
@@ -45,7 +46,7 @@ public class LessonDeliveryEditLearningPlan extends Base {
     @Description("Teacher should be able to able to edit the learning plan successfully.")
     @Story("LDFT_11")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "Teachersdata")
+    @Test(dataProvider = "teachersData")
     public void TeacherEditLearningPlanCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -60,34 +61,26 @@ public class LessonDeliveryEditLearningPlan extends Base {
         if (mob >= 9000000101l && mob <= 9000000104l) { // Environmental Studies Coursebook - Part A
             ld.EnvironmentalcoursebookGrade1().click();
             ThreadSleep5000();
-        }
-
-        else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
+        } else if (mob >= 9000000105l && mob <= 9000000108l) { // English Coursebook - Part A
             WebElement element = ld.EnglishCoursebookGrade2();
             js.executeScript("arguments[0].scrollIntoView();", element);
             ThreadSleep5000();
             element.click();
 
-        }
-
-        else if (mob >= 9000000109l && mob <= 9000000112l) { // Mathematics coursebook - Part A
+        } else if (mob >= 9000000109l && mob <= 9000000112l) { // Mathematics coursebook - Part A
             WebElement element = ld.MathematicsCoursebookGrade3();
             js.executeScript("arguments[0].scrollIntoView();", element);
             Thread.sleep(3000);
             element.click();
 
-        }
-
-        else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
+        } else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
             WebElement element = ld.EnglishCoursebookGrade4();
             js.executeScript("arguments[0].scrollIntoView();", element);
             ThreadSleep5000();
             element.click();
             ThreadSleep5000();
 
-        }
-
-        else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
+        } else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
             WebElement element = ld.MathematicsCoursebookGrade5();
             js.executeScript("arguments[0].scrollIntoView();", element);
             ThreadSleep5000();
@@ -101,12 +94,11 @@ public class LessonDeliveryEditLearningPlan extends Base {
         ld.LessonPlanMode().click();
         Thread.sleep(2000);
 
-        if(ld.LearningPlans().size() > 0){
+        if (ld.LearningPlans().size() > 0) {
             ld.EditBtn().click();
             String Heading = ld.WorkbookHeading().getText();
             ValidateTest(Heading, "Update Learning Plan");
-        }
-        else{
+        } else {
             // create
             ld.CreateLearningPlanBtn().click();
             Thread.sleep(2000);
@@ -128,21 +120,18 @@ public class LessonDeliveryEditLearningPlan extends Base {
     }
 
     private void ValidateTest(String ContentDisplayed, String expected) {
-        if(ContentDisplayed.contains(expected)){
+        if (ContentDisplayed.contains(expected)) {
             System.out.println("PASSED");
-        }
-        else{
+        } else {
             Assert.fail();
         }
     }
 
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-                { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { { "9000000113", "123456" }};
-        return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+        return getTeacherData();
     }
 }

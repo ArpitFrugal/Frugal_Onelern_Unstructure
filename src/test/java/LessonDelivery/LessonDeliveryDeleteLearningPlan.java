@@ -45,7 +45,7 @@ public class LessonDeliveryDeleteLearningPlan extends Base {
     @Description("Teacher should be able to able to delete the learning plan successfully.")
     @Story("LDFT_12")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "Teachersdata")
+    @Test(dataProvider = "teachersData")
     public void TeacherDeleteLearningPlanCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -148,12 +148,10 @@ public class LessonDeliveryDeleteLearningPlan extends Base {
     }
 
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-                { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { { "9000000101", "123456" } };
-        return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+        return getTeacherData();
     }
 }

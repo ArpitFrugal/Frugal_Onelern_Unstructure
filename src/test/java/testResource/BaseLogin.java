@@ -33,6 +33,16 @@ public class BaseLogin extends Base {
 			log.getPasswordButton().click();
 			Thread.sleep(5000);
 		}
+		else if (user.equals("projectadmin")) {
+			log.getOthersSignIn().click();
+			log.userEmailID().click();
+			log.userEmailID().sendKeys(mobNumber);
+			Thread.sleep(1000);
+			log.PasswordInput().click();
+			log.PasswordInput().sendKeys(pass);
+			Thread.sleep(1000);
+			log.adminLoginBtn().click();
+		}
 		else if (user.equals("schooladmin")) {
 			log.userEmailID().click();
 			log.userEmailID().sendKeys(mobNumber);

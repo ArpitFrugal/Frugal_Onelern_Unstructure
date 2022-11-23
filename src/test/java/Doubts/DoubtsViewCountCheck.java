@@ -43,7 +43,7 @@ public class DoubtsViewCountCheck extends Base {
     @Description("Examine whether or not the student can successfully view the increase in view count when viewed.")
     @Story("DOUFS_03")
     @Severity(SeverityLevel.MINOR)
-    @Test(dataProvider = "studentdata")
+    @Test(dataProvider = "studentData")
     public void studentViewCountCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
@@ -72,7 +72,7 @@ public class DoubtsViewCountCheck extends Base {
     @Description("Examine whether or not the teacher can successfully view the increase in view count when viewed.")
     @Story("DOUFT-02")
     @Severity(SeverityLevel.MINOR)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void teacherViewCountCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
@@ -102,20 +102,17 @@ public class DoubtsViewCountCheck extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
-    @DataProvider(name = "studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000001", "123456"}, {"9000000024", "123456"}, {"9000000046", "123456"},
-                {"9000000069", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000001", "123456"}};
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 }

@@ -38,7 +38,7 @@ public class PublishSubjectLessonCategoryFilters_Teacher extends Base {
     @Description("Examine whether or not the teacher can successfully filter the content according to book.")
     @Story("PUBFT-05")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void teacherBookFilter(String mobNumber, String password) throws IOException, InterruptedException {
         boolean flag1= true, flag2 = true, flag3 = true;
         BaseLogin user = new BaseLogin(driver);
@@ -115,11 +115,10 @@ public class PublishSubjectLessonCategoryFilters_Teacher extends Base {
     }
 
 
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 }

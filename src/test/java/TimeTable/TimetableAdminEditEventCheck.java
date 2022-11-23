@@ -33,7 +33,7 @@ public class TimetableAdminEditEventCheck extends Base {
     @Description("Examine whether or not the admin can edit the event successfully.")
     @Story("TIMFA_06")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "admindata")
+    @Test(dataProvider = "adminData")
     public void adminEditEventCheck(String usermail, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("schooladmin", usermail, password);
@@ -75,9 +75,8 @@ public class TimetableAdminEditEventCheck extends Base {
     }
 
 
-    @DataProvider(name = "admindata")
-    public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"frugaltestschooladmin@onelern.com", "123456"}};
-        return loginData;
+    @DataProvider(name = "adminData")
+    public Object[][] getadminData() throws FileAlreadyExistsException {
+        return getSchoolAdminData();
     }
 }

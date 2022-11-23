@@ -45,7 +45,7 @@ public class LessonDeliveryCreateLearningPlanCheck extends Base {
     @Description("Teacher should be able to able to create learning plan successfully.")
     @Story("LDFT_10")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "Teachersdata")
+    @Test(dataProvider = "teachersData")
     public void TeacherCreateLearningPlanCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -127,12 +127,10 @@ public class LessonDeliveryCreateLearningPlanCheck extends Base {
     }
 
 
-    @DataProvider(name = "Teachersdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-                { "9000000114", "123456" }, { "9000000120", "123456" } };
-//        Object loginData[][] = { { "9000000101", "123456" }};
-        return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+        return getTeacherData();
     }
 }

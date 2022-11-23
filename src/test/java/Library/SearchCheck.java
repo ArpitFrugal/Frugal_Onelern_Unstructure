@@ -53,7 +53,7 @@ public class SearchCheck extends Base {
     @Description("Searched content should be displayed on screen.")
     @Story("LIBFS_08")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "Studentdata")
+    @Test(dataProvider = "studentData")
     public void StudentSearchCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -196,7 +196,7 @@ public class SearchCheck extends Base {
     @Description("Searched content should be displayed on screen.")
     @Story("LIBFT-08")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void TeacherSearchCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -340,23 +340,18 @@ public class SearchCheck extends Base {
 
     // This method provides data inputs to the above mentioned data receiver
     // functions.
-    @DataProvider(name = "Studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-                {"9000000061", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000021", "123456"}};
-
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 
 

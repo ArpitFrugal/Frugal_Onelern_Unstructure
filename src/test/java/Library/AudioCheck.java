@@ -57,7 +57,7 @@ public class AudioCheck extends Base {
     @Description("To check if the audio player is displayed or not.")
     @Story("LIBFS_06")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "Studentdata")
+    @Test(dataProvider = "studentData")
     public void StudentAudioCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -168,7 +168,7 @@ public class AudioCheck extends Base {
     @Description("Examine whether or not the audio can successfully played properly.")
     @Story("LIBFT_06")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "Teacherdata")
+    @Test(dataProvider = "teacherData")
     public void teacherAudiocheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
@@ -278,22 +278,17 @@ public class AudioCheck extends Base {
     }
 
 
-    @DataProvider(name = "Studentdata")
+    @DataProvider(name = "studentData")
     public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000001", "123456"}, {"9000000021", "123456"}, {"9000000041", "123456"},
-                {"9000000061", "123456"}, {"9000000081", "123456"}};
-//        Object loginData[][] = {{"9000000021", "123456"}};
-
-        return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+        return getStudentData();
     }
 
-    @DataProvider(name = "Teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 }

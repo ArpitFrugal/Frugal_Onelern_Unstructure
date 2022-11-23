@@ -42,7 +42,7 @@ public class LessonDeliveryLandingPageCheck extends Base {
     @Description("Examine whether or not the teacher can successfully get inside the Lesson Delivery module.")
     @Story("LDFT_01")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(dataProvider = "teacherdata")
+    @Test(dataProvider = "teacherData")
     public void teacherLanding(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
@@ -62,12 +62,11 @@ public class LessonDeliveryLandingPageCheck extends Base {
     // This method provides data inputs to the above mentioned data receiver
     // functions.
 
-    @DataProvider(name = "teacherdata")
+    @DataProvider(name = "teacherData")
     public Object[][] getteacherData() throws FileAlreadyExistsException {
-        Object loginData[][] = {{"9000000101", "123456"}, {"9000000105", "123456"}, {"9000000109", "123456"},
-                {"9000000113", "123456"}, {"9000000117", "123456"}};
 //        Object loginData[][] = {{"9000000101", "123456"}};
-        return loginData;
+//        return loginData;
+        return getTeacherData();
     }
 
 }

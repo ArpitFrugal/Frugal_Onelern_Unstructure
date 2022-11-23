@@ -53,7 +53,7 @@ public class WorkbookNameVerify extends Base {
 	@Description("To check if the student workbook name is the same as that mentioned in the library image")
 	@Story("LIBFS_03")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(dataProvider = "Studentdata")
+	@Test(dataProvider = "studentData")
 	public void StudentWorkbookCheck(String mobNumber, String password) throws IOException, InterruptedException {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
@@ -129,7 +129,7 @@ public class WorkbookNameVerify extends Base {
 	@Description("To check if the teacher workbook name is the same as that mentioned in the library image")
 	@Story("LIBFT_03")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(dataProvider = "Teachersdata")
+	@Test(dataProvider = "teachersData")
 	public void TeacherWorkbookCheck(String mobNumber, String password) throws IOException, InterruptedException {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);
@@ -203,22 +203,18 @@ public class WorkbookNameVerify extends Base {
 
 	}
 
-	@DataProvider(name = "Studentdata")
+	@DataProvider(name = "studentData")
 	public Object[][] getstudentData() throws FileAlreadyExistsException {
-
-		Object loginData[][] = { { "9000000001", "123456" }, { "9000000024", "123456" }, { "9000000046", "123456" },
-				{ "9000000069", "123456" }, { "9000000081", "123456" } };
-//		Object loginData[][] = { { "9000000001", "123456" }};
-		return loginData;
+//		Object loginData[][] = { { "9000000001", "123456" } };
+//        return loginData;
+		return getStudentData();
 	}
 
-	@DataProvider(name = "Teachersdata")
+	@DataProvider(name = "teacherData")
 	public Object[][] getteacherData() throws FileAlreadyExistsException {
-
-		Object loginData[][] = { { "9000000101", "123456" }, { "9000000105", "123456" }, { "9000000110", "123456" },
-				{ "9000000114", "123456" }, { "9000000120", "123456" } };
-//		Object loginData[][] = { { "9000000101", "123456" }};
-		return loginData;
+//        Object loginData[][] = {{"9000000101", "123456"}};
+//        return loginData;
+		return getTeacherData();
 	}
 
 	@AfterMethod
