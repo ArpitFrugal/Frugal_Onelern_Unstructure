@@ -10,6 +10,22 @@
 			<class name="Publish.PublishNewContentCheck"/>
 			<class name="Notebook.viewHighlightsNotesBookmarks"/>
 
+<!--			User Management-->
+			<class name="UserManagement.UserManagementLandingPageCheck"/>
+			<class name="UserManagement.CreateNewInstitute"/>
+			<class name="UserManagement.CreateSchoolInInstitute"/>
+			<class name="UserManagement.CreateGradesInSchool"/>
+			<class name="UserManagement.CreateSectionInGrade"/>
+			<class name="UserManagement.UserManagementCreateNewStudentCheck"/>
+			<class name="UserManagement.UserManagementStudentsPaginationCheck"/>
+			<class name="UserManagement.UserManagementAddCollectionsCheck"/>
+			<class name="UserManagement.UserManagementCollectionPaginationCheck"/>
+			<class name="UserManagement.UserManagementCollectionSearchCheck"/>
+			<class name="UserManagement.UserManagementAddLicenseCheck"/>
+			<class name="UserManagement.UserManagementLicensePaginationCheck"/>
+			<class name="UserManagement.UserManagementLicenseSearchCheck"/>
+
+
 <!--			Time Table-->
 			<class name="TimeTable.TimetableLandingPageCheck"/>
 			<class name="TimeTable.TimetablePaginationCheck"/>
@@ -39,10 +55,7 @@
 			<class name="Assignments.StartAssignment"/>
 			<class name="Assignments.PaginationCheck"/>
 
-			
-			
-			
-			
+
 <!--			Analytics-->
 			<class name="Analytics.AnalyticsLandingPageCheck"/>
 			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>
@@ -81,10 +94,6 @@
 			<class name="LessonDelivery.LessonDeliveryInsertVideoCheck"/>
 
 
-			
-			
-			
-			
 <!--						Student Groups-->
 			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>
 			<class name="StudentGroups.AddGroupBtnCheck"/>
