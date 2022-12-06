@@ -51,7 +51,7 @@ public class DoubtsLandingPageCheck extends Base {
         dou.StudentImageClick().click();
         Thread.sleep(2000);
         dou.DoubtsToggle().click();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
 
         String actual_header = dou.GetHeader().getText();
         ValidateTest(actual_header);
@@ -67,7 +67,7 @@ public class DoubtsLandingPageCheck extends Base {
         user.userLogin("teacher", mobNumber, password);
         Thread.sleep(2000);
         dou.DoubtsToggle().click();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
 
         String actual_header = dou.GetHeader().getText();
         ValidateTest(actual_header);

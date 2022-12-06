@@ -100,12 +100,7 @@ public class PublishSubjectLessonCategoryFilters_Teacher extends Base {
     }
 
     public boolean Validate(String element, String selectedSubject) {
-        if (element.contains(selectedSubject)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return element.contains(selectedSubject);
     }
 
 

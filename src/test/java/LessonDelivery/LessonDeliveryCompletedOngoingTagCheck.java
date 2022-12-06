@@ -54,7 +54,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
     @Description("Teacher should be able to view the correct tags tagged to the learning plans.")
     @Story("LDFT_09")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherCompletedOngoingTagCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

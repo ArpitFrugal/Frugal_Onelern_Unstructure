@@ -45,7 +45,7 @@ public class LessonDeliveryInsertPDFCheck extends Base {
     @Description("Teacher should be able to insert PDF while creating learning plan successfully.")
     @Story("LDFT_16")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherInsertPDFCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

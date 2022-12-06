@@ -35,7 +35,7 @@ public class CreateGradesInSchool extends Base {
     @Story("UMFA_04")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")
-    public void AdminLanding(String mobNumber, String password) throws IOException, InterruptedException {
+    public void AdminCreateGradeCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("projectadmin", mobNumber, password);
         usm.InstituteClick().click();

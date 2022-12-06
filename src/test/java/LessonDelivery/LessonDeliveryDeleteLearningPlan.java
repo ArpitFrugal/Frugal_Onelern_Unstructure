@@ -45,7 +45,7 @@ public class LessonDeliveryDeleteLearningPlan extends Base {
     @Description("Teacher should be able to able to delete the learning plan successfully.")
     @Story("LDFT_12")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherDeleteLearningPlanCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

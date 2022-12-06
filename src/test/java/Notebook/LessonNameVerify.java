@@ -65,8 +65,10 @@ public class LessonNameVerify extends Base {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String LessonName, LessonHeading;
         if (mob >= 9000000001l && mob <= 9000000020l) { // Environmental Studies Coursebook - Part A
-            note.EnvironmentalCoursebookGrade1().click();
+            WebElement element = note.EnvironmentalCoursebookGrade1();
+            js.executeScript("arguments[0].scrollIntoView();", element);
             Thread.sleep(5000);
+            element.click();
 
 //          lesson-1
             note.FirstLesson().click();
@@ -244,7 +246,7 @@ public class LessonNameVerify extends Base {
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
     @Story("NOTFT_03")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherLessonNameCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

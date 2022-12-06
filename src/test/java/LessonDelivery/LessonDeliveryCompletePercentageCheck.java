@@ -46,7 +46,7 @@ public class LessonDeliveryCompletePercentageCheck extends Base {
     @Description("Teacher should be able to able to view the correct completion percentage successfully.")
     @Story("LDFT_13")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherCompletePercentageCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

@@ -21,6 +21,10 @@ public class LoginPage extends Base {
     By PasswordInput = By.id("password");
     By adminLoginBtn = By.id("login-btn");
 
+    By ContactUsBtn = By.id("contact-us-2");
+    By ContactUsModalHeader = By.xpath("//*[contains(@class, 'modal-box')]//h1");
+
+
 
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] screenshot() {
@@ -72,6 +76,16 @@ public class LoginPage extends Base {
     public WebElement getPasswordButton() {
         screenshot();
         return driver.findElement(PasswordSubmit);
+    }
+    @Step("Clicked on Contact us...")
+    public WebElement ContactUsBtn() {
+        screenshot();
+        return driver.findElement(ContactUsBtn);
+    }
+    @Step("Fetching heading on Contact us modal box...")
+    public WebElement ContactUsModalHeader() {
+        screenshot();
+        return driver.findElement(ContactUsModalHeader);
     }
     // Get login with password text
     public WebElement getloginWithPassword() {

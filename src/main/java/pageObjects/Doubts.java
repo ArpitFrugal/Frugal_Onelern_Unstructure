@@ -12,9 +12,9 @@ public class Doubts extends Base {
     By StudentAccount = By.id("student");
     By StudentImageClick = By.xpath("//div[@class='d-flex justify-content-center align-items-center flex-column']//div[2]//button[1]//img[1]");
     By DoubtsToggle = By.id("doubts");
-    By GetHeader = By.xpath("/html/body/div[2]/span[1]/span");
+    By GetHeader = By.xpath("/html/body/div/span/span");
     By AskDoubtBtn = By.xpath("//a[@href='create-doubt']");
-    By AskDoubtHeader = By.xpath("/html/body/div[2]/span/span");
+    By AskDoubtHeader = By.xpath("/html/body/div/span/span");
     By ViewCount = By.xpath("//span[contains(@class, 'view-count')]");
     By DoubtsCards = By.xpath("//*[contains(@class, 'doubts-card')]");
     By FirstDoubt = By.xpath("//*[contains(@class, 'doubts-card')]//div");

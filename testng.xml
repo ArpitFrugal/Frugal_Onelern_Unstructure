@@ -6,11 +6,8 @@
 </listeners>
 	<test name="Test">
 		<classes>
-<!--			Below classes cannot run on headless browsers-->
-			<class name="Publish.PublishNewContentCheck"/>
-			<class name="Notebook.viewHighlightsNotesBookmarks"/>
 
-<!--			User Management-->
+			<!--			User Management-->
 			<class name="UserManagement.UserManagementLandingPageCheck"/>
 			<class name="UserManagement.CreateNewInstitute"/>
 			<class name="UserManagement.CreateSchoolInInstitute"/>
@@ -26,7 +23,7 @@
 			<class name="UserManagement.UserManagementLicenseSearchCheck"/>
 
 
-<!--			Time Table-->
+			<!--			Time Table-->
 			<class name="TimeTable.TimetableLandingPageCheck"/>
 			<class name="TimeTable.TimetablePaginationCheck"/>
 			<class name="TimeTable.TimetableViewAllEventsCheck"/>
@@ -56,7 +53,7 @@
 			<class name="Assignments.PaginationCheck"/>
 
 
-<!--			Analytics-->
+			<!--			Analytics-->
 			<class name="Analytics.AnalyticsLandingPageCheck"/>
 			<class name="Analytics.AnalyticsLearningOutcomesFilterCheck"/>
 			<class name="Analytics.AnalyticsLearningOutcomesCheck"/>
@@ -71,9 +68,9 @@
 			<class name="Analytics.AnalyticsEoSQStudentProfileCheck"/>
 			<class name="Analytics.AnalyticsEoSQStudentGradeCheck"/>
 			<class name="Analytics.AnalyticsEoLTAttemptedCountCheck"/>
-			
-			
-<!--			Lesson Delivery-->
+
+
+			<!--			Lesson Delivery-->
 			<class name="LessonDelivery.LessonDeliveryLandingPageCheck"/>
 			<class name="LessonDelivery.LessonDeliveryGradeCheck"/>
 			<class name="LessonDelivery.LessonDeliveryWorkbookNameVerify"/>
@@ -92,9 +89,11 @@
 			<class name="LessonDelivery.LessonDeliveryInsertPDFCheck"/>
 			<class name="LessonDelivery.LessonDeliveryInsertAudioCheck"/>
 			<class name="LessonDelivery.LessonDeliveryInsertVideoCheck"/>
+			<class name="LessonDelivery.LessonDeliveryLearningCycleOverviewCheck"/>
 
 
-<!--						Student Groups-->
+
+			<!--			Student Groups-->
 			<class name="StudentGroups.StudentGroupsLandingPageCheck"/>
 			<class name="StudentGroups.AddGroupBtnCheck"/>
 			<class name="StudentGroups.AddGroupCheck"/>
@@ -105,17 +104,18 @@
 
 			<!--			Assessments-->
 			<class name="Assessment.AssessmentLandingPageCheck"/>
-			<class name="Assessment.CreateAssessment_Online"/>
+			<class name="Assessment.CreateAssessment_Online"/><!-- error-->
 			<class name="Assessment.CreateAssessment_PenPaper"/>
 			<class name="Assessment.AssessmentsDraftsCheck"/>
 			<class name="Assessment.AssessmentsCompletedCheck"/>
+			<class name="Assessment.AssessmentsPaginationCheck"/>
 
 
 			<!--			Attendance-->
 			<class name="Attendance.AttendanceLandingPageCheck"/>
-			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/>
+			<class name="Attendance.AttendancePresentAbsentLeaveHoliday"/><!-- error-->
 			<class name="Attendance.AttendanceMarkHolidayCheck"/>
-			<class name="Attendance.AttendancePercentageCheck"/>
+			<class name="Attendance.AttendancePercentageCheck"/> <!--failed due to dependent test case-->
 			<class name="Attendance.AttendancePaginationCheck"/>
 
 
@@ -136,6 +136,7 @@
 			<class name="Publish.PublishPagination"/>
 			<class name="Publish.PublishTeacherCategoryFilters_Student"/>
 			<class name="Publish.PublishSubjectLessonCategoryFilters_Teacher"/>
+			<class name="Publish.RepublishContentCheck"/>
 
 
 			<!--			Notebook-->
@@ -157,8 +158,13 @@
 
 			<!--			Login-->
 			<class name="loginFunctionality.LoginLandingPageCheck" />
+			<class name="loginFunctionality.LoginPageContactUsCheck"/>
 			<class name="loginFunctionality.UserSignInFunctionality" />
 
+
+			<!--			Below classes cannot run on headless browsers-->
+			<class name="Publish.PublishNewContentCheck"/>
+			<class name="Notebook.viewHighlightsNotesBookmarks"/>
 
 		</classes>
 	</test> <!-- Test -->

@@ -57,7 +57,7 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
     @Description("Whichever option is selected, the lesson plan components should be clearly visible.")
     @Story("LDFT_07")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherLessonPlanComponentCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

@@ -66,7 +66,7 @@ public class AnalyticsEoSQLessonsTopicCheck extends Base {
         for(i=0;i<ana.LessonTopics().size();i++){
             List<WebElement> LessonTopics = ana.LessonTopics();
             Thread.sleep(2000);
-            int percentage = Integer.parseInt(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0));
+            int percentage = (int)Math.ceil(Double.parseDouble(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0)));
             if(percentage == 0){
                 String classname =  LessonTopics.get(i).getAttribute("class");
                 String tobepresent = "pointer-events-none";

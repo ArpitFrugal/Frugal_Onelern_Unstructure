@@ -65,8 +65,8 @@ public class AnalyticsEoSQTopicsenabledisableCheck extends Base {
         int i=0, j=0;
         boolean flag = true;
         for(i=0;i<LessonTopics.size();i++){
-            int percentage = Integer.parseInt(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0));
-//            System.out.println(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0));
+            int percentage = (int)Math.ceil(Double.parseDouble(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0)));
+            System.out.println(List.of(ana.TopicsPercentage().get(i).getText().split(" ")).get(0));
 //            int percentage =0;
             if(percentage == 0){
                 String className = LessonTopics.get(i).getAttribute("class");

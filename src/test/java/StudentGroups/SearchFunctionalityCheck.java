@@ -54,8 +54,8 @@ public class SearchFunctionalityCheck extends Base {
 
         sg.SearchInputBox().click();
         sg.SearchInputBox().sendKeys("New Group");
-
         int size = sg.GroupCards().size();
+
 
         ValidateTest(size);
     }

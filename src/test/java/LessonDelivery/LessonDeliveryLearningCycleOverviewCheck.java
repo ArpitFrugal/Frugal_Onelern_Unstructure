@@ -17,7 +17,7 @@ import testResource.BaseLogin;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
-public class LessonDeliveryLessonPlanOverviewCheck extends Base {
+public class LessonDeliveryLearningCycleOverviewCheck extends Base {
     public LessonDelivery ld;
     public LoginPage log;
     public WebDriver driver;
@@ -40,11 +40,11 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
     }
 
     @Epic("This story represents the Lesson Delivery module of the onelern_school project.")
-    @Description("Whichever option is selected, the lesson plan overview should be clearly visible.")
-    @Story("LDFT_06")
+    @Description("To check whether the learning cycle overview of a lesson is clearly visible.")
+    @Story("LDFT_19")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "teacherData")
-    public void TeacherLessonPlanOverviewCheck(String mobNumber, String password) throws IOException, InterruptedException {
+    public void TeacherLearningCycleOverviewCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("teacher", mobNumber, password);
@@ -61,11 +61,9 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
             ld.FirstLesson().click();
             Thread.sleep(1000);
 
-            ld.FirstLearningPlan().click();
+            ld.LessonInfo().click();
 
-            ld.LessonPlanOverviewBtn().click();
-
-            ValidateTest(ld.LessonPlanOverviewModalHeader().getText().contains("Learning Plan Overview"), ld.ModalDialogBox().isDisplayed());
+            ValidateTest(ld.LessonInfoKeyPoints().isDisplayed());
 
         }
 
@@ -78,12 +76,9 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
             ld.FirstLesson().click();
             Thread.sleep(1000);
 
-            ld.FirstLearningPlan().click();
+            ld.LessonInfo().click();
 
-            ld.LessonPlanOverviewBtn().click();
-
-            ValidateTest(ld.LessonPlanOverviewModalHeader().getText().contains("Learning Plan Overview"), ld.ModalDialogBox().isDisplayed());
-
+            ValidateTest(ld.LessonInfoKeyPoints().isDisplayed());
         }
 
         else if (mob >= 9000000109l && mob <= 9000000112l) { // Mathematics coursebook - Part A
@@ -95,13 +90,9 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
             ld.FirstLesson().click();
             Thread.sleep(1000);
 
-            ld.FirstLearningPlan().click();
+            ld.LessonInfo().click();
 
-            ld.LessonPlanOverviewBtn().click();
-
-            ValidateTest(ld.LessonPlanOverviewModalHeader().getText().contains("Learning Plan Overview"), ld.ModalDialogBox().isDisplayed());
-
-
+            ValidateTest(ld.LessonInfoKeyPoints().isDisplayed());
         }
 
         else if (mob >= 9000000113l && mob <= 9000000116l) { // English Coursebook - Part A
@@ -114,12 +105,9 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
             ld.FirstLesson().click();
             Thread.sleep(1000);
 
-            ld.FirstLearningPlan().click();
+            ld.LessonInfo().click();
 
-            ld.LessonPlanOverviewBtn().click();
-
-            ValidateTest(ld.LessonPlanOverviewModalHeader().getText().contains("Learning Plan Overview"), ld.ModalDialogBox().isDisplayed());
-
+            ValidateTest(ld.LessonInfoKeyPoints().isDisplayed());
         }
 
         else if (mob >= 9000000117l && mob <= 9000000120l) { // Mathematics Coursebook - Part A
@@ -133,18 +121,14 @@ public class LessonDeliveryLessonPlanOverviewCheck extends Base {
             ld.FirstLesson().click();
             Thread.sleep(1000);
 
-            ld.FirstLearningPlan().click();
+            ld.LessonInfo().click();
 
-            ld.LessonPlanOverviewBtn().click();
-
-            ValidateTest(ld.LessonPlanOverviewModalHeader().getText().contains("Learning Plan Overview"), ld.ModalDialogBox().isDisplayed());
-
-
+            ValidateTest(ld.LessonInfoKeyPoints().isDisplayed());
         }
     }
 
-    public void ValidateTest(boolean HeaderCheck, boolean ModalBoxCheck) {
-        if(HeaderCheck && ModalBoxCheck){
+    public void ValidateTest(boolean flag) {
+        if(flag){
             System.out.println("PASSED");
         }
         else{

@@ -45,7 +45,7 @@ public class LessonDeliveryInsertVideoCheck extends Base {
     @Description("Teacher should be able to insert Video while creating learning plan successfully.")
     @Story("LDFT_18")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherInsertVideoCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

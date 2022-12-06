@@ -46,7 +46,7 @@ public class LessonDeliveryInsertImageCheck extends Base {
     @Description("Teacher should be able to insert image while creating learning plan successfully.")
     @Story("LDFT_15")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherInsertImageCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

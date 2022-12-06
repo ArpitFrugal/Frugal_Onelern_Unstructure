@@ -38,7 +38,7 @@ public class Attendance extends Base {
     By absentmarkoption = By.xpath("//*[contains(@class,'present-mark-box')]/div[2]/button[contains(@class,'absent')]");
     By leavemarkoption = By.xpath("//*[contains(@class,'present-mark-box')]/div[2]/button[contains(@class,'leave')]");
 
-    By AttendancePercentage = By.xpath("//*[contains(@class,'at-cal-percentange')]");
+    By AttendancePercentage = By.xpath("//*[contains(@class,'at-cal-percentage')]");
     By AllDaysList = By.xpath("//*[contains(@class,'calendar ')]//span[contains(@class,'day') and not(contains(@class,'day-disabled')) and not(contains(@class,'day-name'))]");
     By DisplayedMonthStudent = By.xpath("//*[contains(@class,'at-date-txt')]");
 

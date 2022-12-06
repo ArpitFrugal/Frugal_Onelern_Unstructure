@@ -129,7 +129,7 @@ public class WorkbookNameVerify extends Base {
 	@Description("To check if the teacher workbook name is the same as that mentioned in the library image")
 	@Story("LIBFT_03")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(dataProvider = "teachersData")
+	@Test(dataProvider = "teacherData")
 	public void TeacherWorkbookCheck(String mobNumber, String password) throws IOException, InterruptedException {
 		Long mob = Long.parseLong(mobNumber);
 		BaseLogin user = new BaseLogin(driver);

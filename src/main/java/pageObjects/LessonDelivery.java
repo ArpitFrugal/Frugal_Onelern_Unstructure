@@ -65,7 +65,8 @@ public class LessonDelivery extends Base {
     By VideoFileSelectionOption = By.id("video-type");
     By FilePreview = By.xpath("//div[contains(@class, 'file-preview')]");
     By DisplayedFileFormat = By.xpath("//h6[contains(@class, 'file-preview')]");
-
+    By LessonInfo = By.xpath("//*[contains(@class,'lesson-info')]");
+    By LessonInfoKeyPoints = By.xpath("//*[contains(@class,'key-points')]");
 
 
     @Attachment(value = "Screenshot", type = "image/png")
@@ -123,8 +124,11 @@ public class LessonDelivery extends Base {
     }
 
     // Workbook Name
+    @Step("Opening Environmental coursebook...")
     public WebElement EnvironmentalcoursebookGrade1(){return driver.findElement(EnvironmentalcoursebookGrade1);}
+    @Step("Opening English coursebook...")
     public WebElement EnglishCoursebookGrade2(){return driver.findElement(EnglishCoursebookGrade2);}
+    @Step("Opening Mathematics ")
     public WebElement MathematicsCoursebookGrade3(){return driver.findElement(MathematicsCoursebookGrade3);}
     public WebElement EnglishCoursebookGrade4(){return driver.findElement(EnglishCoursebookGrade4);}
     public WebElement MathematicsCoursebookGrade5(){return driver.findElement(MathematicsCoursebookGrade5);}
@@ -171,6 +175,10 @@ public class LessonDelivery extends Base {
     public WebElement VideoFileSelectionOption(){return driver.findElement(VideoFileSelectionOption);}
     public WebElement FilePreview(){return driver.findElement(FilePreview);}
     public WebElement DisplayedFileFormat(){return driver.findElement(DisplayedFileFormat);}
+
+
+    public WebElement LessonInfo(){return driver.findElement(LessonInfo);}
+    public WebElement LessonInfoKeyPoints(){return driver.findElement(LessonInfoKeyPoints);}
 
 
 

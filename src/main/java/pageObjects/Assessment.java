@@ -48,7 +48,7 @@ public class Assessment extends Base {
     By DurationInput = By.xpath("//input[@placeholder='Duration']");
     By ShowScoresAfter = By.xpath("//*[contains(@class,'form-select')]");
     By passwordInputTeacher = By.xpath("//input[@placeholder='password']");
-    By instructionsInput = By.xpath("//*[contains(@class,'form-box')]//textarea");
+    By instructionsInput = By.id("instruction");
     By HintShowOption = By.xpath("//*[contains(@class,'hint-txt')]/div/div/div");
     By PublishAssessmentBtn = By.xpath("//*[@class='bottom-fix']/div/button[2]");
     By FirstAssessmentDisplayedTeacher = By.xpath("//*[contains(@class,'assessment-box')]//h1");
@@ -85,6 +85,9 @@ public class Assessment extends Base {
     By radioOption = By.xpath("//*[contains(@class, 'radio-item')]");
     By checkOption = By.xpath("//*[contains(@class, 'option')]//*[contains(@class, 'check ')]");
 
+    By NextNavigate = By.xpath("//*[contains(@class,'option next')]");
+    By PaginationText = By.xpath("//*[contains(@class,'pagination-main-block')]//p");
+    By BackNavigate = By.xpath("//*[contains(@class,'option prev')]");
 
 
 
@@ -211,32 +214,51 @@ public class Assessment extends Base {
         screenshot();
         return driver.findElement(MarksInputBox);
     }
+    @Step("Fetching pass marks...")
     public WebElement PassMarks(){return driver.findElement(PassMarks);}
+    @Step("Clicking on assign students btn...")
     public WebElement AssignStudentsBtn(){return driver.findElement(AssignStudentsBtn);}
     public WebElement SelectStudentsBtn(){return driver.findElement(SelectStudentsBtn);}
     public WebElement SelectAllStudents(){return driver.findElement(SelectAllStudents);}
+    @Step("Confirming added students...")
     public WebElement AddStudents(){return driver.findElement(AddStudents);}
+    @Step("Schedule button is clicked...")
     public WebElement ScheduleBtn(){return driver.findElement(ScheduleBtn);}
+    @Step("Entering date...")
     public WebElement DateInput(){return driver.findElement(DateInput);}
+    @Step("Entering time...")
     public WebElement TimeInput(){return driver.findElement(TimeInput);}
+    @Step("Entering duration...")
     public WebElement DurationInput(){return driver.findElement(DurationInput);}
     public WebElement ShowScoresAfter(){return driver.findElement(ShowScoresAfter);}
+    @Step("Entering password...")
     public WebElement passwordInputTeacher(){return driver.findElement(passwordInputTeacher);}
+    @Step("Entering instructions...")
     public WebElement instructionsInput(){return driver.findElement(instructionsInput);}
+    @Step("choosing hint to show or hide...")
     public WebElement HintShowOption(){return driver.findElement(HintShowOption);}
+    @Step("Publish assessment button is clicked...")
     public WebElement PublishAssessmentBtn(){return driver.findElement(PublishAssessmentBtn);}
     public WebElement FirstAssessmentDisplayedTeacher(){return driver.findElement(FirstAssessmentDisplayedTeacher);}
     public WebElement AssessmentsSearch(){return driver.findElement(AssessmentsSearch);}
     public WebElement FirstAssessmentDisplayedStudent(){return driver.findElements(FirstAssessmentDisplayedStudent).get(0);}
+    @Step("Started assessment...")
     public WebElement StartAssessmentBtn(){return driver.findElement(StartAssessmentBtn);}
+    @Step("Entering password...")
     public WebElement PasswordInputStudent(){return driver.findElement(PasswordInputStudent);}
+    @Step("Submitted password...")
     public WebElement PasswordSubmitBtnStudent(){return driver.findElement(PasswordSubmitBtnStudent);}
+    @Step("Navigating to next question...")
     public WebElement NextQuestionBtn(){return driver.findElement(NextQuestionBtn);}
     public WebElement AttemptAnswerOption(){return driver.findElement(AttemptAnswerOption);}
-    public WebElement AssessmentSubmitBtn(){return driver.findElement(AssessmentSubmitBtn);}
     public WebElement FinalSubmitAssessment(){return driver.findElement(FinalSubmitAssessment);}
+    @Step("Submitting assessment...")
+    public WebElement AssessmentSubmitBtn(){return driver.findElement(AssessmentSubmitBtn);}
+    @Step("Fetching heading...")
     public WebElement ModuleHeading(){return driver.findElement(ModuleHeading);}
+    @Step("Viewing answer key...")
     public WebElement ViewAnswersKey(){return driver.findElement(ViewAnswersKey);}
+
     public WebElement PrintReportBtn(){return driver.findElement(PrintReportBtn);}
     public WebElement PrintPreviewBtn(){return driver.findElement(PrintPreviewBtn);}
     @Step("Opening Menu...")
@@ -265,15 +287,22 @@ public class Assessment extends Base {
         return driver.findElement(FBCorrectAnswer);
     }
     public WebElement questionPaperPreview(){return driver.findElement(questionPaperPreview);}
+    @Step("Switching to completed page...")
     public WebElement CompletedTabPage(){return driver.findElement(CompletedTabPage);}
+    @Step("Switching to drafts page...")
     public WebElement DraftsTabPage(){return driver.findElement(DraftsTabPage);}
+    @Step("Switching to ongoing page...")
     public WebElement OngoingTabPage(){return driver.findElement(OngoingTabPage);}
+    @Step("Evaluating assessment...")
     public WebElement EvaluateAssess(){return driver.findElement(EvaluateAssess);}
     public WebElement EvaluatePaper(){return driver.findElement(EvaluatePaper);}
     public WebElement QuestionByQuestion(){return driver.findElement(QuestionByQuestion);}
     public List<WebElement> AssessmentCards(){return driver.findElements(AssessmentCards);}
+    @Step("Clicking on publish button...")
     public List<WebElement> DraftPublishBtn(){return driver.findElements(DraftPublishBtn);}
+    @Step("Clicking edit button...")
     public WebElement OutsideEditBtnDrafts(){return driver.findElement(OutsideEditBtnDrafts);}
+    @Step("Deleting draft...")
     public WebElement deleteDraft(){return driver.findElement(deleteDraft);}
     public List<WebElement> StatusTagOnAssessment(){return driver.findElements(StatusTagOnAssessment);}
 
@@ -287,5 +316,16 @@ public class Assessment extends Base {
         screenshot();
         return driver.findElement(checkOption);
     }
-
+    @Step("Paginating next...")
+    public WebElement NextNavigate() {
+        return driver.findElement(NextNavigate);
+    }
+    @Step("Fetching pagination text...")
+    public WebElement PaginationText() {
+        return driver.findElement(PaginationText);
+    }
+    @Step("Paginating previous...")
+    public WebElement BackNavigate() {
+        return driver.findElement(BackNavigate);
+    }
 }

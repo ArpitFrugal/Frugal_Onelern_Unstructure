@@ -46,7 +46,7 @@ public class LessonDeliveryEditLearningPlan extends Base {
     @Description("Teacher should be able to able to edit the learning plan successfully.")
     @Story("LDFT_11")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherEditLearningPlanCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

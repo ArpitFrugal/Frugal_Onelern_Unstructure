@@ -54,7 +54,7 @@ public class LessonDeliveryStartEndSessionCheck extends Base {
     @Description("Teacher should be able to start, resume, and end sessions whenever needed.")
     @Story("LDFT_08")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherStartEndSessionCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

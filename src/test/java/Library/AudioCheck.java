@@ -79,7 +79,9 @@ public class AudioCheck extends Base {
 
             WebElement element = lib.AudioPlayer();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            ThreadSleep5000(); ThreadSleep5000();
+            ThreadSleep5000();
+            ThreadSleep5000();
+            ThreadSleep5000();
 
             lib.AudioPlayBtn().click();
             ThreadSleep5000();

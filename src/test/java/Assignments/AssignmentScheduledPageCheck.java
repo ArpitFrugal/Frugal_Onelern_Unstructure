@@ -117,6 +117,9 @@ public class AssignmentScheduledPageCheck extends Base {
         asg.AddStudentsBtn().click();
 
         asg.ScheduleBtn().click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//label[@for='individual']")).click();
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");

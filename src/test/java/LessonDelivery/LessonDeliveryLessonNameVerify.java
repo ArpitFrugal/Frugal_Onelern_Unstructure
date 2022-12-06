@@ -61,7 +61,7 @@ public class LessonDeliveryLessonNameVerify extends Base {
     @Description("Whichever option is selected, the lesson name should be clearly visible.")
     @Story("LDFT_04")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherLessonNameCheck(String mobNumber, String password) throws  IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

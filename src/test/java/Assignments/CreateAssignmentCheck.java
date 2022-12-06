@@ -107,6 +107,9 @@ public class CreateAssignmentCheck extends Base {
         asg.AddStudentsBtn().click();
 
         asg.ScheduleBtn().click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//label[@for='individual']")).click();
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -158,8 +161,6 @@ public class CreateAssignmentCheck extends Base {
 
         asg.PublishBtn().click();
 
-        Thread.sleep(3000);
-        asg.OngoingTabPage().click();
         Thread.sleep(3000);
         List<WebElement> assignments = driver.findElements(By.xpath("//h1"));
 

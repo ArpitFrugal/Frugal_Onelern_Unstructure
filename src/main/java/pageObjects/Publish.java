@@ -58,7 +58,8 @@ public class Publish extends Base {
     By ContentList = By.xpath("//tr[@class= 'svelte-egeff7']");
     By FirstCategoryFilterOption = By.xpath("//*[@for='showing_0']");
 
-
+    By FirstContentMoreOptions = By.xpath("//*[contains(@class, 'dropdown-toggle')]");
+    By RepublishBtn = By.xpath("//*[contains(@class, 'dropdown-menu')]//li[1]");
 
 
 
@@ -191,6 +192,8 @@ public class Publish extends Base {
     public List<WebElement> TeacherFilterOptions(){return driver.findElements(TeacherFilterOptions);}
     public List<WebElement> ContentList(){return driver.findElements(ContentList);}
     public WebElement FirstCategoryFilterOption(){return driver.findElement(FirstCategoryFilterOption);}
+    public WebElement FirstContentMoreOptions(){return driver.findElement(FirstContentMoreOptions);}
+    public WebElement RepublishBtn(){return driver.findElement(RepublishBtn);}
 
 
 

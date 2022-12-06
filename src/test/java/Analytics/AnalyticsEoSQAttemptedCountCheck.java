@@ -78,15 +78,13 @@ public class AnalyticsEoSQAttemptedCountCheck extends Base {
 
         flag2 = CompareVal(nonattemptedCount, displayedStudents);
 
+        System.out.println(attemptedCount+" "+nonattemptedCount+" "+Integer.parseInt(ana.overallScore().getText()));
         flag3 = CompareVal(attemptedCount+ nonattemptedCount, Integer.parseInt(ana.overallScore().getText()));
 
         ValidateTest(flag1, flag2, flag3);
     }
     public boolean CompareVal(int actual, int expected){
         return actual == expected;
-    }
-    public boolean CompareText(String actual, String expected){
-        return actual.contains(expected);
     }
 
     @AfterMethod

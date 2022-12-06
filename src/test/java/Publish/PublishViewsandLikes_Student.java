@@ -43,7 +43,7 @@ public class PublishViewsandLikes_Student extends Base {
     @Description("Examine whether or not the student can successfully view and like the published content.")
     @Story("TPUBFS_03")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "studentData", priority = 2)
+    @Test(dataProvider = "studentData")
     public void studentPublishViewsandLikes(String mobNumber, String password) throws IOException, InterruptedException {
         boolean flag1, flag2;
         Long mob = Long.parseLong(mobNumber);

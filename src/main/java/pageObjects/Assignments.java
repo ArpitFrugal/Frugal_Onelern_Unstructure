@@ -65,14 +65,16 @@ public class Assignments extends Base {
     }
 
     public WebElement StudentAccount(){ return driver.findElement(StudentAccount);}
-
+    @Step("Selecting student prodile")
     public WebElement StudentImageClick() { return driver.findElement(StudentImageClick);}
     public WebElement rightswipemodules(){return driver.findElement(rightSwipeModules);}
-
+    @Step("Opening assignments module...")
     public WebElement AssignmentsToggle() { return driver.findElement(AssignmentsToggle);}
 
     // landing page
+    @Step("Fetching header...")
     public String GetHeader(){ return driver.findElement(GetHeader).getText();}
+    @Step("Creating new assignment...")
     public WebElement CreateNewBtn(){return driver.findElement(CreateNewBtn);}
     public WebElement AssignmentName(){return driver.findElement(AssignmentName);}
     public WebElement AssignmentSubject(){return driver.findElement(AssignmentSubject);}
@@ -80,38 +82,53 @@ public class Assignments extends Base {
     public WebElement AssignmentType(){return driver.findElement(AssignmentType);}
     public WebElement AssignmentDetailsSubmitBtn(){return driver.findElement(AssignmentDetailsSubmitBtn);}
     public WebElement QuestionDescription(){return driver.findElement(QuestionDescription);}
+    @Step("Attaching link...")
     public WebElement AttachLink(){return driver.findElement(AttachLink);}
     public WebElement LinkInputBox(){return driver.findElement(LinkInputBox);}
+    @Step("Adding link...")
     public WebElement AddLinkSubmit(){return driver.findElement(AssignmentDetailsSubmitBtn);}
     public List<WebElement> FileTypes(){return driver.findElements(FileTypes);}
+    @Step("Assigning students...")
     public WebElement AssignStudentsBtn(){return driver.findElement(AssignStudentsBtn);}
-
+    @Step("Selecting students...")
     public WebElement SelectStudentsBtn(){return driver.findElement(SelectStudentsBtn);}
     public WebElement SelectAllOption(){return driver.findElement(SelectAllOption);}
+    @Step("Adding students...")
     public WebElement AddStudentsBtn(){return driver.findElement(AssignmentDetailsSubmitBtn);}
+    @Step("Scheduling assignment...")
     public WebElement ScheduleBtn(){return driver.findElement(AssignStudentsBtn);}
-    public WebElement StartDateInputBox(){return driver.findElements(StartEndDateInputs).get(0);}
-    public WebElement EndDateInputBox(){return driver.findElements(StartEndDateInputs).get(1);}
+    public WebElement StartDateInputBox(){return driver.findElements(StartEndDateInputs).get(3);}
+    public WebElement EndDateInputBox(){return driver.findElements(StartEndDateInputs).get(4);}
+    @Step("Publishing the assignment...")
     public WebElement PublishBtn(){return driver.findElement(AssignStudentsBtn);}
+    @Step("Switching to ongoing tab...")
     public WebElement OngoingTabPage(){return driver.findElement(OngoingTabPage);}
+    @Step("Switching to drafts page...")
     public WebElement DraftsTabPage(){return driver.findElement(DraftsTabPage);}
+    @Step("Switching to completed page...")
     public WebElement CompletedTabPage(){return driver.findElement(CompletedTabPage);}
+    @Step("Switching to cancelled page...")
     public WebElement CancelledTabPage(){return driver.findElement(CancelledTabPage);}
     public List<WebElement> AssignmentStatus(){return driver.findElements(AssignmentStatus);}
     public List<WebElement> AssignmentNames(){return driver.findElements(AssignmentNames);}
 
 
     // Pagination
-
+    @Step("Paginate to next page")
     public WebElement NextNavigate(){ return driver.findElement(NextNavigate); }
+    @Step("Fetching pagination text...")
     public WebElement PaginationText(){return driver.findElement(PaginationText);}
+    @Step("Paginating back...")
     public WebElement BackNavigate(){ return driver.findElement(BackNavigate);}
-
+    @Step("Saving as draft...")
     public WebElement SaveAsDraft(){return driver.findElement(SaveAsDraft);}
+    @Step("Starting assignment...")
     public WebElement startAssignment(){return driver.findElement(startAssignment);}
+    @Step("Submitting assignment...")
     public WebElement submitAssignment(){return driver.findElement(startAssignment);}
     public WebElement AttachFileInputBox(){return driver.findElement(AttachFileInputBox);}
     public WebElement AssignmentAnswerInputBox(){return driver.findElement(AssignmentAnswerInputBox);}
+    @Step("Going to dashboard...")
     public WebElement GoToDashboardBtn(){return driver.findElement(GoToDashboardBtn);}
     public WebElement FirstAssignment(){return driver.findElement(FirstAssignment);}
     public WebElement mainContent(){return driver.findElement(mainContent);}

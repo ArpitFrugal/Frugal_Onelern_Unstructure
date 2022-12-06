@@ -61,12 +61,14 @@ public class Base {
 	}
 
 	public Object[][] getStudentData() throws FileAlreadyExistsException {
+//		Object loginData[][] = {{"9000000001", "123456"}};
 		Object loginData[][] = { { "9000000001", "123456" }, { "9000000021", "123456" }, { "9000000041", "123456" },
 				{ "9000000061", "123456" }, { "9000000081", "123456" } };
 		return loginData;
 	}
 
 	public Object[][] getTeacherData() throws FileAlreadyExistsException {
+//		Object loginData[][] = {{"9000000101", "123456"}};
 		Object loginData[][] = {{"9000000101", "123456"}, {"9000000106", "123456"}, {"9000000109", "123456"},
 				{"9000000113", "123456"}, {"9000000117", "123456"}};
 		return loginData;

@@ -45,7 +45,7 @@ public class LessonDeliveryInsertAudioCheck extends Base {
     @Description("Teacher should be able to insert Audio while creating learning plan successfully.")
     @Story("LDFT_17")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherInsertAudioCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

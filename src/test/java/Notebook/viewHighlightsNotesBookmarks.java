@@ -454,7 +454,7 @@ public class viewHighlightsNotesBookmarks extends Base {
     @Description("To see if a teacher can view highlights, notes and bookmarks from library in Notebook")
     @Story("NOTFT_04")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void CheckTeacherHighlightsNotesBookmarks(String mobNumber, String password) throws IOException, InterruptedException, UnsupportedFlavorException {
         Map<String, String> map = new HashMap<>();
         Long mob = Long.parseLong(mobNumber);

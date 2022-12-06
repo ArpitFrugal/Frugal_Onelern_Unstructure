@@ -45,7 +45,7 @@ public class LessonDeliveryInsertLinkCheck extends Base {
     @Description("Teacher should be able to insert link while creating learning plan successfully.")
     @Story("LDFT_14")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void TeacherInsertLinkCheck(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);

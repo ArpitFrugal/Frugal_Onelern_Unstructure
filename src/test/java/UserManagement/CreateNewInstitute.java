@@ -35,7 +35,7 @@ public class CreateNewInstitute extends Base {
     @Story("UMFA_02")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")
-    public void AdminLanding(String mobNumber, String password) throws IOException, InterruptedException {
+    public void AdminAddInstituteCheck(String mobNumber, String password) throws IOException, InterruptedException {
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("projectadmin", mobNumber, password);
         Thread.sleep(2000);

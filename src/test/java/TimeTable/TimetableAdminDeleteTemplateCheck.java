@@ -45,7 +45,7 @@ public class TimetableAdminDeleteTemplateCheck extends Base {
         Thread.sleep(2000);
 
         tim.adminTimetableToggle().click();
-
+        Thread.sleep(2000);
         tim.TemplatesBtn().click();
 
         tim.CreateTemplate().click();

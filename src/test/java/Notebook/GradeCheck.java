@@ -93,7 +93,7 @@ public class GradeCheck extends Base {
     @Description("To see if a teacher of a specific grade has the correct grade book")
     @Story("NOTFT_02")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(dataProvider = "teachersData")
+    @Test(dataProvider = "teacherData")
     public void CheckTeacherBookGrade(String mobNumber, String password) throws IOException, InterruptedException {
         Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
