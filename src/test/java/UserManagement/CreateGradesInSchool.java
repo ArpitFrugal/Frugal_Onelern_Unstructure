@@ -1,7 +1,10 @@
 package UserManagement;
 
 import io.qameta.allure.*;
+import org.apache.commons.lang3.Validate;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -36,34 +39,48 @@ public class CreateGradesInSchool extends Base {
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")
     public void AdminCreateGradeCheck(String mobNumber, String password) throws IOException, InterruptedException {
+        boolean flag;
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("projectadmin", mobNumber, password);
         usm.InstituteClick().click();
         Thread.sleep(2000);
-        usm.SearchInstitute().sendKeys("Alphores");
+        usm.SearchInstitute().sendKeys("Automation");
         Thread.sleep(2000);
         usm.SelectInstitute().click();
         Thread.sleep(2000);
         usm.SearchSchool().click();
-        usm.SearchSchool().sendKeys("Trinity");
+        usm.SearchSchool().sendKeys("School");
         usm.SelectSchool().click();
         Thread.sleep(2000);
+
+        int gradesDisplayed = driver.findElements(By.xpath("//label[contains(@for,'form')]/input")).size();
         usm.AddGradeBtnClick().click();
         Thread.sleep(5000);
-        usm.Grade1Check().click();
-        Thread.sleep(2000);
-        usm.Grade2Check().click();
-        Thread.sleep(2000);
-        usm.Grade3Check().click();
-        Thread.sleep(2000);
-        usm.Grade4Check().click();
-        Thread.sleep(2000);
-        usm.Grade5Check().click();
-        Thread.sleep(2000);
-        usm.SaveBtn().click();
-        Thread.sleep(2000);
 
+        if(usm.Grades().size()>0){
+            usm.Grade1Check().click();
+            Thread.sleep(2000);
+            usm.SaveBtn().click();
+            Thread.sleep(2000);
 
+            System.out.println(driver.findElements(By.xpath("//label[contains(@for,'form')]/input")).size());
+            flag = driver.findElements(By.xpath("//label[contains(@for,'form')]/input")).size() == gradesDisplayed+1;
+        }
+        else{
+            flag=true;
+        }
+
+        ValidateTest(flag);
+
+    }
+
+    private void ValidateTest(boolean flag) {
+        if(flag){
+            System.out.println("PASSED");
+        }
+        else{
+            Assert.fail();
+        }
     }
 
     @AfterMethod

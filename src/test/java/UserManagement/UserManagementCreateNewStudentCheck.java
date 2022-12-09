@@ -134,7 +134,7 @@ public class UserManagementCreateNewStudentCheck extends Base {
         js.executeScript("arguments[0].scrollIntoView();", usm.AddStudent());
         Thread.sleep(1000);
         usm.AddStudent().click();
-        Thread.sleep(2000);
+        Thread.sleep(10000);
         List<WebElement> StudentsDisplayed = usm.StudentsDisplayed();
 
         boolean flag = false;

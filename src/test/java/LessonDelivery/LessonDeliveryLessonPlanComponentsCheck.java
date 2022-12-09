@@ -1,6 +1,7 @@
 package LessonDelivery;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,9 +40,9 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
         Thread.sleep(5000);
     }
 
-    public boolean ColorCheck(String actual, String expected){
+    public boolean ClassCheck(String actual, String expected){
         System.out.println(actual+" "+expected);
-        return actual.equals(expected);
+        return !actual.contains(expected);
     }
     public void ValidateTest(boolean flag1, boolean flag2, boolean flag3, boolean flag4) {
         System.out.println(flag1+" "+flag2+" "+flag3+" "+flag4);
@@ -71,7 +72,7 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
         String blackColor = "#131536";
         String blueColor = "rgba(71, 75, 255, 1)";
         boolean flag1, flag2, flag3, flag4;
-        String color;
+        String classname;
 
         if (mob >= 9000000101l && mob <= 9000000104l) { // Environmental Studies Coursebook - Part A
             ld.EnvironmentalcoursebookGrade1().click();
@@ -84,29 +85,36 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
 
             ld.TeachComponent().click();
             Thread.sleep(5000);
-            color = ld.TeachComponent().getCssValue("color");
-            flag1 = ColorCheck(color, blueColor);
+            classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
+            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
+//            driver.findElement(By.xpath("//*[contains(@id,'flush-headingTwo')]/button")).click();
+//            Thread.sleep(5000);
+//            String classname1 = String.valueOf(driver.findElement(By.xpath("//*[contains(@id,'flush-headingTwo')]/button")).getAttribute("class"));
+//            flag2 = ClassCheck(classname1, "collapsed");
+//            Thread.sleep(1000);
+//            ld.ApplyComponent().click();
+
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            color = ld.ApplyComponent().getCssValue("color");
-            flag2 = ColorCheck(color, blueColor);
+            classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
+            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            color = ld.AssessComponent().getCssValue("color");
-            flag3 = ColorCheck(color, blueColor);
+            classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
+            flag3 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            color = ld.ReviewComponent().getCssValue("color");
-            flag4 = ColorCheck(color, blueColor);
+            classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
+            flag4 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -125,26 +133,30 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.FirstLearningPlan().click();
 
             ld.TeachComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
-            flag1 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.ApplyComponent().getCssValue("color");
-            flag2 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.AssessComponent().getCssValue("color");
-            flag3 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag3 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.ReviewComponent().getCssValue("color");
-            flag4 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag4 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -163,26 +175,30 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.FirstLearningPlan().click();
 
             ld.TeachComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
-            flag1 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.ApplyComponent().getCssValue("color");
-            flag2 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.AssessComponent().getCssValue("color");
-            flag3 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag3 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.ReviewComponent().getCssValue("color");
-            flag4 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag4 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -202,26 +218,30 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.FirstLearningPlan().click();
 
             ld.TeachComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
-            flag1 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.ApplyComponent().getCssValue("color");
-            flag2 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.AssessComponent().getCssValue("color");
-            flag3 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag3 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.ReviewComponent().getCssValue("color");
-            flag4 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag4 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -241,26 +261,30 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             ld.FirstLearningPlan().click();
 
             ld.TeachComponent().click();
-            color = ld.TeachComponent().getCssValue("color");
-            flag1 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
             ld.ApplyComponent().click();
-            color = ld.ApplyComponent().getCssValue("color");
-            flag2 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
             ld.AssessComponent().click();
-            color = ld.AssessComponent().getCssValue("color");
-            flag3 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag3 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.AssessComponent().click();
 
             ld.ReviewComponent().click();
-            color = ld.ReviewComponent().getCssValue("color");
-            flag4 = ColorCheck(color, blueColor);
+            Thread.sleep(5000);
+            classname = String.valueOf(ld.TeachComponent().getClass());
+            flag4 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 

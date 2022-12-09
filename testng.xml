@@ -136,6 +136,7 @@
 			<class name="Publish.PublishPagination"/>
 			<class name="Publish.PublishTeacherCategoryFilters_Student"/>
 			<class name="Publish.PublishSubjectLessonCategoryFilters_Teacher"/>
+			<class name="Publish.PublishNewContentCheck"/>
 			<class name="Publish.RepublishContentCheck"/>
 
 
@@ -163,7 +164,6 @@
 
 
 			<!--			Below classes cannot run on headless browsers-->
-			<class name="Publish.PublishNewContentCheck"/>
 			<class name="Notebook.viewHighlightsNotesBookmarks"/>
 
 		</classes>

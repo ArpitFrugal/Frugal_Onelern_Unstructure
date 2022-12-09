@@ -128,14 +128,19 @@ public class LessonDelivery extends Base {
     public WebElement EnvironmentalcoursebookGrade1(){return driver.findElement(EnvironmentalcoursebookGrade1);}
     @Step("Opening English coursebook...")
     public WebElement EnglishCoursebookGrade2(){return driver.findElement(EnglishCoursebookGrade2);}
-    @Step("Opening Mathematics ")
+    @Step("Opening Mathematics coursebook...")
     public WebElement MathematicsCoursebookGrade3(){return driver.findElement(MathematicsCoursebookGrade3);}
+    @Step("Opening English coursebook...")
     public WebElement EnglishCoursebookGrade4(){return driver.findElement(EnglishCoursebookGrade4);}
+    @Step("Opening Mathematics coursebook...")
     public WebElement MathematicsCoursebookGrade5(){return driver.findElement(MathematicsCoursebookGrade5);}
-
+    @Step("Fetching workbook heading...")
     public WebElement WorkbookHeading(){return driver.findElement(WorkbookHeading);}
+    @Step("Opening first lesson...")
     public WebElement FirstLesson(){return driver.findElement(FirstLesson);}
+    @Step("Opening second lesson...")
     public WebElement SecondLesson(){return driver.findElement(SecondLesson);}
+    @Step("Opening third lesson...")
     public WebElement ThirdLesson(){return driver.findElement(ThirdLesson);}
     public WebElement DisplayedLessonName(){return driver.findElement(DisplayedLessonName);}
     public WebElement FirstLearningPlan(){return driver.findElement(FirstLearningPlan);}
@@ -145,7 +150,7 @@ public class LessonDelivery extends Base {
         screenshot();
         return driver.findElement(BackButton);
     }
-
+    @Step("Viewing lesson plan...")
     public WebElement LessonPlanOverviewBtn(){return driver.findElement(LessonPlanOverviewBtn);}
 
     public WebElement LessonPlanOverviewModalHeader(){return driver.findElement(LessonPlanOverviewModalHeader);}
@@ -155,31 +160,42 @@ public class LessonDelivery extends Base {
     public WebElement ApplyComponent(){return driver.findElement(ApplyComponent);}
     public WebElement AssessComponent(){return driver.findElement(AssessComponent);}
     public WebElement ReviewComponent(){return driver.findElement(ReviewComponent);}
+    @Step("Fetching learning plan status...")
     public WebElement LearningPlanStatus(){return driver.findElement(LearningPlanStatus);}
     public WebElement LessonPlanMode(){return driver.findElement(LessonPlanMode);}
+    @Step("Creating learning plan...")
     public WebElement CreateLearningPlanBtn(){return driver.findElement(CreateLearningPlanBtn);}
     public List<WebElement> LearningPlanInputs(){return driver.findElements(LearningPlanInputs);}
+    @Step("Submit learning plan...")
     public WebElement LearningPlanSubmitBtn(){return driver.findElement(LearningPlanSubmitBtn);}
     public List<WebElement> CustomLearningPlans(){return driver.findElements(CustomLearningPlans);}
     public List<WebElement> LearningPlans(){return driver.findElements(LearningPlans);}
+    @Step("Editing learning plan...")
     public WebElement EditBtn(){return driver.findElement(EditBtn);}
+    @Step("Deleting learning plan...")
     public WebElement DeleteBtn(){return driver.findElements(EditBtn).get(1);}
+    @Step("confirm deleting learning plan...")
     public WebElement ConfirmDeleteBtn(){return driver.findElement(ConfirmDeleteBtn);}
     public List<WebElement> FileSelectionOptions(){return driver.findElements(FileSelectionOptions);}
     public WebElement LinkInputBox(){return driver.findElement(LinkInputBox);}
+    @Step("Adding link...")
     public WebElement AddLinkBtn(){return driver.findElement(AddLinkBtn);}
     public WebElement previewLink(){return driver.findElement(previewLink);}
+    @Step("Choosing image...")
     public WebElement ImageFileSelectionOption(){return driver.findElement(ImageFileSelectionOption);}
+    @Step("Choosing PDF...")
     public WebElement PDFFileSelectionOption(){return driver.findElement(PDFFileSelectionOption);}
+    @Step("Choosing Audio...")
     public WebElement AudioFileSelectionOption(){return driver.findElement(AudioFileSelectionOption);}
+    @Step("Choosing video...")
     public WebElement VideoFileSelectionOption(){return driver.findElement(VideoFileSelectionOption);}
+    @Step("Viewing file...")
     public WebElement FilePreview(){return driver.findElement(FilePreview);}
     public WebElement DisplayedFileFormat(){return driver.findElement(DisplayedFileFormat);}
 
 
     public WebElement LessonInfo(){return driver.findElement(LessonInfo);}
     public WebElement LessonInfoKeyPoints(){return driver.findElement(LessonInfoKeyPoints);}
-
 
 
 

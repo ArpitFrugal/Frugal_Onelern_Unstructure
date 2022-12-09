@@ -56,7 +56,7 @@ public class TeacherDoubtReplyCheck extends Base {
 
         String selectedSubject = null, selectedLesson = null;
         List<WebElement> doubtoptions = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div/div[1]//select"));
-
+        Thread.sleep(2000);
         for(WebElement webElement:doubtoptions){
             webElement.click();
             webElement.sendKeys(Keys.ARROW_DOWN);
@@ -79,7 +79,6 @@ public class TeacherDoubtReplyCheck extends Base {
         dou.QuestionTextBox().sendKeys("ABCD TEST");
         Thread.sleep(1000);
         dou.SubmitBtn().click();
-
         Thread.sleep(5000);
 
         // -------------------------

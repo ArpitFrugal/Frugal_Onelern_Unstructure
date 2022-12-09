@@ -70,6 +70,7 @@ public class viewHighlightsNotesBookmarks extends Base {
         note.StudentImageClick().click();
         ThreadSleep5000();
         note.LibraryToggle().click();
+        Thread.sleep(5000);
 
         if (mob >= 9000000001l && mob <= 9000000020l) {// English
             note.EnvironmentalCoursebookGrade1().click();

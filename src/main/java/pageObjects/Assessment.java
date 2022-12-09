@@ -48,7 +48,7 @@ public class Assessment extends Base {
     By DurationInput = By.xpath("//input[@placeholder='Duration']");
     By ShowScoresAfter = By.xpath("//*[contains(@class,'form-select')]");
     By passwordInputTeacher = By.xpath("//input[@placeholder='password']");
-    By instructionsInput = By.id("instruction");
+    By instructionsInput = By.xpath("//*[contains(@id,'instruction')]/div/div");
     By HintShowOption = By.xpath("//*[contains(@class,'hint-txt')]/div/div/div");
     By PublishAssessmentBtn = By.xpath("//*[@class='bottom-fix']/div/button[2]");
     By FirstAssessmentDisplayedTeacher = By.xpath("//*[contains(@class,'assessment-box')]//h1");

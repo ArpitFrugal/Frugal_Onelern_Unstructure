@@ -1,8 +1,11 @@
 package UserManagement;
 
 import io.qameta.allure.*;
+import org.apache.commons.lang3.Validate;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -43,18 +46,20 @@ public class CreateSectionInGrade extends Base {
         Thread.sleep(2000);
         usm.SearchInstitute().click();
         Thread.sleep(2000);
-        usm.SearchInstitute().sendKeys("Alphores");
+        usm.SearchInstitute().sendKeys("Automation");
         Thread.sleep(2000);
         usm.SelectInstitute().click();
         Thread.sleep(2000);
         usm.SearchSchool().click();
-        usm.SearchSchool().sendKeys("Trinity");
+        usm.SearchSchool().sendKeys("School");
         Thread.sleep(2000);
         usm.SelectSchool().click();
         Thread.sleep(2000);
         List<WebElement> grades = usm.GradesDisplay();
         grades.get(0).click();
         Thread.sleep(2000);
+
+        int sectionsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'grade-card')]")).size();
         usm.AddsectionsBtn().click();
         Thread.sleep(2000);
         usm.InputSectionName().click();
@@ -62,6 +67,18 @@ public class CreateSectionInGrade extends Base {
         Thread.sleep(2000);
         usm.AddSectionBtn().click();
         Thread.sleep(2000);
+        int sectionsDisplayedAfterAdding = driver.findElements(By.xpath("//*[contains(@class,'grade-card')]")).size();
+
+        ValidateTest(sectionsDisplayed, sectionsDisplayedAfterAdding);
+    }
+
+    private void ValidateTest(int sectionsDisplayed, int sectionsDisplayedAfterAdding) {
+        if(sectionsDisplayed+1 == sectionsDisplayedAfterAdding){
+            System.out.println("PASSED");
+        }
+        else{
+            Assert.fail();
+        }
     }
 
     @AfterMethod

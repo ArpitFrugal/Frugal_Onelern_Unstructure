@@ -104,12 +104,15 @@ public class AssignmentCompletedPageCheck extends Base {
             webElement.click();
             Thread.sleep(500);
         }
+        asg.FileSizeLimit().click();
+        asg.FileSizeLimit().sendKeys("1");
 
         asg.AssignStudentsBtn().click();
+        Thread.sleep(2000);
 
         asg.SelectStudentsBtn().click();
-
         Thread.sleep(2000);
+
         asg.SelectAllOption().click();
 
         asg.AddStudentsBtn().click();

@@ -45,7 +45,7 @@ public class CreateSchoolInInstitute extends Base {
         Thread.sleep(2000);
         usm.SearchInstitute().click();
         Thread.sleep(2000);
-        usm.SearchInstitute().sendKeys("Alphores");
+        usm.SearchInstitute().sendKeys("Automation");
         Thread.sleep(2000);
         usm.SelectInstitute().click();
         Thread.sleep(2000);

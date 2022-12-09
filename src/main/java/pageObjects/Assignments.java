@@ -52,7 +52,7 @@ public class Assignments extends Base {
     By FirstAssignment = By.xpath("//*[contains(@class,'due-take-test')]//button");
     By mainContent = By.xpath("//*[contains(@class, 'main-content')]");
 
-
+    By FileSizeLimit = By.id("file-size-limit");
 
 
     @Attachment(value = "Screenshot", type = "image/png")
@@ -133,6 +133,7 @@ public class Assignments extends Base {
     public WebElement FirstAssignment(){return driver.findElement(FirstAssignment);}
     public WebElement mainContent(){return driver.findElement(mainContent);}
 
+    public WebElement FileSizeLimit(){return driver.findElement(FileSizeLimit);}
 
 
 

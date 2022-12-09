@@ -68,6 +68,8 @@ public class UserManagement extends Base {
     By SearchSchool = By.xpath("//input[@type='search']");
     By SelectSchool = By.xpath("/html/body/div[1]/div/div/div[2]/div[1]/div[4]/div/div");
     By AddGradeBtnClick = By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/button");
+    By Grades = By.xpath("//label[contains(@for,'form')]/input");
+    By Sections = By.xpath("//*[contains(@class,'grade-card')]");
     By Grade1Check = By.xpath("//label[@for='form_0']/input");
     By Grade2Check = By.xpath("//label[@for='form_1']/input");
     By Grade3Check = By.xpath("//label[@for='form_2']/input");
@@ -155,177 +157,182 @@ public class UserManagement extends Base {
     /////
     @Step("Institute is selected from left Navigation bar...")
     public WebElement InstituteClick() {
-        return this.driver.findElement(this.InstituteClick);
+        return driver.findElement(InstituteClick);
     }
 
     @Step("Create Institute button is clicked")
     public WebElement NewInstituteBtnClick() {
-        return this.driver.findElement(this.NewInstituteBtnClick);
+        return driver.findElement(NewInstituteBtnClick);
     }
 
     @Step("Enter Institute Name")
     public WebElement EnterInstituteName() {
-        return this.driver.findElement(this.EnterInstituteName);
+        return driver.findElement(EnterInstituteName);
     }
 
     @Step("Enter Institute Code")
     public WebElement EnterInstituteCode() {
-        return this.driver.findElement(this.EnterInstituteCode);
+        return driver.findElement(EnterInstituteCode);
     }
 
     @Step("Select Curriculum from dropdown")
     public WebElement SelectCurriculum() {
-        return this.driver.findElement(this.SelectCurriculum);
+        return driver.findElement(SelectCurriculum);
     }
 
     @Step("Click on Create Institute button ")
     public WebElement CreateInstituteBtnClick() {
-        return this.driver.findElement(this.CreateInstituteBtnClick);
+        return driver.findElement(CreateInstituteBtnClick);
     }
 
     @Step("Search Institute from list ")
     public WebElement SearchInstitute() {
-        return this.driver.findElement(this.SearchInstitute);
+        return driver.findElement(SearchInstitute);
     }
 
     @Step("Click on Institute card from the list ")
     public WebElement SelectInstitute() {
-        return this.driver.findElement(this.SelectInstitute);
+        return driver.findElement(SelectInstitute);
     }
 
     @Step("Click on Add school button")
     public WebElement AddSchoolBtnClick() {
-        return this.driver.findElement(this.AddSchoolBtnClick);
+        return driver.findElement(AddSchoolBtnClick);
     }
 
     @Step("Enter School Name ")
     public WebElement EnterSchoolName() {
-        return this.driver.findElement(this.EnterSchoolName);
+        return driver.findElement(EnterSchoolName);
     }
 
     @Step("Enter School Code ")
     public WebElement EnterSchoolCode() {
-        return this.driver.findElement(this.EnterSchoolCode);
+        return driver.findElement(EnterSchoolCode);
     }
 
     @Step("Enter Curriculum ")
     public WebElement EnterCurriculum() {
-        return this.driver.findElement(this.EnterCurriculum);
+        return driver.findElement(EnterCurriculum);
     }
 
     @Step("Enter Live URl ")
     public WebElement EnterLiveClassURL() {
-        return this.driver.findElement(this.EnterLiveClassURL);
+        return driver.findElement(EnterLiveClassURL);
     }
 
     @Step("Enter Address ")
     public WebElement EnterAddress() {
-        return this.driver.findElement(this.EnterAddress);
+        return driver.findElement(EnterAddress);
     }
 
     @Step("Enter PhoneNumber ")
     public WebElement EnterPhoneNumber() {
-        return this.driver.findElement(this.EnterPhoneNumber);
+        return driver.findElement(EnterPhoneNumber);
     }
 
     @Step("Enter Zipcode ")
     public WebElement EnterZipCode() {
-        return this.driver.findElement(this.EnterZipCode);
+        return driver.findElement(EnterZipCode);
     }
 
     @Step("Enter City ")
     public WebElement EnterCity() {
-        return this.driver.findElement(this.EnterCity);
+        return driver.findElement(EnterCity);
     }
 
     @Step("Enter State")
     public WebElement EnterState() {
-        return this.driver.findElement(this.EnterState);
+        return driver.findElement(EnterState);
     }
 
     @Step("Enter Country ")
     public WebElement EnterCountry() {
-        return this.driver.findElement(this.EnterCountry);
+        return driver.findElement(EnterCountry);
     }
 
     @Step("Enter Email ")
     public WebElement EnterEmail() {
-        return this.driver.findElement(this.EnterEmail);
+        return driver.findElement(EnterEmail);
     }
 
     @Step("Enter Website ")
     public WebElement EnterWebsite() {
-        return this.driver.findElement(this.EnterWebsite);
+        return driver.findElement(EnterWebsite);
     }
 
     @Step("Click Create school button ")
     public WebElement CreateSchoolBtn() {
-        return this.driver.findElement(this.CreateSchoolBtn);
+        return driver.findElement(CreateSchoolBtn);
     }
 
     @Step("Search for Schoolname ")
     public WebElement SearchSchool() {
-        return this.driver.findElement(this.SearchSchool);
+        return driver.findElement(SearchSchool);
     }
 
     @Step("Select school from list")
     public WebElement SelectSchool() {
-        return this.driver.findElement(this.SelectSchool);
+        return driver.findElement(SelectSchool);
     }
 
     @Step("Click Add Grade button ")
     public WebElement AddGradeBtnClick() {
-        return this.driver.findElement(this.AddGradeBtnClick);
+        return driver.findElement(AddGradeBtnClick);
+    }
+
+    @Step("fetching grades...")
+    public List<WebElement> Grades(){
+        return driver.findElements(Grades);
     }
 
     @Step("Select Grade1 Checkbox")
     public WebElement Grade1Check() {
-        return this.driver.findElement(this.Grade1Check);
+        return driver.findElement(Grade1Check);
     }
 
     @Step("Select Grade2 Checkbox")
     public WebElement Grade2Check() {
-        return this.driver.findElement(this.Grade2Check);
+        return driver.findElement(Grade2Check);
     }
 
     @Step("Select Grade3 Checkbox")
     public WebElement Grade3Check() {
-        return this.driver.findElement(this.Grade3Check);
+        return driver.findElement(Grade3Check);
     }
 
     @Step("Select Grade4 Checkbox")
     public WebElement Grade4Check() {
-        return this.driver.findElement(this.Grade4Check);
+        return driver.findElement(Grade4Check);
     }
 
     @Step("Select Grade5 Checkbox")
     public WebElement Grade5Check() {
-        return this.driver.findElement(this.Grade5Check);
+        return driver.findElement(Grade5Check);
     }
 
     @Step("Click save button ")
     public WebElement SaveBtn() {
-        return this.driver.findElement(this.SaveBtn);
+        return driver.findElement(SaveBtn);
     }
 
     @Step("Selecting Grades from list")
     public List<WebElement> GradesDisplay() {
-        return this.driver.findElements(this.GradesDisplay);
+        return driver.findElements(GradesDisplay);
     }
 
     @Step("Click Add sections button to add Add name of sections ")
     public WebElement AddsectionsBtn() {
-        return this.driver.findElement(this.AddsectionsBtn);
+        return driver.findElement(AddsectionsBtn);
     }
 
     @Step("Add Section name ")
     public WebElement InputSectionName() {
-        return this.driver.findElement(this.InputSectionName);
+        return driver.findElement(InputSectionName);
     }
 
     @Step("Click on Add section button to save ")
     public WebElement AddSectionBtn() {
-        return this.driver.findElement(this.AddSectionBtn);
+        return driver.findElement(AddSectionBtn);
     }
 
     public WebElement StudentFirstName(){return driver.findElement(StudentFirstName);}

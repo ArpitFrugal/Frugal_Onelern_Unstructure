@@ -107,8 +107,11 @@ public class AssignmentScheduledPageCheck extends Base {
             Thread.sleep(500);
         }
 
-        asg.AssignStudentsBtn().click();
+        asg.FileSizeLimit().click();
+        asg.FileSizeLimit().sendKeys("1");
 
+        asg.AssignStudentsBtn().click();
+        Thread.sleep(2000);
         asg.SelectStudentsBtn().click();
 
         Thread.sleep(2000);
@@ -123,22 +126,32 @@ public class AssignmentScheduledPageCheck extends Base {
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        String str = formatter.format(date);
-
-        String currdate = str.split("/")[0];
-        String currmonth = str.split("/")[1];
-        String curryear = str.split("/")[2];
-
-        Calendar cal = Calendar.getInstance();
+        String CurrDate = formatter.format(date);
+        Calendar cal1 = Calendar.getInstance();
         try{
-            cal.setTime(formatter.parse(str));
+            cal1.setTime(formatter.parse(CurrDate));
         }catch(ParseException e){
             e.printStackTrace();
         }
 
         // use add() method to add the days to the given date
-        cal.add(Calendar.DAY_OF_MONTH, 2);
-        String dateAfter = formatter.format(cal.getTime());
+        cal1.add(Calendar.DAY_OF_MONTH, 5);
+        String str = formatter.format(cal1.getTime());
+        System.out.println(str);
+        String currdate = str.split("/")[0];
+        String currmonth = str.split("/")[1];
+        String curryear = str.split("/")[2];
+
+        Calendar cal2 = Calendar.getInstance();
+        try{
+            cal2.setTime(formatter.parse(str));
+        }catch(ParseException e){
+            e.printStackTrace();
+        }
+
+        // use add() method to add the days to the given date
+        cal2.add(Calendar.DAY_OF_MONTH, 20);
+        String dateAfter = formatter.format(cal2.getTime());
 
         String enddate = dateAfter.split("/")[0];
         String endmonth = dateAfter.split("/")[1];
@@ -148,7 +161,7 @@ public class AssignmentScheduledPageCheck extends Base {
         asg.StartDateInputBox().sendKeys(currdate);
         asg.StartDateInputBox().sendKeys(currmonth);
         asg.StartDateInputBox().sendKeys(curryear);
-
+        Thread.sleep(2000);
         asg.EndDateInputBox().click();
         asg.EndDateInputBox().sendKeys(enddate);
         asg.EndDateInputBox().sendKeys(endmonth);

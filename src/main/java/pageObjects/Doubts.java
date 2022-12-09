@@ -19,7 +19,7 @@ public class Doubts extends Base {
     By DoubtsCards = By.xpath("//*[contains(@class, 'doubts-card')]");
     By FirstDoubt = By.xpath("//*[contains(@class, 'doubts-card')]//div");
     By QuestionTextBox = By.xpath("//*[contains(@class,'fr-wrapper')]/div");
-    By SubmitBtn = By.xpath("//button[contains(@class, 'btn-submit')]");
+    By SubmitBtn = By.xpath("//*[contains(@class, 'btn-section')]/button[2]");
     By CreatedSubjectDetails = By.xpath("//div[contains(@class, 'subject-details')]");
     By CreatedQuestionDetails = By.xpath("//div[contains(@class, 'question-section')]");
     By InsertImageOption = By.id("insertImage-1");

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 
 import io.qameta.allure.*;
-import org.apache.logging.log4j.LogManager;
-import org.testng.log4testng.Logger;
 import resources.Base;
 import testResource.BaseLogin;
 

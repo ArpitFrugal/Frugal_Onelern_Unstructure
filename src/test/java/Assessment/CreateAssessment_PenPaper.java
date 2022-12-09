@@ -183,7 +183,7 @@ public class CreateAssessment_PenPaper extends Base {
 
         ass.DurationInput().click();
         ass.DurationInput().sendKeys(Keys.ARROW_DOWN);
-
+        Thread.sleep(2000);
         ass.instructionsInput().click();
         ass.instructionsInput().sendKeys("Instructions");
         Thread.sleep(1000);

@@ -105,8 +105,11 @@ public class CreateAssignmentForStudent extends Base {
             Thread.sleep(500);
         }
 
-        asg.AssignStudentsBtn().click();
+        asg.FileSizeLimit().click();
+        asg.FileSizeLimit().sendKeys("1");
 
+        asg.AssignStudentsBtn().click();
+        Thread.sleep(2000);
         asg.SelectStudentsBtn().click();
 
         Thread.sleep(2000);

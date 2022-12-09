@@ -60,7 +60,7 @@ public class UserManagementStudentsPaginationCheck extends Base {
         WebElement firstSchool = usm.SchoolsDisplayed().get(0);
         firstSchool.click();
         Thread.sleep(2000);
-        WebElement firstGrade = usm.GradesDisplayed().get(0);
+        WebElement firstGrade = usm.GradesDisplayed().get(3); // temp
         firstGrade.click();
         Thread.sleep(2000);
         WebElement firstSection = usm.SectionsDisplayed().get(0);

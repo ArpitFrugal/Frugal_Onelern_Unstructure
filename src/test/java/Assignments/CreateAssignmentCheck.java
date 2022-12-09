@@ -68,7 +68,7 @@ public class CreateAssignmentCheck extends Base {
         asg.CreateNewBtn().click();
 
         asg.AssignmentName().click();
-        asg.AssignmentName().sendKeys("ggg");
+        asg.AssignmentName().sendKeys("New Assignment");
 
         Select AssignmentSubject = new Select(asg.AssignmentSubject());
         AssignmentSubject.selectByIndex(1);
@@ -96,12 +96,15 @@ public class CreateAssignmentCheck extends Base {
             webElement.click();
             Thread.sleep(500);
         }
+        asg.FileSizeLimit().click();
+        asg.FileSizeLimit().sendKeys("1");
 
         asg.AssignStudentsBtn().click();
+        Thread.sleep(2000);
 
         asg.SelectStudentsBtn().click();
-
         Thread.sleep(2000);
+
         asg.SelectAllOption().click();
 
         asg.AddStudentsBtn().click();
@@ -123,8 +126,8 @@ public class CreateAssignmentCheck extends Base {
 
         // use add() method to add the days to the given date
         cal1.add(Calendar.DAY_OF_MONTH, 5);
-        String str = formatter.format(date);
-
+        String str = formatter.format(cal1.getTime());
+        System.out.println(str);
         String currdate = str.split("/")[0];
         String currmonth = str.split("/")[1];
         String curryear = str.split("/")[2];
@@ -148,7 +151,7 @@ public class CreateAssignmentCheck extends Base {
         asg.StartDateInputBox().sendKeys(currdate);
         asg.StartDateInputBox().sendKeys(currmonth);
         asg.StartDateInputBox().sendKeys(curryear);
-
+        Thread.sleep(2000);
         asg.EndDateInputBox().click();
         asg.EndDateInputBox().sendKeys(enddate);
         asg.EndDateInputBox().sendKeys(endmonth);

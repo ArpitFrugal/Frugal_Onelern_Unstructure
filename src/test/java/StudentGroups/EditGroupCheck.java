@@ -68,7 +68,7 @@ public class EditGroupCheck extends Base {
 
         sg.GroupNameInput().sendKeys("Edited Group");
         sg.UpdateGroupNameSubmit().click();
-
+        Thread.sleep(2000);
         sg.SearchInputBox().click();
         sg.SearchInputBox().sendKeys("Edited Group");
 

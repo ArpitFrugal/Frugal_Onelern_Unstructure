@@ -33,19 +33,17 @@ public class Publish extends Base {
     // student publish module
     By PublishContentOnTop = By.xpath("//*[contains(@class,'doubts-card')][1]/div[contains(@class,'question-section')]");
     By BackAfterPublish = By.xpath("/html/body/nav/div[1]/div/span[1]");
-    By FirstContentTime = By.xpath("/html/body/div/div/div[2]/div[2]/table/tbody/tr[1]/td[4]");
+    By FirstContentTime = By.xpath("/html/body/div/div/div[2]/div[2]/table/tbody/tr[1]/td[6]");
     By OutsideViewCount = By.xpath("//span[contains(@class,'view-count')]");
     By ContentMetaData = By.xpath("//*[contains(@class,'doubts-card')]//div");
-    By InsideViewCount = By.xpath("/html/body/div/div[5]/div[1]/div[1]/span");
+    By InsideViewCount = By.xpath("//div[contains(@class,'preview-footer')]//span");
     By LikeBtn = By.xpath("//button[text()='Yes']");
     By DisLikeBtn = By.xpath("//button[text()='No']");
     By LikeCount = By.xpath("/html/body/div/div[5]/div[1]/div[2]/span");
 
     // pagination
-    By BackNavigate = By.xpath("//*[contains(@class,'option prev')]");
-    By NextNavigate = By.xpath("//*[contains(@class,'option next')]");
-    By StudentBackNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[1]");
-    By StudentNextNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[2]");
+    By BackNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[1]");
+    By NextNavigate = By.xpath("//*[contains(@class,'nxt-prv')]//button[2]");
     By PaginationText = By.className("pagination-text");
 
     // Teacher filter
@@ -161,12 +159,12 @@ public class Publish extends Base {
     @Step("Back button is clicked...")
     public WebElement StudentBackNavigate(){
         screenshot();
-        return driver.findElement(StudentBackNavigate);
+        return driver.findElement(BackNavigate);
     }
     @Step("Next button is clicked...")
     public WebElement StudentNextNavigate(){
         screenshot();
-        return driver.findElement(StudentNextNavigate);
+        return driver.findElement(NextNavigate);
     }
     @Step("Back button is clicked...")
     public WebElement BackNavigate(){

@@ -66,21 +66,14 @@ public class AssignmentCancelledPageCheck extends Base {
 
         asg.CreateNewBtn().click();
 
-        Thread.sleep(2000);
         asg.AssignmentName().click();
-        asg.AssignmentName().sendKeys("New Assignment");
+        asg.AssignmentName().sendKeys("Cancelled Assignment");
 
-//        System.out.println(1);
         Select AssignmentSubject = new Select(asg.AssignmentSubject());
         AssignmentSubject.selectByIndex(1);
-        Thread.sleep(2000);
 
-//        System.out.println(2);
         Select AssignmentRewardType = new Select(asg.AssignmentRewardType());
         AssignmentRewardType.selectByIndex(1);
-        Thread.sleep(2000);
-
-//        System.out.println(3);
 //        Select AssignmentType = new Select(asg.AssignmentType());
 //        AssignmentType.selectByIndex(1);
 //        Thread.sleep(2000);
@@ -88,8 +81,6 @@ public class AssignmentCancelledPageCheck extends Base {
         action.sendKeys(Keys.TAB).perform();
         action.sendKeys(Keys.ARROW_DOWN).perform();
 
-
-//        System.out.println(4);
         asg.AssignmentDetailsSubmitBtn().click();
 
         asg.QuestionDescription().click();
@@ -104,39 +95,52 @@ public class AssignmentCancelledPageCheck extends Base {
             webElement.click();
             Thread.sleep(500);
         }
+        asg.FileSizeLimit().click();
+        asg.FileSizeLimit().sendKeys("1");
 
         asg.AssignStudentsBtn().click();
+        Thread.sleep(2000);
 
         asg.SelectStudentsBtn().click();
-
         Thread.sleep(2000);
+
         asg.SelectAllOption().click();
 
         asg.AddStudentsBtn().click();
 
         asg.ScheduleBtn().click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         driver.findElement(By.xpath("//label[@for='individual']")).click();
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        String str = formatter.format(date);
-
-        String currdate = str.split("/")[0];
-        String currmonth = str.split("/")[1];
-        String curryear = str.split("/")[2];
-
-        Calendar cal = Calendar.getInstance();
+        String CurrDate = formatter.format(date);
+        Calendar cal1 = Calendar.getInstance();
         try{
-            cal.setTime(formatter.parse(str));
+            cal1.setTime(formatter.parse(CurrDate));
         }catch(ParseException e){
             e.printStackTrace();
         }
 
         // use add() method to add the days to the given date
-        cal.add(Calendar.DAY_OF_MONTH, 2);
-        String dateAfter = formatter.format(cal.getTime());
+        cal1.add(Calendar.DAY_OF_MONTH, 5);
+        String str = formatter.format(cal1.getTime());
+        System.out.println(str);
+        String currdate = str.split("/")[0];
+        String currmonth = str.split("/")[1];
+        String curryear = str.split("/")[2];
+
+        Calendar cal2 = Calendar.getInstance();
+        try{
+            cal2.setTime(formatter.parse(str));
+        }catch(ParseException e){
+            e.printStackTrace();
+        }
+
+        // use add() method to add the days to the given date
+        cal2.add(Calendar.DAY_OF_MONTH, 20);
+        String dateAfter = formatter.format(cal2.getTime());
 
         String enddate = dateAfter.split("/")[0];
         String endmonth = dateAfter.split("/")[1];
@@ -146,7 +150,7 @@ public class AssignmentCancelledPageCheck extends Base {
         asg.StartDateInputBox().sendKeys(currdate);
         asg.StartDateInputBox().sendKeys(currmonth);
         asg.StartDateInputBox().sendKeys(curryear);
-
+        Thread.sleep(2000);
         asg.EndDateInputBox().click();
         asg.EndDateInputBox().sendKeys(enddate);
         asg.EndDateInputBox().sendKeys(endmonth);
@@ -159,8 +163,16 @@ public class AssignmentCancelledPageCheck extends Base {
 
         asg.PublishBtn().click();
 
+        driver.findElement(By.xpath("//*[contains(@class,'test-actions')]//a")).click();
         Thread.sleep(2000);
-        asg.CancelledTabPage().click();
+
+        driver.findElement(By.xpath("//*[contains(@class,'bottom-fix')]/div")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//*[contains(@class,'modal-footer')]//button[2]")).click();
+        Thread.sleep(2000);
+
+//        asg.CancelledTabPage().click();
         boolean flag=true;
         for(WebElement webElement:asg.AssignmentStatus()){
             if(!webElement.getText().contains("Cancelled")){

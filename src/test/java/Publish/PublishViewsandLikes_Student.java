@@ -46,7 +46,6 @@ public class PublishViewsandLikes_Student extends Base {
     @Test(dataProvider = "studentData")
     public void studentPublishViewsandLikes(String mobNumber, String password) throws IOException, InterruptedException {
         boolean flag1, flag2;
-        Long mob = Long.parseLong(mobNumber);
         BaseLogin user = new BaseLogin(driver);
         user.userLogin("student", mobNumber, password);
         Thread.sleep(2000);
