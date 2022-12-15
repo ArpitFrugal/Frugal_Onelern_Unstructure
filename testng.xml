@@ -23,7 +23,7 @@
 			<class name="UserManagement.UserManagementLicenseSearchCheck"/>
 
 
-			<!--			Time Table-->
+<!--						Time Table-->
 			<class name="TimeTable.TimetableLandingPageCheck"/>
 			<class name="TimeTable.TimetablePaginationCheck"/>
 			<class name="TimeTable.TimetableViewAllEventsCheck"/>
@@ -40,7 +40,7 @@
 			<class name="TimeTable.TimetableAdminDeleteHolidayCheck"/>
 
 
-			<!--			Assignment-->
+<!--						Assignment-->
 			<class name="Assignments.AssignmentsLandingPageCheck"/>
 			<class name="Assignments.CreateAssignmentCheck"/>
 			<class name="Assignments.AssignmentScheduledPageCheck"/>
@@ -146,7 +146,7 @@
 			<class name="Notebook.LessonNameVerify"/>
 
 
-			<!--			Library-->
+<!--			&lt;!&ndash;			Library&ndash;&gt;-->
 			<class name="Library.LibLandingPageCheck" />
 			<class name="Library.GradeCheck" />
 			<class name="Library.WorkbookNameVerify" />

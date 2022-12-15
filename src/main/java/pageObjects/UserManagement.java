@@ -116,41 +116,69 @@ public class UserManagement extends Base {
 
     @Step("Student account is selected...")
     public WebElement StudentImageClick() { return driver.findElement(StudentImageClick); }
+    @Step("Fetching header...")
     public WebElement GetHeader(){return driver.findElement(GetHeader);}
+    @Step("Opening collections module...")
     public WebElement CollectionsModule(){return driver.findElement(CollectionsModule);}
+    @Step("Opening Institutes module...")
     public WebElement InstitutesModule(){return driver.findElement(InstitutesModule);}
+    @Step("Adding collections...")
     public WebElement AddCollectionsBtn(){return driver.findElement(AddCollectionsBtn);}
+    @Step("Entering collections name...")
     public WebElement CollectionNameInput(){return driver.findElement(CollectionNameInput);}
+    @Step("Entering collections description...")
     public WebElement CollectionDescriptionInput(){return driver.findElement(CollectionDescriptionInput);}
     public WebElement bottomDiv(){return driver.findElement(bottomDiv);}
+    @Step("Adding packages...")
     public WebElement AddPackagesBtn(){return driver.findElement(AddPackagesBtn);}
+    @Step("Adding collections...")
     public WebElement AddCollectionBtn(){return driver.findElement(AddCollectionBtn);}
     public WebElement FirstPackage(){return driver.findElement(FirstPackage);}
     public WebElement FirstCollection(){return driver.findElement(FirstPackage);}
+    @Step("Confirming packages...")
     public WebElement ConfirmPackages(){return driver.findElement(ConfirmPackages);}
+    @Step("Confirming collections...")
     public WebElement ConfirmCollections(){return driver.findElement(ConfirmPackages);}
+    @Step("Confirming collections...")
     public WebElement ConfirmCollection(){return driver.findElement(ConfirmCollection);}
     public WebElement FirstCollectionDisplayed(){return driver.findElement(FirstCollectionDisplayed);}
     public WebElement FirstLicenseDisplayed(){return driver.findElement(FirstCollectionDisplayed);}
+    @Step("Paginating to previous page...")
     public WebElement prevNavigateBtn(){return driver.findElement(prevNavigateBtn);}
+    @Step("Paginating to next page...")
     public WebElement nextNavigateBtn(){return driver.findElement(nextNavigateBtn);}
+    @Step("Fetching pagination text...")
     public WebElement paginationText(){return driver.findElement(paginationText);}
+    @Step("Searching...")
     public WebElement SearchInputBox(){return driver.findElement(SearchInputBox);}
     public List<WebElement> CollectionsDisplayed(){return driver.findElements(CollectionsDisplayed);}
+    @Step("Opening User Management module...")
     public WebElement UserManagementModule(){return driver.findElement(UserManagementModule);}
+    @Step("Opening License module...")
     public WebElement LicensesModule(){return driver.findElement(LicensesModule);}
-
+    @Step("Adding license...")
     public WebElement AddLicenseBtn(){return driver.findElement(AddCollectionsBtn);}
+    @Step("Entering license name...")
     public WebElement LicenseName(){return driver.findElement(LicenseName);}
+    @Step("Selecting institute...")
     public WebElement LicenseInstituteSelect(){return driver.findElement(LicenseInstituteSelect);}
+    @Step("Fetching total allocated licenses...")
     public WebElement TotalAllocatedLicenses(){return driver.findElement(TotalAllocatedLicenses);}
+    @Step("Entering Start date...")
     public WebElement StartDateInputBox(){return driver.findElement(StartDateInputBox);}
+    @Step("Entering end date...")
     public WebElement EndDateInputBox(){return driver.findElement(EndDateInputBox);}
+    @Step("Creating License...")
     public WebElement CreateLicenseBtn(){return driver.findElement(CreateLicenseBtn);}
+    @Step("Fetching institutes displayed...")
     public List<WebElement> InstitutesDisplayed(){return driver.findElements(InstitutesDisplayed);}
+    @Step("Fetching schools displayed...")
     public List<WebElement> SchoolsDisplayed(){return driver.findElements(InstitutesDisplayed);}
+    @Step("Fetching grades displayed...")
     public List<WebElement> GradesDisplayed(){return driver.findElements(GradesDisplayed);}
+    @Step("Fetching sections displayed...")
     public List<WebElement> SectionsDisplayed(){return driver.findElements(GradesDisplayed);}
+    @Step("Adding students...")
     public WebElement AddStudentBtn(){return driver.findElement(AddCollectionsBtn);}
 
 
@@ -206,14 +234,10 @@ public class UserManagement extends Base {
     }
 
     @Step("Enter School Code ")
-    public WebElement EnterSchoolCode() {
-        return driver.findElement(EnterSchoolCode);
-    }
+    public WebElement EnterSchoolCode() { return driver.findElement(EnterSchoolCode); }
 
     @Step("Enter Curriculum ")
-    public WebElement EnterCurriculum() {
-        return driver.findElement(EnterCurriculum);
-    }
+    public WebElement EnterCurriculum() { return driver.findElement(EnterCurriculum); }
 
     @Step("Enter Live URl ")
     public WebElement EnterLiveClassURL() {
@@ -266,9 +290,7 @@ public class UserManagement extends Base {
     }
 
     @Step("Search for Schoolname ")
-    public WebElement SearchSchool() {
-        return driver.findElement(SearchSchool);
-    }
+    public WebElement SearchSchool() { return driver.findElement(SearchSchool); }
 
     @Step("Select school from list")
     public WebElement SelectSchool() {
@@ -335,25 +357,43 @@ public class UserManagement extends Base {
         return driver.findElement(AddSectionBtn);
     }
 
+    @Step("Entering Student first name...")
     public WebElement StudentFirstName(){return driver.findElement(StudentFirstName);}
+    @Step("Entering Student last name...")
     public WebElement StudentLastName(){return driver.findElement(StudentLastName);}
+    @Step("Entering Student DOB...")
     public WebElement StudentDOB(){return driver.findElement(StudentDOB);}
+    @Step("Entering Student gender...")
     public WebElement StudentGender(){return driver.findElement(StudentGender);}
+    @Step("Entering Student email...")
     public WebElement StudentEmail(){return driver.findElement(StudentEmail);}
+    @Step("Entering Studnet nationality...")
     public WebElement StudentNationality(){return driver.findElement(StudentNationality);}
+    @Step("Entering Student roll number...")
     public WebElement StudentRollNumber(){return driver.findElement(StudentRollNumber);}
+    @Step("Entering parent email...")
     public WebElement ParentEmail(){return driver.findElement(ParentEmail);}
+    @Step("Entering parent name...")
     public WebElement ParentName(){return driver.findElement(ParentName);}
+    @Step("Entering parent mobile number...")
     public WebElement ParentMobileNumber(){return driver.findElement(ParentMobileNumber);}
+    @Step("Entering parent occupation...")
     public WebElement ParentOccupation(){return driver.findElement(ParentOccupation);}
+    @Step("Entering current address...")
     public WebElement CurrentAddress(){return driver.findElement(CurrentAddress);}
+    @Step("Clicking on next step...")
     public WebElement NextStep(){return driver.findElement(NextStep);}
+    @Step("Entering Student user name...")
     public WebElement StudentUsername(){return driver.findElement(StudentUsername);}
+    @Step("Adding Student...")
     public WebElement AddStudent(){return driver.findElement(AddStudent);}
+    @Step("Fetching all the Students displayed...")
     public List<WebElement> StudentsDisplayed(){return driver.findElements(StudentsDisplayed);}
+    @Step("Fetching Pagination text...")
     public WebElement StudentsPaginationText(){return driver.findElement(StudentsPaginationText);}
+    @Step("Paginating to previous page...")
     public WebElement PaginationPrev(){return driver.findElement(PaginationPrev);}
+    @Step("Paginating to next page...")
     public WebElement PaginationNext(){return driver.findElement(PaginationNext);}
-
 
 }

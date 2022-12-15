@@ -58,6 +58,7 @@ public class TimetableAdminDeleteTemplateCheck extends Base {
 
         tim.templateName().click();
         tim.templateName().sendKeys("New Template " + CurrDate1);
+//        tim.templateName().sendKeys("Newtemplate1");
 
         Calendar cal1 = Calendar.getInstance();
         try{
@@ -148,7 +149,9 @@ public class TimetableAdminDeleteTemplateCheck extends Base {
         List<WebElement> TemplateCards = driver.findElements(By.xpath("//*[contains(@class, 'menu-icon')]"));
         int BeforeCount = TemplateCards.size();
         TemplateCards.get(BeforeCount-1).click();
+        Thread.sleep(2000);
         tim.DeleteBtn().click();
+        Thread.sleep(1000);
         tim.ConfirmDelete().click();
         Thread.sleep(2000);
         int AfterCount = driver.findElements(By.xpath("//*[contains(@class, 'menu-icon')]")).size();

@@ -421,13 +421,15 @@ public class CreateAssessment_Online extends Base {
         driver.findElement(By.xpath("//h1")).click();
 //        js.executeScript("arguments[0].scrollIntoView();", ass.instructionsInput());
         js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//*[contains(@class,'hint-txt')]")));
+        Thread.sleep(2000);
         ass.instructionsInput().click();
         ass.instructionsInput().sendKeys("Instructions");
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("//h1")).click();
         Thread.sleep(1000);
-        Thread.sleep(1000);
+//        js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//*[contains(@class,'hint-txt')]")));
+//        Thread.sleep(1000);
         ass.HintShowOption().click();
         Thread.sleep(1000);
         ass.PublishAssessmentBtn().click();

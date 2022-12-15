@@ -1,9 +1,13 @@
 package Library;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,6 +20,7 @@ import testResource.BaseLogin;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
+import java.time.Duration;
 
 public class AudioCheck extends Base {
     public Library lib;
@@ -77,12 +82,17 @@ public class AudioCheck extends Base {
             lib.FirstTopic().click();
             ThreadSleep5000();
 
-            WebElement element = lib.AudioPlayer();
+            WebElement element = lib.AudioPlayBtn();
             js.executeScript("arguments[0].scrollIntoView();", element);
-            ThreadSleep5000();
-            ThreadSleep5000();
-            ThreadSleep5000();
+            ThreadSleep5000(); ThreadSleep5000();
 
+//            WebElement element = lib.AudioPlayer();
+//            Actions actions = new Actions(driver);
+//            actions.moveToElement(element).click().build().perform();
+//            ThreadSleep5000(); ThreadSleep5000();
+
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.elementToBeClickable(lib.AudioPlayBtn()));
             lib.AudioPlayBtn().click();
             ThreadSleep5000();
 

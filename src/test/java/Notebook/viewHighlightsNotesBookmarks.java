@@ -100,7 +100,7 @@ public class viewHighlightsNotesBookmarks extends Base {
 
             driver.navigate().to(prop.getProperty("website")+"notebook");
             ThreadSleep5000();
-
+            Thread.sleep(3000);
             note.EnvironmentalCoursebookGrade1().click();
             ThreadSleep5000();
 

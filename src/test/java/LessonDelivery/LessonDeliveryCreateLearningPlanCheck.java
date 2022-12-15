@@ -1,6 +1,7 @@
 package LessonDelivery;
 
 import io.qameta.allure.*;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -118,6 +119,7 @@ public class LessonDeliveryCreateLearningPlanCheck extends Base {
     }
 
     private void ValidateTest(String ContentDisplayed, String description) {
+        System.out.println(ContentDisplayed+" "+description);
         if(ContentDisplayed.contains(description)){
             System.out.println("PASSED");
         }

@@ -98,7 +98,9 @@ public class LoginPage extends Base {
 
 
     // Admin
+    @Step("Entering user email Id...")
     public WebElement userEmailID(){return driver.findElement(userEmailID);}
+    @Step("Entering password...")
     public WebElement PasswordInput(){return driver.findElement(PasswordInput);}
     public WebElement adminLoginBtn(){return driver.findElement(adminLoginBtn);}
 

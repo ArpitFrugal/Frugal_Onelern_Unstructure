@@ -134,6 +134,7 @@ public class StudentGroups extends Base {
         screenshot();
         return driver.findElement(NextStepBtn);
     }
+    @Step("Choosing group to publish...")
     public WebElement PublishToGroup(){return driver.findElement(PublishToGroup);}
     public WebElement GroupDropDown(){return driver.findElement(GroupDropDown);}
     public WebElement FinalPublishBtn(){return driver.findElement(FinalPublishBtn);}

@@ -191,9 +191,8 @@ public class Publish extends Base {
     public List<WebElement> ContentList(){return driver.findElements(ContentList);}
     public WebElement FirstCategoryFilterOption(){return driver.findElement(FirstCategoryFilterOption);}
     public WebElement FirstContentMoreOptions(){return driver.findElement(FirstContentMoreOptions);}
+    @Step("Republishing content...")
     public WebElement RepublishBtn(){return driver.findElement(RepublishBtn);}
-
-
 
 
 }

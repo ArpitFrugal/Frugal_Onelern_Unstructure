@@ -132,7 +132,7 @@ public class UserSignInFunctionality extends Base {
 	}
 
 	@DataProvider(name = "TeacherLoginPageIncorrectPassword_Data")
-	public Object[][] getDataTLPIP() throws FileAlreadyExistsException {
+	public Object[][] getDataTLPIP() {
 
 		Object loginData[][] = { { "9000000102", "12" }, { "9000000106", "  " }, { "9000000111", "123456789" },
 				{ "9000000115", "12345610" }, { "9000000118", "1234567894651" } };

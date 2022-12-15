@@ -90,7 +90,7 @@ public class LessonDelivery extends Base {
         return driver.findElement(GetHeader).getText();
     }
 
-    @Step("Library Module is opened...")
+    @Step("Lesson delivery Module is opened...")
     public WebElement LessonDeliveryToggle() {
         screenshot();
         return driver.findElement(LessonDeliveryToggle);

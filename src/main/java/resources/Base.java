@@ -26,7 +26,7 @@ public class Base {
 
 	public WebDriver initializeDriver() throws IOException {
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("./src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/resources/data.properties");
 
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
@@ -35,7 +35,7 @@ public class Base {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 //			ChromeOptions options = new ChromeOptions();
-//			options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+//			options.addArguments("--headless", "--ignore-certificate-errors","--disable-extensions");
 //			driver = new ChromeDriver(options);
 		}
 

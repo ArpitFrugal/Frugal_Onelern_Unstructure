@@ -99,27 +99,40 @@ public class TimeTable extends Base {
     }
 
     public WebElement rightswipemodules(){return driver.findElement(rightSwipeModules);}
+    @Step("Paginating to previous page...")
     public WebElement leftNavigationBtn(){return driver.findElement(leftNavigationBtn);}
+    @Step("Paginating to next page...")
     public WebElement rightNavigationBtn(){return driver.findElement(rightNavigationBtn);}
     public WebElement DisplayedMonth(){return driver.findElement(DisplayedMonth);}
+    @Step("Viewing all events and holidays...")
     public List<WebElement> ViewAllEventsHolidays(){return driver.findElements(ViewAllBtns);}
     public WebElement TemplateHeader(){return driver.findElement(TemplateHeader);}
+
+    @Step("Switching to events tab...")
     public WebElement EventsTab(){return driver.findElement(EventsTab);}
+    @Step("Switching to holidays tab...")
     public WebElement HolidaysTab(){return driver.findElement(HolidaysTab);}
     public WebElement adminTimetableToggle(){return driver.findElement(adminTimetableToggle);}
     public WebElement adminTimetableModuleHeading(){return driver.findElement(adminTimetableModuleHeading);}
+    @Step("Opening templates section...")
     public WebElement TemplatesBtn(){return driver.findElement(TemplatesBtn);}
+    @Step("Creating template...")
     public WebElement CreateTemplate(){return driver.findElement(AddBtn);}
-
+    @Step("Entering template name...")
     public WebElement templateName(){return driver.findElement(templateName);}
+    @Step("Entering Start date...")
     public WebElement startDate(){return driver.findElement(startDate);}
+    @Step("Entering End date...")
     public WebElement endDate(){return driver.findElement(endDate);}
+    @Step("Entering Start time...")
     public WebElement startTime(){return driver.findElement(startTime);}
+    @Step("Entering End time...")
     public WebElement endTime(){return driver.findElement(endTime);}
+    @Step("Selecting weekly holiday day...")
     public WebElement SelectWeekHoliday(){return driver.findElement(SelectWeekHoliday);}
     public WebElement Weekday(){return driver.findElement(Weekday);}
+    @Step("Clicking next button...")
     public WebElement NextButton(){return driver.findElement(NextButton);}
-
 
     public WebElement Session1Name(){return driver.findElement(Session1Name);}
     public WebElement Session2Name(){return driver.findElement(Session2Name);}
@@ -127,33 +140,49 @@ public class TimeTable extends Base {
     public WebElement Session2sessiontype(){return driver.findElement(Session2sessiontype);}
     public WebElement Session1endTime(){return driver.findElement(Session1endTime);}
     public WebElement Session2endTime(){return driver.findElement(Session2endTime);}
-
+    @Step("Clicking on add more sessions button...")
     public WebElement AddMoreSessionsBtn(){return driver.findElement(AddMoreSessionsBtn);}
+    @Step("Clicking on create template submit button...")
     public WebElement CreateTemplateSubmitBtn(){return driver.findElement(CreateTemplateSubmitBtn);}
+    @Step("Clicking on back button...")
     public WebElement backBtn(){return driver.findElement(backBtn);}
     public List<WebElement> TemplateCards(){return driver.findElements(TemplateCards);}
+    @Step("Clicking on delete button...")
     public WebElement DeleteBtn(){return driver.findElement(DeleteBtn);}
+    @Step("Confirming delete...")
     public WebElement ConfirmDelete(){return driver.findElement(ConfirmDelete);}
     public WebElement timetableGrades(){return driver.findElement(timetableGrades);}
     public WebElement ViewOrAddTimetableBtn(){return driver.findElement(ViewOrAddTimetableBtn);}
     public WebElement TimetableSectionName(){return driver.findElement(TimetableSectionName);}
+    @Step("Fetching current page path...")
     public WebElement CurrentPagePath(){return driver.findElement(CurrentPagePath);}
     public WebElement CreateTemplatePageHeader(){return driver.findElement(CreateTemplatePageHeader);}
+    @Step("Creating new event...")
     public WebElement CreateNewEvent(){return driver.findElement(AddBtn);}
+    @Step("Create new holiday...")
     public WebElement CreateNewHoliday(){return driver.findElement(AddBtn);}
+    @Step("Entering event name...")
     public WebElement EventName(){return driver.findElement(EventName);}
+    @Step("Submitting event...")
     public WebElement CreateEventBtn(){return driver.findElement(CreateTemplateBtn);}
+    @Step("submitting holiday...")
     public WebElement CreateHolidayBtn(){return driver.findElement(CreateHolidayBtn);}
     public List<WebElement> AllEventsName(){return driver.findElements(AllEventsName);}
+    @Step("Editing events...")
     public WebElement EventsEditBtn(){return driver.findElement(EventsEditBtn);}
+    @Step("Editing holidays...")
     public WebElement HolidaysEditBtn(){return driver.findElement(HolidaysEditBtn);}
+    @Step("Deleting events...")
     public WebElement EventsDeleteBtn(){return driver.findElement(EventsDeleteBtn);}
+    @Step("Deleting holidays...")
     public WebElement HolidaysDeleteBtn(){return driver.findElement(HolidaysDeleteBtn);}
+    @Step("Entering holiday name...")
     public WebElement HolidayName(){return driver.findElement(HolidayName);}
+    @Step("Entering holiday description...")
     public WebElement Holidaydesc(){return driver.findElement(Holidaydesc);}
     public List<WebElement> AllHolidaysName(){return driver.findElements(AllEventsName);}
+    @Step("Searching holiday...")
     public WebElement HolidaySearchBox(){return driver.findElement(HolidaySearchBox);}
-
 
 
 }

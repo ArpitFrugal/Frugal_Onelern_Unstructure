@@ -227,9 +227,13 @@ public class Library extends Base {
 
 
 	// videoCheck
+	@Step("Opening environmental coursebook...")
 	public WebElement EnvironmentalcoursebookGrade1(){return driver.findElement(EnvironmentalcoursebookGrade1);}
+	@Step("Opening first lesson...")
 	public WebElement FirstLesson(){return driver.findElement(FirstLesson);}
+	@Step("Opening second lesson...")
 	public WebElement SecondLesson(){return driver.findElement(SecondLesson);}
+	@Step("Opening third lesson...")
 	public WebElement ThirdLesson(){return driver.findElement(ThirdLesson);}
 	@Step("Switching to videos page...")
 	public WebElement videosPageTab(){
@@ -279,11 +283,17 @@ public class Library extends Base {
 		screenshot();
 		return driver.findElement(MathVideoPathGrade5);
 	}
+	@Step("Opening English coursebook...")
 	public WebElement EnglishCoursebookGrade2(){return driver.findElement(EnglishCoursebookGrade2);}
+	@Step("Opening Mathematics coursebook...")
 	public WebElement MathematicsCoursebookGrade3(){return driver.findElement(MathematicsCoursebookGrade3);}
+	@Step("Opening English coursebook...")
 	public WebElement EnglishCoursebookGrade4(){return driver.findElement(EnglishCoursebookGrade4);}
+	@Step("Opening Mathematicscoursebook...")
 	public WebElement MathematicsCoursebookGrade5(){return driver.findElement(MathematicsCoursebookGrade5);}
+	@Step("Opening English coursebook...")
 	public WebElement EnglishCoursebookGrade3(){return driver.findElement(EnglishCoursebookGrade3);}
+	@Step("Opening English coursebook...")
 	public WebElement EnglishCoursebookGrade5(){return driver.findElement(EnglishCoursebookGrade5);}
 
 	// search box
@@ -309,6 +319,7 @@ public class Library extends Base {
 		screenshot();
 		return driver.findElement(AudioPlayer);
 	}
+	@Step("Playing audio...")
 	public WebElement AudioPlayBtn(){return driver.findElement(AudioPlayBtn);}
 	@Step("Fetching current audio play time ...")
 	public WebElement CurrPlayTime(){

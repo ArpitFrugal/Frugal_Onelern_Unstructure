@@ -171,14 +171,23 @@ public class Notebook extends Base {
 
 
     // lesson name verify
+    @Step("Opening Environmental coursebook...")
     public WebElement EnvironmentalCoursebookGrade1(){return driver.findElement(EnvironmentalCoursebookGrade1);}
+    @Step("Opening Mathematics coursebook...")
     public WebElement MathematicsCoursebookGrade2(){return driver.findElement(MathematicsCoursebookGrade2);}
+    @Step("Opening Social Studies coursebook...")
     public WebElement SocialStudiesCoursebookGrade3(){return driver.findElement(SocialStudiesCoursebookGrade3);}
+    @Step("Opening Science coursebook...")
     public WebElement ScienceCoursebookGrade4(){return driver.findElement(ScienceCoursebookGrade4);}
+    @Step("Opening Social Studies coursebook...")
     public WebElement SocialStudiesCoursebookGrade5(){return driver.findElement(SocialStudiesCoursebookGrade5);}
+    @Step("Opening English coursebook...")
     public WebElement EnglishCoursebookGrade2(){return driver.findElement(EnglishCoursebookGrade2);}
+    @Step("Opening Mathematics coursebook...")
     public WebElement MathematicsCoursebookGrade3(){return driver.findElement(MathematicsCoursebookGrade3);}
+    @Step("Opening English coursebook...")
     public WebElement EnglishCoursebookGrade4(){return driver.findElement(EnglishCoursebookGrade4);}
+    @Step("Opening Mathematics coursebook...")
     public WebElement MathematicsCoursebookGrade5(){return driver.findElement(MathematicsCoursebookGrade5);}
 
     public WebElement FirstLesson(){return driver.findElement(FirstLesson);}
