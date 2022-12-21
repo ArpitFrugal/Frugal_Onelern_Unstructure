@@ -32,7 +32,7 @@ public class UserManagementAddCollectionsCheck extends Base {
     }
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully able to add collections.")
+    @Description("Examine whether or noti the admin can successfully able to add collections.")
     @Story("UMFA_08")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

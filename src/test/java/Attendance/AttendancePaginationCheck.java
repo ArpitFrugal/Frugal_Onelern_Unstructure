@@ -54,7 +54,7 @@ public class AttendancePaginationCheck extends Base {
         }
     }
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the student can navigate to next pages through pagination.")
+    @Description("Examine whether or noti the student can navigate to next pages through pagination.")
     @Story("ATTFS_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -86,7 +86,7 @@ public class AttendancePaginationCheck extends Base {
 
 
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can navigate to next pages through pagination.")
+    @Description("Examine whether or noti the teacher can navigate to next pages through pagination.")
     @Story("ATTFT_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

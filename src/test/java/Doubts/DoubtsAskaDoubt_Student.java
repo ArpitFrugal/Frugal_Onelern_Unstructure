@@ -38,7 +38,7 @@ public class DoubtsAskaDoubt_Student extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully open page for asking doubt.")
+    @Description("Examine whether or noti the student can successfully open page for asking doubt.")
     @Story("DOUFS_02")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentData")

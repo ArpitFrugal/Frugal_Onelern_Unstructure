@@ -31,7 +31,7 @@ public class UserManagementLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully get inside the User Management module.")
+    @Description("Examine whether or noti the admin can successfully get inside the User Management module.")
     @Story("UMFA_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

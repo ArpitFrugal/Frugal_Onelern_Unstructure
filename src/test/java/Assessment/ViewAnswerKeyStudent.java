@@ -34,7 +34,7 @@ public class ViewAnswerKeyStudent extends Base {
 
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully view the answer key of the assessment.")
+    @Description("Examine whether or noti the student can successfully view the answer key of the assessment.")
     @Story("ASSFS_04")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentData")

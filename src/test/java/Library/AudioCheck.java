@@ -59,7 +59,7 @@ public class AudioCheck extends Base {
     }
 
     @Epic("This story represents the Library module of the onelern_school project.")
-    @Description("To check if the audio player is displayed or not.")
+    @Description("To check if the audio player is displayed or noti.")
     @Story("LIBFS_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -177,7 +177,7 @@ public class AudioCheck extends Base {
         }
     }
     @Epic("This story represents the Library module of the onelern_school project.")
-    @Description("Examine whether or not the audio can successfully played properly.")
+    @Description("Examine whether or noti the audio can successfully played properly.")
     @Story("LIBFT_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

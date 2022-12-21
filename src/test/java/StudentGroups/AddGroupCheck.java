@@ -40,7 +40,7 @@ public class AddGroupCheck extends Base {
     }
 
     @Epic("This story represents the Student Groups module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully add a group of many students.")
+    @Description("Examine whether or noti the teacher can successfully add a group of many students.")
     @Story("SGFT-03")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

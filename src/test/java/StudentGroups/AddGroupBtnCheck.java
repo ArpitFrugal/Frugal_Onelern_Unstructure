@@ -40,7 +40,7 @@ public class AddGroupBtnCheck extends Base {
     }
 
     @Epic("This story represents the Student Groups module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully click the add group button.")
+    @Description("Examine whether or noti the teacher can successfully click the add group button.")
     @Story("SGFT-02")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

@@ -33,7 +33,7 @@ public class UserManagementCollectionPaginationCheck extends Base {
 
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully navigate to next and previous pages through navigation.")
+    @Description("Examine whether or noti the admin can successfully navigate to next and previous pages through navigation.")
     @Story("UMFA_12")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

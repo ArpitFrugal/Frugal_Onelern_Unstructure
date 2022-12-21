@@ -40,7 +40,7 @@ public class AnalyticsLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Analytics module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Analytics module.")
     @Story("ANAFT_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

@@ -30,7 +30,7 @@ public class TimetableAdminDeleteHolidayCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can delete an holiday successfully.")
+    @Description("Examine whether or noti the admin can delete an holiday successfully.")
     @Story("TIMFA_10")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

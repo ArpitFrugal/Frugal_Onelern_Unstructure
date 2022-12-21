@@ -46,7 +46,7 @@ public class AnalyticsEoSQLessonsTopicCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher should be able to view the lessons and can open them to view detailed scores.")
+    @Description("Examine whether or noti the teacher should be able to view the lessons and can open them to view detailed scores.")
     @Story("ANAFT_10")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

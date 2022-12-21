@@ -28,7 +28,7 @@ public class TimetableAdminLandingPageCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can enter into timetable module successfully.")
+    @Description("Examine whether or noti the admin can enter into timetable module successfully.")
     @Story("TIMFA_01")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

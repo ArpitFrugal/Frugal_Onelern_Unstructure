@@ -33,7 +33,7 @@ public class TimetableAdminCreateHolidayCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can create a holiday successfully.")
+    @Description("Examine whether or noti the admin can create a holiday successfully.")
     @Story("TIMFA_08")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")
@@ -49,8 +49,8 @@ public class TimetableAdminCreateHolidayCheck extends Base {
 
         tim.HolidayName().click();
         tim.HolidayName().sendKeys("New Holiday");
-        tim.Holidaydesc().click();
-        tim.Holidaydesc().sendKeys("Event description");
+//        tim.Holidaydesc().click();
+//        tim.Holidaydesc().sendKeys("Event description");
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");

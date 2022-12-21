@@ -40,7 +40,7 @@ public class SearchFunctionalityCheck extends Base {
     }
 
     @Epic("This story represents the Student Groups module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully Search the added group.")
+    @Description("Examine whether or noti the teacher can successfully Search the added group.")
     @Story("SGFT-06")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

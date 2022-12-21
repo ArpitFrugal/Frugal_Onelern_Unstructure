@@ -32,7 +32,7 @@ public class AnalyticsEoSQStudentsCountCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher should be able to view all the attempted students in EoSQ Performance.")
+    @Description("Examine whether or noti the teacher should be able to view all the attempted students in EoSQ Performance.")
     @Story("ANAFT_11")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

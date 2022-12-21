@@ -48,7 +48,7 @@ public class AttendancePercentageCheck extends Base {
     }
 
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully the attendance percentage calculated monthly.")
+    @Description("Examine whether or noti the student can successfully the attendance percentage calculated monthly.")
     @Story("ATTFS_03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")

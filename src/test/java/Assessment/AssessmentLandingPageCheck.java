@@ -40,7 +40,7 @@ public class AssessmentLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully get inside the Assessment module.")
+    @Description("Examine whether or noti the student can successfully get inside the Assessment module.")
     @Story("ASSFS_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "studentData")
@@ -59,7 +59,7 @@ public class AssessmentLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Assessment module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Assessment module.")
     @Story("ASSFT_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

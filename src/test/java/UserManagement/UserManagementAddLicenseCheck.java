@@ -38,7 +38,7 @@ public class UserManagementAddLicenseCheck extends Base {
     }
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully able to add License.")
+    @Description("Examine whether or noti the admin can successfully able to add License.")
     @Story("UMFA_11")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

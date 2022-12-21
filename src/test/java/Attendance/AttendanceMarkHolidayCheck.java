@@ -31,7 +31,7 @@ public class AttendanceMarkHolidayCheck extends Base {
 
 
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can mark a day as holiday or mark attendance for any particular day.")
+    @Description("Examine whether or noti the teacher can mark a day as holiday or mark attendance for any particular day.")
     @Story("ATTFT_03")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

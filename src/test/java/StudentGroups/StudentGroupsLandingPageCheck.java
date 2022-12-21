@@ -40,7 +40,7 @@ public class StudentGroupsLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Student Groups module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Student Groups module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Student Groups module.")
     @Story("SGFT-01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

@@ -38,7 +38,7 @@ public class CreateAssessment_PenPaper extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully create Pen & paper assessment for the students.")
+    @Description("Examine whether or noti the teacher can successfully create Pen & paper assessment for the students.")
     @Story("ASSFT_03")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

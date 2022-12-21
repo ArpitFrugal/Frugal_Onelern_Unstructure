@@ -37,7 +37,7 @@ public class TimetableAdminCreateTemplateCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can create an template successfully.")
+    @Description("Examine whether or noti the admin can create an template successfully.")
     @Story("TIMFA_02")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

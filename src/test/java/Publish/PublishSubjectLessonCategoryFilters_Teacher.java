@@ -35,7 +35,7 @@ public class PublishSubjectLessonCategoryFilters_Teacher extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully filter the content according to book.")
+    @Description("Examine whether or noti the teacher can successfully filter the content according to book.")
     @Story("PUBFT-05")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

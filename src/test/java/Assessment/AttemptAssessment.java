@@ -29,7 +29,7 @@ public class AttemptAssessment extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully attempt the assessment created by his/her teacher.")
+    @Description("Examine whether or noti the student can successfully attempt the assessment created by his/her teacher.")
     @Story("ASSFS_02")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "studentData")

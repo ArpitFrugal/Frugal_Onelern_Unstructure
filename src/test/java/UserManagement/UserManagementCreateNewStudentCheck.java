@@ -40,7 +40,7 @@ public class UserManagementCreateNewStudentCheck extends Base {
 
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully create a student.")
+    @Description("Examine whether or noti the admin can successfully create a student.")
     @Story("UMFA_06")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

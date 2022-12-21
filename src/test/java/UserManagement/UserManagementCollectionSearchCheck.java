@@ -34,7 +34,7 @@ public class UserManagementCollectionSearchCheck extends Base {
 
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully search the collection.")
+    @Description("Examine whether or noti the admin can successfully search the collection.")
     @Story("UMFA_10")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

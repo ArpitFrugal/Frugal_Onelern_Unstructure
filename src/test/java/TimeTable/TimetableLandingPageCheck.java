@@ -39,7 +39,7 @@ public class TimetableLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully get inside the Time table module.")
+    @Description("Examine whether or noti the student can successfully get inside the Time table module.")
     @Story("TIMFS_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "studentData")
@@ -58,7 +58,7 @@ public class TimetableLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Time table module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Time table module.")
     @Story("TIMFT_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

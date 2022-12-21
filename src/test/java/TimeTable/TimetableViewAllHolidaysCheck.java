@@ -41,7 +41,7 @@ public class TimetableViewAllHolidaysCheck extends Base {
         }
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the student can view all the holidays successfully by clicking on view all button.")
+    @Description("Examine whether or noti the student can view all the holidays successfully by clicking on view all button.")
     @Story("TIMFS_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -71,7 +71,7 @@ public class TimetableViewAllHolidaysCheck extends Base {
 
 
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can view all the holidays successfully by clicking on view all button.")
+    @Description("Examine whether or noti the teacher can view all the holidays successfully by clicking on view all button.")
     @Story("TIMFT_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

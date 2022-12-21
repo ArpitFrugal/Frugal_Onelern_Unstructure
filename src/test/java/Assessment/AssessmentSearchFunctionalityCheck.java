@@ -37,7 +37,7 @@ public class AssessmentSearchFunctionalityCheck extends Base {
 
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully search an assessment.")
+    @Description("Examine whether or noti the student can successfully search an assessment.")
     @Story("ASSFS_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -69,7 +69,7 @@ public class AssessmentSearchFunctionalityCheck extends Base {
 
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully search an assessment.")
+    @Description("Examine whether or noti the teacher can successfully search an assessment.")
     @Story("ASSFT_08")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

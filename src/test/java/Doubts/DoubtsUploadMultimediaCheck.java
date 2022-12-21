@@ -32,13 +32,13 @@ public class DoubtsUploadMultimediaCheck extends Base {
             System.out.println("Image is inserted successfully.");
         }
         else {
-            System.out.println("Image is not inserted.");
+            System.out.println("Image is noti inserted.");
         }
         if (webElement2.isDisplayed()) {
             System.out.println("Video is inserted successfully.");
         }
         else {
-            System.out.println("Video is not inserted.");
+            System.out.println("Video is noti inserted.");
         }
 
         if (webElement1.isDisplayed() && webElement2.isDisplayed()) {
@@ -50,7 +50,7 @@ public class DoubtsUploadMultimediaCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully upload multimedia content in his/her doubt.")
+    @Description("Examine whether or noti the student can successfully upload multimedia content in his/her doubt.")
     @Story("DOUFS_05")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")

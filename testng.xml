@@ -6,6 +6,12 @@
 </listeners>
 	<test name="Test">
 		<classes>
+			<!--			Notifications-->
+			<class name=""></class>
+			<!--			Parent-->
+			<class name="Parent.StudentViewProfileCheck"/>
+			<class name="Parent.StudentAttendanceCheck"/>
+
 
 			<!--			User Management-->
 			<class name="UserManagement.UserManagementLandingPageCheck"/>

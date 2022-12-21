@@ -81,7 +81,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
                 flag = true;
             }
             else if (ld.LearningPlanStatus().getText().contains("Start")) {
-                // not yet started
+                // noti yet started
                 Thread.sleep(2000);
                 ld.LearningPlanStatus().click();
                 Thread.sleep(2000);
@@ -118,7 +118,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
                 flag = true;
             }
             else if (driver.getPageSource().contains("Start")) {
-                // not yet started
+                // noti yet started
                 driver.findElement(By.xpath("//button[contains(text(),'Start')]")).click();
                 flag = driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).isDisplayed();
                 driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).click();
@@ -149,7 +149,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
                 flag = true;
             }
             else if (driver.getPageSource().contains("Start")) {
-                // not yet started
+                // noti yet started
                 driver.findElement(By.xpath("//button[contains(text(),'Start')]")).click();
                 flag = driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).isDisplayed();
                 driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).click();
@@ -181,7 +181,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
                 flag = true;
             }
             else if (driver.getPageSource().contains("Start")) {
-                // not yet started
+                // noti yet started
                 driver.findElement(By.xpath("//button[contains(text(),'Start')]")).click();
                 flag = driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).isDisplayed();
                 driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).click();
@@ -213,7 +213,7 @@ public class LessonDeliveryCompletedOngoingTagCheck extends Base {
                 flag = true;
             }
             else if (driver.getPageSource().contains("Start")) {
-                // not yet started
+                // noti yet started
                 driver.findElement(By.xpath("//button[contains(text(),'Start')]")).click();
                 flag = driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).isDisplayed();
                 driver.findElement(By.xpath("//button[contains(text(),'Pause')]")).click();

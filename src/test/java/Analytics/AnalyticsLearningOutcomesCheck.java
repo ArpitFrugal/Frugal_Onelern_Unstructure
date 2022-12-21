@@ -43,7 +43,7 @@ public class AnalyticsLearningOutcomesCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher should be able to open the learning outcomes successfully.")
+    @Description("Examine whether or noti the teacher should be able to open the learning outcomes successfully.")
     @Story("ANAFT_04")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

@@ -34,7 +34,7 @@ public class AssessmentsDraftsCheck extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully draft assessment for the students.")
+    @Description("Examine whether or noti the teacher can successfully draft assessment for the students.")
     @Story("ASSFT_03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

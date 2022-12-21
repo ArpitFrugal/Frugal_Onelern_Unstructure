@@ -47,7 +47,7 @@ public class AnalyticsEoSQTopicsenabledisableCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher should be able to select only topics with accuracy greater than 0%.")
+    @Description("Examine whether or noti the teacher should be able to select only topics with accuracy greater than 0%.")
     @Story("ANAFT_09")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

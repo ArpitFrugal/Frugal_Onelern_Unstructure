@@ -34,7 +34,7 @@ public class CreateGradesInSchool extends Base {
     }
 
     @Epic("This story represents the User management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully create Grade or not")
+    @Description("Examine whether or noti the admin can successfully create Grade or noti")
     @Story("UMFA_04")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

@@ -32,7 +32,7 @@ public class PublishTeacherCategoryFilters_Student extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully filter content according to Teacher.")
+    @Description("Examine whether or noti the student can successfully filter content according to Teacher.")
     @Story("TPUBFS_05")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")

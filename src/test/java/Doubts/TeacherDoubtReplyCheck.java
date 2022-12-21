@@ -31,7 +31,7 @@ public class TeacherDoubtReplyCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully reply to the doubt posted by the student. And also to check whether student can view reply to the doubt")
+    @Description("Examine whether or noti the teacher can successfully reply to the doubt posted by the student. And also to check whether student can view reply to the doubt")
     @Story("DOU-01")
     @Test
     public void DoubtreplyCheck() throws IOException, InterruptedException {

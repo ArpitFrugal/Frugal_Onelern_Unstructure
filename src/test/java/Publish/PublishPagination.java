@@ -38,7 +38,7 @@ public class PublishPagination extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully navigate to next pages.")
+    @Description("Examine whether or noti the student can successfully navigate to next pages.")
     @Story("TPUBFS_04")
     @Severity(SeverityLevel.MINOR)
     @Test(dataProvider = "studentData")
@@ -108,7 +108,7 @@ public class PublishPagination extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully navigate to next pages.")
+    @Description("Examine whether or noti the teacher can successfully navigate to next pages.")
     @Story("PUBFT-04")
     @Severity(SeverityLevel.MINOR)
     @Test(dataProvider = "teacherData")

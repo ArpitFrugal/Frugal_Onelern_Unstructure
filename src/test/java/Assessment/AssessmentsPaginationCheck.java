@@ -44,7 +44,7 @@ public class AssessmentsPaginationCheck extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the student can navigate to other pages through pagination.")
+    @Description("Examine whether or noti the student can navigate to other pages through pagination.")
     @Story("ASSFS_07")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "studentData")

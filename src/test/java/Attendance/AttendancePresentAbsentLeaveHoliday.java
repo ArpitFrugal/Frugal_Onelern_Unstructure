@@ -47,7 +47,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
     }
 
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the student can view the count of present, absent, leave, and holiday correctly.")
+    @Description("Examine whether or noti the student can view the count of present, absent, leave, and holiday correctly.")
     @Story("ATTFS_02")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "studentData")
@@ -89,7 +89,7 @@ public class AttendancePresentAbsentLeaveHoliday extends Base {
 
 
     @Epic("This story represents the Attendance module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can view the count of present, absent, and leave correctly.")
+    @Description("Examine whether or noti the teacher can view the count of present, absent, and leave correctly.")
     @Story("ATTFT_02")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "teacherData")

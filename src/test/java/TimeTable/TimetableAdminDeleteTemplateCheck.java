@@ -35,7 +35,7 @@ public class TimetableAdminDeleteTemplateCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can delete the template successfully.")
+    @Description("Examine whether or noti the admin can delete the template successfully.")
     @Story("TIMFA_03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

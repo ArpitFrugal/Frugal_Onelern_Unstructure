@@ -47,7 +47,7 @@ public class RepublishContentCheck extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully republished the content.")
+    @Description("Examine whether or noti the teacher can successfully republished the content.")
     @Story("PUBFT_05")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

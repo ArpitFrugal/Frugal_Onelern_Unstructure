@@ -55,7 +55,7 @@ public class TimetablePaginationCheck extends Base {
         }
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the student can navigate to next pages through pagination.")
+    @Description("Examine whether or noti the student can navigate to next pages through pagination.")
     @Story("TIMFS_02")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -95,7 +95,7 @@ public class TimetablePaginationCheck extends Base {
 
 
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can navigate to next pages through pagination.")
+    @Description("Examine whether or noti the teacher can navigate to next pages through pagination.")
     @Story("TIMFT_02")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

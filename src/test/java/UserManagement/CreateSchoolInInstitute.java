@@ -33,7 +33,7 @@ public class CreateSchoolInInstitute extends Base {
     }
 
     @Epic("This story represents the User management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully create School or not")
+    @Description("Examine whether or noti the admin can successfully create School or noti")
     @Story("UMFA_03")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

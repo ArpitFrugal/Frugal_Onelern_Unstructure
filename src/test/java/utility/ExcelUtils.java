@@ -38,7 +38,7 @@ public class ExcelUtils {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Could not read the Excel sheet");
+            System.out.println("Could noti read the Excel sheet");
             e.printStackTrace();
         }
         return (tabArray);

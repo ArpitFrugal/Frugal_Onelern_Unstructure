@@ -39,7 +39,7 @@ public class LessonDeliveryLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Lesson Delivery module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Lesson Delivery module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Lesson Delivery module.")
     @Story("LDFT_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

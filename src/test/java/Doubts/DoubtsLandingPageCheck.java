@@ -40,7 +40,7 @@ public class DoubtsLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully get inside the Doubts module.")
+    @Description("Examine whether or noti the student can successfully get inside the Doubts module.")
     @Story("DOUFS_01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "studentData")
@@ -58,7 +58,7 @@ public class DoubtsLandingPageCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Doubts module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Doubts module.")
     @Story("DOUFT-01")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

@@ -40,7 +40,7 @@ public class PublishViewsandLikes_Student extends Base {
         }
     }
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully view and like the published content.")
+    @Description("Examine whether or noti the student can successfully view and like the published content.")
     @Story("TPUBFS_03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")

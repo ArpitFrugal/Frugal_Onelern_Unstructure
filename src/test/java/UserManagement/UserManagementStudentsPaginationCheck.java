@@ -36,7 +36,7 @@ public class UserManagementStudentsPaginationCheck extends Base {
     }
 
     @Epic("This story represents the User Management module of the onelern_school project.")
-    @Description("Examine whether or not the admin can successfully navigayte to all pages of students and view them.")
+    @Description("Examine whether or noti the admin can successfully navigayte to all pages of students and view them.")
     @Story("UMFA_07")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")

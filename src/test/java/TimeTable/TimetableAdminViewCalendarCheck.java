@@ -30,7 +30,7 @@ public class TimetableAdminViewCalendarCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can view the calendar successfully.")
+    @Description("Examine whether or noti the admin can view the calendar successfully.")
     @Story("TIMFA_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

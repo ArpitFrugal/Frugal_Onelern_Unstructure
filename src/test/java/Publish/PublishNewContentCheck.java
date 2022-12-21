@@ -48,7 +48,7 @@ public class PublishNewContentCheck extends Base {
     }
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully view the published content published by teacher.")
+    @Description("Examine whether or noti the student can successfully view the published content published by teacher.")
     @Story("TPUBFS_02")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData", priority = 2)
@@ -88,7 +88,7 @@ public class PublishNewContentCheck extends Base {
 
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully publish new content.")
+    @Description("Examine whether or noti the teacher can successfully publish new content.")
     @Story("PUBFT-03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData", priority = 1)

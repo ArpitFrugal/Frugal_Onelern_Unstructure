@@ -39,7 +39,7 @@ public class DoubtsFilterFunctionality extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully filter the content by applying specific filters.")
+    @Description("Examine whether or noti the student can successfully filter the content by applying specific filters.")
     @Story("DOUFS_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -125,7 +125,7 @@ public class DoubtsFilterFunctionality extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully filter the content by applying specific filters.")
+    @Description("Examine whether or noti the teacher can successfully filter the content by applying specific filters.")
     @Story("DOUFT-04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

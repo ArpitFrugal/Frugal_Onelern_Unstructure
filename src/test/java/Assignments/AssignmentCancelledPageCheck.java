@@ -49,7 +49,7 @@ public class AssignmentCancelledPageCheck extends Base {
     }
 
     @Epic("This story represents the Assignments module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully view the assignments in drafts page.")
+    @Description("Examine whether or noti the teacher can successfully view the assignments in drafts page.")
     @Story("ASGFT_07")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

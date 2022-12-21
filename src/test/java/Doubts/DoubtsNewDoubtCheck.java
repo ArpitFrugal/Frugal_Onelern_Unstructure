@@ -55,7 +55,7 @@ public class DoubtsNewDoubtCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully ask his/her doubt.")
+    @Description("Examine whether or noti the student can successfully ask his/her doubt.")
     @Story("DOUFS_04")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -73,7 +73,7 @@ public class DoubtsNewDoubtCheck extends Base {
         Thread.sleep(2000);
 
         String selectedSubject = null, selectedLesson = null;
-        List<WebElement> doubtoptions = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div/div[1]//select"));
+        List<WebElement> doubtoptions = driver.findElements(By.xpath("//*[contains(@class,'form-group')]//select"));
 
         for(WebElement webElement:doubtoptions){
             webElement.click();
@@ -164,7 +164,7 @@ public class DoubtsNewDoubtCheck extends Base {
 
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully view the doubt asked by the students.")
+    @Description("Examine whether or noti the teacher can successfully view the doubt asked by the students.")
     @Story("DOUFT-03")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

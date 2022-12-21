@@ -42,7 +42,7 @@ public class AnalyticsLearningOutcomesFilterCheck extends Base {
     }
 
     @Epic("This story represents the Analytics module of the onelern_school project.")
-    @Description("Examine whether or not the teacher should be able to filter the learning outcomes according to the count needed.")
+    @Description("Examine whether or noti the teacher should be able to filter the learning outcomes according to the count needed.")
     @Story("ANAFT_03")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "teacherData")

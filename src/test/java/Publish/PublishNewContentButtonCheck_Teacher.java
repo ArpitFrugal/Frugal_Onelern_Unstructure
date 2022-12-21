@@ -43,7 +43,7 @@ public class PublishNewContentButtonCheck_Teacher extends Base {
 
 
     @Epic("This story represents the Publish module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully get inside the Publish module.")
+    @Description("Examine whether or noti the teacher can successfully get inside the Publish module.")
     @Story("PUBFT-02")
     @Severity(SeverityLevel.CRITICAL)
     @Test(dataProvider = "teacherData")

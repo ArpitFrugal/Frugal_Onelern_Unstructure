@@ -30,7 +30,7 @@ public class TimetableAdminEditEventCheck extends Base {
         tim = new TimeTable(driver);
     }
     @Epic("This story represents the Time table module of the onelern_school project.")
-    @Description("Examine whether or not the admin can edit the event successfully.")
+    @Description("Examine whether or noti the admin can edit the event successfully.")
     @Story("TIMFA_06")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "adminData")

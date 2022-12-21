@@ -40,7 +40,7 @@ public class DoubtsViewCountCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully view the increase in view count when viewed.")
+    @Description("Examine whether or noti the student can successfully view the increase in view count when viewed.")
     @Story("DOUFS_03")
     @Severity(SeverityLevel.MINOR)
     @Test(dataProvider = "studentData")
@@ -69,7 +69,7 @@ public class DoubtsViewCountCheck extends Base {
     }
 
     @Epic("This story represents the Doubts module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully view the increase in view count when viewed.")
+    @Description("Examine whether or noti the teacher can successfully view the increase in view count when viewed.")
     @Story("DOUFT-02")
     @Severity(SeverityLevel.MINOR)
     @Test(dataProvider = "teacherData")

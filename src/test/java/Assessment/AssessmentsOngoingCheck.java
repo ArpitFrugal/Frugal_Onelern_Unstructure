@@ -33,7 +33,7 @@ public class AssessmentsOngoingCheck extends Base {
     }
 
     @Epic("This story represents the Assessment module of the onelern_school project.")
-    @Description("Examine whether or not the teacher can successfully fetch ongoing assessments from ongoing tab.")
+    @Description("Examine whether or noti the teacher can successfully fetch ongoing assessments from ongoing tab.")
     @Story("ASSFT_05")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

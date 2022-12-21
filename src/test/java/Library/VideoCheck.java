@@ -62,7 +62,7 @@ public class VideoCheck extends Base {
         }
     }
     @Epic("This story represents the Library module of the onelern_school project.")
-    @Description("Examine whether or not the video can successfully played properly.")
+    @Description("Examine whether or noti the video can successfully played properly.")
     @Story("LIBFS_07")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "studentData")
@@ -276,7 +276,7 @@ public class VideoCheck extends Base {
     }
 
     @Epic("This story represents the Library module of the onelern_school project.")
-    @Description("Examine whether or not the video can successfully played properly.")
+    @Description("Examine whether or noti the video can successfully played properly.")
     @Story("LIBFT_07")
     @Severity(SeverityLevel.NORMAL)
     @Test(dataProvider = "teacherData")

@@ -39,7 +39,7 @@ public class LibLandingPageCheck extends Base {
 	}
 
 	@Epic("This story represents the Library module of the onelern_school project.")
-	@Description("Examine whether or not the student can successfully get inside the library module.")
+	@Description("Examine whether or noti the student can successfully get inside the library module.")
 	@Story("LIBFS_01")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(dataProvider = "studentData")
@@ -63,7 +63,7 @@ public class LibLandingPageCheck extends Base {
 	}
 
 	@Epic("This story represents the Library module of the onelern_school project.")
-	@Description("Examine whether or not the teacher can successfully get inside the library module.")
+	@Description("Examine whether or noti the teacher can successfully get inside the library module.")
 	@Story("LIBFT_01")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(dataProvider = "teacherData")
