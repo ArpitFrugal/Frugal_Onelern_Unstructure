@@ -73,7 +73,7 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
         String blueColor = "rgba(71, 75, 255, 1)";
         boolean flag1, flag2, flag3, flag4;
         String classname;
-
+        WebElement expandedComponent;
         if (mob >= 9000000101l && mob <= 9000000104l) { // Environmental Studies Coursebook - Part A
             ld.EnvironmentalcoursebookGrade1().click();
             ThreadSleep5000();
@@ -82,39 +82,47 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
-            ld.TeachComponent().click();
+            Thread.sleep(2000);
+            WebElement FirstComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button"));
+            if(!String.valueOf(FirstComponent.getClass()).contains("collapsed")){
+                ld.TeachComponent().click();
+            }
             Thread.sleep(5000);
             classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
-            flag1 = ClassCheck(classname, "collapsed");
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag1 = expandedComponent.isDisplayed();
+//            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
-//            driver.findElement(By.xpath("//*[contains(@id,'flush-headingTwo')]/button")).click();
-//            Thread.sleep(5000);
-//            String classname1 = String.valueOf(driver.findElement(By.xpath("//*[contains(@id,'flush-headingTwo')]/button")).getAttribute("class"));
-//            flag2 = ClassCheck(classname1, "collapsed");
-//            Thread.sleep(1000);
-//            ld.ApplyComponent().click();
+            Thread.sleep(2000);
 
             ld.ApplyComponent().click();
             Thread.sleep(5000);
             classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
-            flag2 = ClassCheck(classname, "collapsed");
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag2 = expandedComponent.isDisplayed();
+//            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
+
+            Thread.sleep(2000);
 
             ld.AssessComponent().click();
             Thread.sleep(5000);
             classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
-            flag3 = ClassCheck(classname, "collapsed");
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag3 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.AssessComponent().click();
+
+            Thread.sleep(2000);
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
             classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
-            flag4 = ClassCheck(classname, "collapsed");
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag4 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -131,32 +139,47 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
-            ld.TeachComponent().click();
+            Thread.sleep(2000);
+            WebElement FirstComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button"));
+            if(!String.valueOf(FirstComponent.getClass()).contains("collapsed")){
+                ld.TeachComponent().click();
+            }
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag1 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag1 = expandedComponent.isDisplayed();
+//            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
+            Thread.sleep(2000);
+
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag2 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag2 = expandedComponent.isDisplayed();
+//            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
+            Thread.sleep(2000);
+
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag3 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag3 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.AssessComponent().click();
+
+            Thread.sleep(2000);
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag4 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag4 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -173,32 +196,47 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
-            ld.TeachComponent().click();
+            Thread.sleep(2000);
+            WebElement FirstComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button"));
+            if(!String.valueOf(FirstComponent.getClass()).contains("collapsed")){
+                ld.TeachComponent().click();
+            }
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag1 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag1 = expandedComponent.isDisplayed();
+//            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
+            Thread.sleep(2000);
+
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag2 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag2 = expandedComponent.isDisplayed();
+//            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
+            Thread.sleep(2000);
+
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag3 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag3 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.AssessComponent().click();
+
+            Thread.sleep(2000);
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag4 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag4 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -216,32 +254,47 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
-            ld.TeachComponent().click();
+            Thread.sleep(2000);
+            WebElement FirstComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button"));
+            if(!String.valueOf(FirstComponent.getClass()).contains("collapsed")){
+                ld.TeachComponent().click();
+            }
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag1 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag1 = expandedComponent.isDisplayed();
+//            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
+            Thread.sleep(2000);
+
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag2 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag2 = expandedComponent.isDisplayed();
+//            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
+            Thread.sleep(2000);
+
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag3 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag3 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.AssessComponent().click();
+
+            Thread.sleep(2000);
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag4 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag4 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 
@@ -259,32 +312,47 @@ public class LessonDeliveryLessonPlanComponentsCheck extends Base {
             Thread.sleep(1000);
 
             ld.FirstLearningPlan().click();
-
-            ld.TeachComponent().click();
+            Thread.sleep(2000);
+            WebElement FirstComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button"));
+            if(!String.valueOf(FirstComponent.getClass()).contains("collapsed")){
+                ld.TeachComponent().click();
+            }
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag1 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.TeachComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag1 = expandedComponent.isDisplayed();
+//            flag1 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.TeachComponent().click();
 
+            Thread.sleep(2000);
+
             ld.ApplyComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag2 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ApplyComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag2 = expandedComponent.isDisplayed();
+//            flag2 = ClassCheck(classname, "collapsed");
             Thread.sleep(1000);
             ld.ApplyComponent().click();
 
+            Thread.sleep(2000);
+
             ld.AssessComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag3 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.AssessComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]//button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag3 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.AssessComponent().click();
+
+            Thread.sleep(2000);
 
             ld.ReviewComponent().click();
             Thread.sleep(5000);
-            classname = String.valueOf(ld.TeachComponent().getClass());
-            flag4 = ClassCheck(classname, "collapsed");
+            classname = String.valueOf(ld.ReviewComponent().getAttribute("class"));
+            expandedComponent = driver.findElement(By.xpath("//*[contains(@class,'accordion-header')]// button[not(contains(@class,'collapsed')) and @aria-expanded='true']"));
+            flag4 = expandedComponent.isDisplayed();
             Thread.sleep(1000);
             ld.ReviewComponent().click();
 

@@ -139,13 +139,14 @@ public class DoubtsFilterFunctionality extends Base {
         dou.DoubtsToggle().click();
         Thread.sleep(2000);
 
+        driver.findElement(By.xpath("//label[contains(text(),'Grade 1')]")).click();
 
-        dou.FilterSubjectFirstSubject_Teacher().click();
-        Thread.sleep(1000);
-        dou.FilterSubjectSecondSubject_Teacher().click();
-        Thread.sleep(1000);
-        dou.FilterSubjectThirdSubject_Teacher().click();
-        Thread.sleep(1000);
+//        dou.FilterSubjectFirstSubject_Teacher().click();
+//        Thread.sleep(1000);
+//        dou.FilterSubjectSecondSubject_Teacher().click();
+//        Thread.sleep(1000);
+//        dou.FilterSubjectThirdSubject_Teacher().click();
+//        Thread.sleep(1000);
 
         dou.FilterSubjectFirstSubject_Teacher().click();
         Thread.sleep(5000);

@@ -38,7 +38,7 @@ public class Assignments extends Base {
 
     //Pagination
     By NextNavigate = By.xpath("//*[contains(@class,'option next')]");
-    By PaginationText = By.className("pagination-text");
+    By PaginationText = By.xpath("//*[contains(@class,'pagination-main-block')]//p");
     By BackNavigate = By.xpath("//*[contains(@class,'option prev')]");
     By SaveAsDraft  = By.xpath("//*[contains(@class,'save-text-btn')]");
 

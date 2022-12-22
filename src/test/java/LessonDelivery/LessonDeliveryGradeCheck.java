@@ -35,7 +35,8 @@ public class LessonDeliveryGradeCheck extends Base {
 		Thread.sleep(5000);
 	}
 	public void ValidateTest(String actual_grade, String expected_grade){
-		if (actual_grade.equals(expected_grade)) {
+		System.out.println(actual_grade+" "+expected_grade);
+		if (actual_grade.contains(expected_grade)) {
 			System.out.println("PASSED");
 		} else {
 			Assert.fail();

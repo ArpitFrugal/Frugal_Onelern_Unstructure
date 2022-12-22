@@ -60,7 +60,7 @@ public class DeleteGroupCheck extends Base {
         sg.DeleteOption().click();
         Thread.sleep(1000);
         sg.DeleteConfirmationBtn().click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         int GroupsCountAfterDeleting = sg.GroupCards().size();
 
         ValidateTest(GroupsCountBeforeDeleting, GroupsCountAfterDeleting + 1);

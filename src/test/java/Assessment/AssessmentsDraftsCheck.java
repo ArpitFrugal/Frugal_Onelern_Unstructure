@@ -3,6 +3,7 @@ package Assessment;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,6 +19,7 @@ import testResource.BaseLogin;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.time.Duration;
+import java.util.List;
 
 public class AssessmentsDraftsCheck extends Base {
     public Assessment ass;
@@ -59,6 +61,7 @@ public class AssessmentsDraftsCheck extends Base {
         ass.DraftsTabPage().click();
 
         int no_of_assessments =ass.AssessmentCards().size();
+        System.out.println(no_of_assessments);
         if(no_of_assessments > 0){
             flag1= ValueCompare(no_of_assessments, ass.DraftPublishBtn().size());
 
@@ -72,9 +75,11 @@ public class AssessmentsDraftsCheck extends Base {
             Thread.sleep(1000);
             ass.deleteDraft().click();
             Thread.sleep(2000);
-            ass.DraftsTabPage().click();
-            Thread.sleep(1000);
-            flag3 = ValueCompare(no_of_assessments -1, ass.AssessmentCards().size());
+            driver.findElement(By.xpath("//*[contains(@class,'modal-footer')]//button[2]")).click();
+//            ass.DraftsTabPage().click();
+            Thread.sleep(2000);
+            List<WebElement> assessmentcards = ass.AssessmentCards();
+            flag3 = ValueCompare(no_of_assessments -1, assessmentcards.size());
 
             ValidateTest(flag1, flag2, flag3);
         }

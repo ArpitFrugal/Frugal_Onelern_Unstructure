@@ -44,7 +44,7 @@ public class BaseLogin extends Base {
 			log.adminLoginBtn().click();
 		}
 		else if (user.equals("schooladmin")) {
-			log.getOthersSignIn().click();
+//			log.getOthersSignIn().click();
 			log.userEmailID().click();
 			log.userEmailID().sendKeys(mobNumber);
 			Thread.sleep(1000);

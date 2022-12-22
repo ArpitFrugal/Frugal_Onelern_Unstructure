@@ -50,7 +50,7 @@ public class AddGroupCheck extends Base {
         Thread.sleep(2000);
         sg.rightswipemodules().click();
         sg.StudentGroupsToggle().click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         sg.AddGroupBtn().click();
         Thread.sleep(1000);
 

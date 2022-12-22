@@ -39,7 +39,7 @@ public class EventCreatedNotification extends Base {
     }
 
     @Epic("This story represents the Notifications module of the onelern_school project.")
-    @Description("Examine whether or not the student can successfully view the notification for new Holiday created.")
+    @Description("Examine whether or not the student can successf  ully view the notification for new Holiday created.")
     @Story("NOTIFS_06")
     @Severity(SeverityLevel.BLOCKER)
     @Test(dataProvider = "adminData")
