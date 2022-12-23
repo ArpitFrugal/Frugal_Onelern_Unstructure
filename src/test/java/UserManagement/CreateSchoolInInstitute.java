@@ -1,11 +1,11 @@
 package UserManagement;
 
 import io.qameta.allure.*;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.lang3.Validate;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -17,6 +17,7 @@ import testResource.BaseLogin;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
+import java.util.List;
 
 public class CreateSchoolInInstitute extends Base {
     public UserManagement usm;
@@ -52,30 +53,27 @@ public class CreateSchoolInInstitute extends Base {
         usm.AddSchoolBtnClick().click();
         Thread.sleep(2000);
 
-        usm.EnterCurriculum().click();
-        Thread.sleep(1000);
-        usm.EnterCurriculum().sendKeys("CBSE");
-        Thread.sleep(2000);
-        Actions action = new Actions(driver);
-        action.keyDown(Keys.CONTROL).sendKeys(Keys.ENTER).build().perform();
-        Thread.sleep(2000);
+        Select EnterCurriculum = new Select(usm.EnterCurriculum());
+        EnterCurriculum.selectByVisibleText("CBSE");
 
-        usm.EnterSchoolName().sendKeys("Trinity");
-        Thread.sleep(2000);
-        usm.EnterSchoolCode().sendKeys("Tri_001");
-        Thread.sleep(2000);
 //        usm.EnterCurriculum().click();
 //        Thread.sleep(1000);
 //        usm.EnterCurriculum().sendKeys("CBSE");
 //        Thread.sleep(2000);
 //        Actions action = new Actions(driver);
-//        action.sendKeys(Keys.CONTROL).clickAndHold().sendKeys(Keys.ENTER).build().perform();
+//        action.keyDown(Keys.CONTROL).sendKeys(Keys.ENTER).build().perform();
 //        Thread.sleep(2000);
+        String schoolName = "Trinity";
+        usm.EnterSchoolName().sendKeys(schoolName);
+        Thread.sleep(2000);
+        usm.EnterSchoolCode().sendKeys("Tri_001");
+        Thread.sleep(2000);
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", usm.EnterPhoneNumber());
         usm.EnterLiveClassURL().sendKeys("https://meet.google.com/");
         usm.EnterAddress().sendKeys("Park Street");
-        usm.EnterPhoneNumber().sendKeys("9876543210");
+//        usm.EnterPhoneNumber().sendKeys("9876543210");
         js.executeScript("arguments[0].scrollIntoView();", usm.EnterState());
         usm.EnterZipCode().sendKeys("500080");
         usm.EnterCity().sendKeys("Hyderabad");
@@ -84,8 +82,29 @@ public class CreateSchoolInInstitute extends Base {
         usm.EnterCountry().sendKeys("India");
         usm.EnterEmail().sendKeys("abc@test.com");
         usm.EnterWebsite().sendKeys("Website");
+        Thread.sleep(1000);
+        js.executeScript("arguments[0].scrollIntoView();", usm.CreateSchoolBtn());
+        Thread.sleep(2000);
         usm.CreateSchoolBtn().click();
+        Thread.sleep(2000);
 
+        usm.SearchInstitute().click();
+        Thread.sleep(2000);
+        usm.SearchInstitute().sendKeys(schoolName);
+        Thread.sleep(2000);
+
+        List<WebElement> schoolsDisplayed = driver.findElements(By.xpath("//*[contains(@class,'center-card')]"));
+        ValidateTest(schoolsDisplayed.size());
+
+    }
+
+    private void ValidateTest(int size) {
+        if(size>0){
+            System.out.println("PASSED");
+        }
+        else{
+            Assert.fail();
+        }
     }
 
     @AfterMethod

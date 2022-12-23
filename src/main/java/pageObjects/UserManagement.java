@@ -54,11 +54,12 @@ public class UserManagement extends Base {
     By AddSchoolBtnClick = By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/button");
     By EnterSchoolName = By.id("school-name");
     By EnterSchoolCode = By.id("school-code");
-    By EnterCurriculum = By.xpath("//div[@class='multiselect form-select svelte-1oi6uf5']//input");
+    By EnterCurriculum = By.xpath("//*[@id='curriculum']//select");
     By EnterLiveClassURL = By.id("live-class-url");
     By EnterAddress = By.id("address");
-    By EnterPhoneNumber = By.id("number");
-    By EnterZipCode = By.id("zipcode");
+    By EnterPhoneNumber = By.xpath("//input[@type='number' and contains(@onkeypress, 'length')]");
+//    By EnterPhoneNumber = By.id("number");
+    By EnterZipCode = By.id("schoolzipcode");
     By EnterCity = By.id("city");
     By EnterState = By.id("state");
     By EnterCountry = By.id("country");
@@ -250,14 +251,10 @@ public class UserManagement extends Base {
     }
 
     @Step("Enter PhoneNumber ")
-    public WebElement EnterPhoneNumber() {
-        return driver.findElement(EnterPhoneNumber);
-    }
+    public WebElement EnterPhoneNumber() { return driver.findElement(EnterPhoneNumber);}
 
     @Step("Enter Zipcode ")
-    public WebElement EnterZipCode() {
-        return driver.findElement(EnterZipCode);
-    }
+    public WebElement EnterZipCode() { return driver.findElement(EnterZipCode);}
 
     @Step("Enter City ")
     public WebElement EnterCity() {
@@ -285,9 +282,7 @@ public class UserManagement extends Base {
     }
 
     @Step("Click Create school button ")
-    public WebElement CreateSchoolBtn() {
-        return driver.findElement(CreateSchoolBtn);
-    }
+    public WebElement CreateSchoolBtn() { return driver.findElement(CreateSchoolBtn);}
 
     @Step("Search for Schoolname ")
     public WebElement SearchSchool() { return driver.findElement(SearchSchool); }

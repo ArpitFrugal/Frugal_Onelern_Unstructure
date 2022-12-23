@@ -97,10 +97,10 @@ public class UserManagementCreateNewStudentCheck extends Base {
         String currmonth = str.split("/")[1];
         String curryear = str.split("/")[2];
 
-        usm.StudentDOB().click();
-        usm.StudentDOB().sendKeys(currdate);
-        usm.StudentDOB().sendKeys(currmonth);
-        usm.StudentDOB().sendKeys(curryear);
+//        usm.StudentDOB().click();
+//        usm.StudentDOB().sendKeys(currdate);
+//        usm.StudentDOB().sendKeys(currmonth);
+//        usm.StudentDOB().sendKeys(curryear);
 
         usm.StudentGender().click();
         Thread.sleep(1000);
@@ -116,9 +116,9 @@ public class UserManagementCreateNewStudentCheck extends Base {
         usm.ParentMobileNumber().sendKeys("9876543210");
         Thread.sleep(1000);
         js.executeScript("arguments[0].scrollIntoView();", usm.CurrentAddress());
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         usm.NextStep().click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         js.executeScript("window.scrollBy(0,-350)", "");
         Thread.sleep(1000);
 

@@ -52,9 +52,9 @@ public class CreateSectionInGrade extends Base {
         Thread.sleep(2000);
         usm.SearchSchool().click();
         usm.SearchSchool().sendKeys("School");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         usm.SelectSchool().click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         List<WebElement> grades = usm.GradesDisplay();
         grades.get(0).click();
         Thread.sleep(2000);

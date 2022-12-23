@@ -51,7 +51,7 @@ public class UserManagementAddLicenseCheck extends Base {
         Thread.sleep(1000);
 
         usm.LicensesModule().click();
-
+        Thread.sleep(2000);
         usm.AddLicenseBtn().click();
 
         String LicenseName = "New License";

@@ -24,7 +24,7 @@ public class UserManagementStudentsPaginationCheck extends Base {
     public LoginPage log;
     public WebDriver driver;
 
-    List<String> paginationpage = List.of("1-15", "16-30", "31-45", "46-60", "61-75");
+    List<String> paginationpage = List.of("1-", "16-", "31-", "46-", "61-");
 
     @BeforeMethod
     public void standardLogic() throws IOException {
@@ -73,8 +73,8 @@ public class UserManagementStudentsPaginationCheck extends Base {
         Thread.sleep(2000);
         usm.PaginationNext().click();
         i+=1;
-        usm.PaginationNext().click();
-        i+=1;
+//        usm.PaginationNext().click();
+//        i+=1;
 
         flag2 = ValCompare(usm.StudentsPaginationText().getText(), paginationpage.get(i));
         Thread.sleep(2000);
@@ -98,6 +98,7 @@ public class UserManagementStudentsPaginationCheck extends Base {
     }
 
     private boolean ValCompare(String studentsPaginationText, String actual) {
+        System.out.println(studentsPaginationText+" "+actual);
         return studentsPaginationText.contains(actual);
     }
 

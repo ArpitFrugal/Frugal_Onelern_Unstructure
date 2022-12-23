@@ -11,7 +11,7 @@ public class Analytics extends Base {
     public WebDriver driver;
 
     By AnalyticsToggle = By.id("analytics");
-    By PerformanceTab = By.xpath("//*[contains(@class, 'page-tabs')]//div[2]");
+    By PerformanceTab = By.xpath("//*[contains(@class, 'page-tabs')]//div[1]");
     By GetHeader = By.xpath("//header/div/div/h1");
     By LearningOutcomes = By.xpath("//div[contains(@class, 'lo-block')]//table//tbody/tr");
     By LearningOutcomesFilterDropdown = By.xpath("//div[contains(@class, 'lo-block')]//select");
